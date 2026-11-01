@@ -1,0 +1,540 @@
+/* 多端预览页：桌面沙箱里放一台手机，iframe 用真实 390px 视口渲染。 */
+
+.preview-page {
+  min-height: 100dvh;
+  background:
+    radial-gradient(1100px 520px at 18% -10%, color-mix(in srgb, var(--primary) 9%, transparent), transparent 65%),
+    var(--surface);
+  padding: 24px 28px 64px;
+}
+.preview-head {
+  max-width: 1180px;
+  margin: 0 auto 18px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.preview-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+  color: var(--text);
+  text-decoration: none;
+  flex: none;
+}
+.preview-brand .logo {
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  background: var(--primary);
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.preview-brand .logo .od-icon {
+  --od-icon-size: 18px;
+}
+.preview-head-main {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+.preview-head-main h1 {
+  font-size: var(--fs-20);
+  letter-spacing: -0.01em;
+}
+.preview-head-main p {
+  margin: 2px 0 0;
+  font-size: var(--fs-12);
+  color: var(--text-muted);
+}
+.preview-head > .btn {
+  text-decoration: none;
+  flex: none;
+}
+
+.preview-toolbar {
+  max-width: 1180px;
+  margin: 0 auto 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 10px;
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter: blur(8px);
+}
+.preview-modes {
+  display: flex;
+  gap: 4px;
+  min-width: 0;
+}
+.preview-modes button {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1px;
+  padding: 7px 12px;
+  border-radius: var(--r-md);
+  color: var(--text-muted);
+  text-align: left;
+  transition: background var(--dur-fast), color var(--dur-fast);
+}
+.preview-modes button:hover {
+  background: var(--surface-2);
+}
+.preview-modes button strong {
+  font-size: var(--fs-13);
+  font-weight: 700;
+}
+.preview-modes button span {
+  font-size: 10.5px;
+  color: var(--text-faint);
+  white-space: nowrap;
+}
+.preview-modes button.active {
+  background: var(--primary);
+  color: #fff;
+}
+.preview-modes button.active span {
+  color: rgba(255, 255, 255, 0.76);
+}
+.preview-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: none;
+}
+.preview-actions .btn {
+  text-decoration: none;
+  white-space: nowrap;
+}
+.preview-select {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: var(--fs-12);
+  color: var(--text-faint);
+}
+.preview-select select {
+  max-width: 220px;
+  height: 30px;
+  padding: 0 8px;
+  border: 1px solid var(--border);
+  border-radius: var(--r-sm);
+  background: var(--bg);
+  color: var(--text);
+  font-size: var(--fs-12);
+}
+.preview-error {
+  max-width: 1180px;
+  margin: 0 auto 12px;
+  padding: 10px 14px;
+  border-radius: var(--r-md);
+  border: 1px solid color-mix(in srgb, var(--error) 30%, var(--border));
+  background: var(--error-100);
+  color: var(--error);
+  font-size: var(--fs-12);
+}
+
+/* ---------- stage ---------- */
+.preview-stage {
+  max-width: 1180px;
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 48px;
+}
+.device {
+  flex: none;
+  width: 390px;
+  zoom: 0.82;
+}
+.device-shell {
+  width: 390px;
+  height: 844px;
+  padding: 10px;
+  border-radius: 54px;
+  background: linear-gradient(160deg, #2a3239, #0b0f12 40%, #171d22);
+  box-shadow:
+    0 40px 90px -30px rgba(4, 10, 14, 0.65),
+    0 18px 40px -20px rgba(4, 10, 14, 0.45),
+    inset 0 0 0 1.5px rgba(255, 255, 255, 0.12);
+  position: relative;
+}
+.device-shell::before {
+  /* 听筒 */
+  content: '';
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 92px;
+  height: 24px;
+  border-radius: 0 0 16px 16px;
+  background: #070a0d;
+  z-index: 3;
+  pointer-events: none;
+}
+.device-screen {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 44px;
+  overflow: hidden;
+  background: var(--bg);
+  display: flex;
+  flex-direction: column;
+}
+.device-frame {
+  flex: 1 1 auto;
+  width: 100%;
+  min-height: 0;
+  border: 0;
+  background: var(--bg);
+  display: block;
+}
+.device-empty {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: var(--text-muted);
+  font-size: var(--fs-13);
+}
+.device-caption {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px 0 0;
+  color: var(--text-faint);
+  font-size: var(--fs-11);
+  text-align: center;
+}
+.device-caption strong {
+  color: var(--text-muted);
+  font-size: var(--fs-12);
+}
+
+/* ---------- App 状态栏 ---------- */
+.app-statusbar {
+  flex: none;
+  height: 44px;
+  padding: 5px 22px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--bg);
+  color: var(--text);
+  font-size: 11px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  position: relative;
+  z-index: 2;
+}
+.app-statusbar.wechat-statusbar {
+  background: #ededed;
+  color: #111;
+}
+[data-theme='dark'] .app-statusbar.wechat-statusbar {
+  background: #1b1f23;
+  color: #eee;
+}
+.app-statusbar .status-icons {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+.app-statusbar .sig,
+.app-statusbar .wifi,
+.app-statusbar .battery {
+  display: inline-block;
+  height: 9px;
+  background: currentColor;
+  border-radius: 1px;
+}
+.app-statusbar .sig {
+  width: 15px;
+  clip-path: polygon(0 100%, 0 62%, 22% 62%, 22% 38%, 44% 38%, 44% 20%, 66% 20%, 66% 0, 100% 0, 100% 100%);
+}
+.app-statusbar .wifi {
+  width: 12px;
+  clip-path: polygon(50% 100%, 0 34%, 12% 22%, 50% 56%, 88% 22%, 100% 34%);
+}
+.app-statusbar .battery {
+  width: 20px;
+  height: 9px;
+  background: transparent;
+  border: 1px solid currentColor;
+  border-radius: 2px;
+  position: relative;
+}
+.app-statusbar .battery::before {
+  content: '';
+  position: absolute;
+  inset: 1.5px;
+  right: 5px;
+  background: currentColor;
+  border-radius: 1px;
+}
+.app-statusbar .battery::after {
+  content: '';
+  position: absolute;
+  right: -3px;
+  top: 2px;
+  width: 2px;
+  height: 4px;
+  background: currentColor;
+  border-radius: 0 1px 1px 0;
+}
+
+.device-home-indicator {
+  position: absolute;
+  bottom: 7px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 124px;
+  height: 4px;
+  border-radius: 99px;
+  background: color-mix(in srgb, var(--text) 55%, transparent);
+  z-index: 4;
+  pointer-events: none;
+}
+
+/* ---------- 微信小程序导航栏 ---------- */
+.wechat-navbar {
+  flex: none;
+  height: 46px;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #ededed;
+  color: #111;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  position: relative;
+  z-index: 2;
+}
+[data-theme='dark'] .wechat-navbar {
+  background: #1b1f23;
+  color: #eee;
+  border-bottom-color: rgba(255, 255, 255, 0.08);
+}
+.wn-back {
+  font-size: 26px;
+  line-height: 1;
+  width: 28px;
+  text-align: center;
+  font-weight: 300;
+}
+.wn-title {
+  flex: 1 1 auto;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 600;
+  margin-left: -28px;
+}
+.wn-capsule {
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  height: 28px;
+  padding: 0 8px;
+  border: 1px solid rgba(0, 0, 0, 0.16);
+  border-radius: 99px;
+  font-size: 12px;
+  line-height: 1;
+  background: rgba(255, 255, 255, 0.6);
+}
+[data-theme='dark'] .wn-capsule {
+  border-color: rgba(255, 255, 255, 0.22);
+  background: rgba(255, 255, 255, 0.08);
+}
+.wn-dots {
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+.wn-sep {
+  width: 1px;
+  height: 14px;
+  background: currentColor;
+  opacity: 0.22;
+}
+.wn-circle {
+  font-size: 14px;
+}
+
+/* ---------- 浏览器 ---------- */
+.browser-bar {
+  flex: none;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 12px;
+  background: var(--surface-2);
+  border-bottom: 1px solid var(--border);
+}
+.br-dots {
+  display: inline-flex;
+  gap: 4px;
+}
+.br-dots i {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--border-strong);
+}
+.br-url {
+  flex: 1 1 auto;
+  min-width: 0;
+  height: 24px;
+  border-radius: 6px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  color: var(--text-faint);
+  font-size: 11px;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/* ---------- 说明卡 ---------- */
+.preview-notes {
+  width: 360px;
+  max-width: 100%;
+  padding: 22px;
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  background: var(--bg);
+  box-shadow: var(--shadow-sm);
+  margin-top: 24px;
+}
+.preview-notes h2 {
+  font-size: var(--fs-16);
+  margin-bottom: 12px;
+}
+.preview-notes ol {
+  margin: 0 0 14px;
+  padding-left: 1.25em;
+  color: var(--text-muted);
+  font-size: var(--fs-12);
+  line-height: 1.7;
+}
+.preview-notes li + li {
+  margin-top: 7px;
+}
+.preview-notes li strong {
+  color: var(--text);
+}
+.preview-notes code,
+.preview-note-card code {
+  font-size: 11px;
+  padding: 1px 4px;
+  border-radius: 3px;
+  background: var(--surface-2);
+  color: var(--primary);
+}
+.preview-note-card {
+  display: flex;
+  gap: 9px;
+  align-items: flex-start;
+  padding: 12px;
+  border-radius: var(--r-md);
+  background: color-mix(in srgb, var(--info) 6%, var(--bg));
+  border: 1px solid color-mix(in srgb, var(--info) 20%, var(--border));
+  font-size: var(--fs-12);
+  color: var(--text-muted);
+}
+.preview-note-card .od-icon {
+  --od-icon-size: 16px;
+  color: var(--info);
+  flex: none;
+  margin-top: 1px;
+}
+.preview-note-card strong {
+  display: block;
+  color: var(--text);
+  margin-bottom: 3px;
+}
+.preview-note-card p {
+  margin: 0;
+  line-height: 1.6;
+}
+.preview-links {
+  display: flex;
+  gap: 8px;
+  margin-top: 14px;
+}
+.preview-links .btn {
+  text-decoration: none;
+}
+
+@media (max-width: 1100px) {
+  .preview-stage {
+    gap: 24px;
+  }
+  .device {
+    zoom: 0.72;
+  }
+  .preview-notes {
+    width: 310px;
+  }
+}
+@media (max-width: 900px) {
+  .preview-page {
+    padding: 16px 12px 48px;
+  }
+  .preview-head {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .preview-head > .btn {
+    margin-left: auto;
+  }
+  .preview-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+  .preview-modes button span {
+    display: none;
+  }
+  .preview-actions {
+    flex-wrap: wrap;
+  }
+  .preview-select {
+    flex: 1 1 100%;
+  }
+  .preview-select select {
+    flex: 1 1 auto;
+    max-width: none;
+  }
+  .preview-stage {
+    flex-direction: column;
+    align-items: center;
+  }
+  .device {
+    zoom: 0.78;
+  }
+  .preview-notes {
+    width: min(480px, 100%);
+    margin-top: 0;
+  }
+}
+@media (max-width: 420px) {
+  .device {
+    zoom: 0.72;
+  }
+}

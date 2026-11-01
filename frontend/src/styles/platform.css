@@ -1,0 +1,333 @@
+/* ============================================================
+   Trace Planner · 多端外壳
+   安全区 / 软键盘 / 触控尺寸 / 微信分享引导 / 长图预览
+   以 Web 为基线，App 与微信小程序只做增量，不改写原有 tokens。
+   ============================================================ */
+
+:root {
+  --safe-top: env(safe-area-inset-top, 0px);
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+  --safe-left: env(safe-area-inset-left, 0px);
+  --safe-right: env(safe-area-inset-right, 0px);
+  --kb-inset: 0px;
+  --touch-min: 44px;
+}
+
+/* ---------- 全局触控 / 回弹 / 字体缩放 ---------- */
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+body {
+  overscroll-behavior-y: none;
+}
+button,
+a,
+[role='button'] {
+  -webkit-tap-highlight-color: transparent;
+}
+@media (hover: none) {
+  /* 触屏没有 hover：避免“按下去一直高亮” */
+  .btn:hover,
+  .icon-btn:hover,
+  .trip-card-link:hover .trip-card-body {
+    text-decoration: none;
+  }
+}
+
+/* iOS / WeChat 上输入框 <16px 会触发自动放大 */
+@media (max-width: 767px) {
+  .list-topbar .desktop-only {
+    display: none !important;
+  }
+  .list-topbar {
+    gap: 8px;
+  }
+  input,
+  textarea,
+  select {
+    font-size: 16px;
+  }
+  .composer textarea {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+}
+
+/* ---------- 顶部安全区 ---------- */
+.topbar {
+  height: calc(var(--topbar-h) + var(--safe-top));
+  padding-top: var(--safe-top);
+  padding-left: max(var(--sp-4), var(--safe-left));
+  padding-right: max(var(--sp-4), var(--safe-right));
+}
+.list-topbar {
+  padding-top: calc(10px + var(--safe-top));
+  padding-left: max(14px, var(--safe-left));
+  padding-right: max(14px, var(--safe-right));
+}
+.trip-list-page {
+  padding-bottom: var(--safe-bottom);
+}
+.mobile-menu {
+  top: calc(var(--topbar-h) + var(--safe-top) + 6px);
+}
+
+/* 主工作台：软键盘弹出时按可视视口收缩，底部抽屉始终贴着键盘上沿 */
+.workbench {
+  height: calc(100dvh - var(--kb-inset, 0px));
+}
+
+/* ---------- 底部安全区 ---------- */
+.toast-host {
+  bottom: calc(24px + var(--safe-bottom));
+}
+.drawer {
+  padding-bottom: var(--safe-bottom);
+}
+.trip-panel {
+  /* 移动端从底部展开，给 Home Indicator 留位置 */
+  padding-bottom: var(--safe-bottom);
+}
+@media (max-width: 767px) {
+  .trip-panel .composer-wrap {
+    padding-bottom: 10px;
+  }
+  .settings-modal {
+    padding-bottom: var(--safe-bottom);
+  }
+  .settings-foot {
+    padding-bottom: calc(11px + var(--safe-bottom));
+  }
+  .sheet-handle {
+    touch-action: none;
+    user-select: none;
+    -webkit-user-select: none;
+    min-height: 40px;
+    justify-content: center;
+  }
+  .sheet-handle .handle-summary {
+    max-width: 82vw;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .day-tab {
+    min-height: 44px;
+  }
+  .mobile-tabs button {
+    min-height: 42px;
+  }
+  .topbar .icon-btn,
+  .topbar .hamburger-only {
+    width: 40px;
+    height: 40px;
+  }
+  .trip-title-block {
+    max-width: 44vw;
+  }
+  /* 长按卡片 / 图片时可正常选择与保存，不拦截系统菜单 */
+  .map-canvas {
+    -webkit-user-select: none;
+    user-select: none;
+  }
+  .panel-scroll,
+  .chat-scroll,
+  .day-tabs {
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+/* ---------- 微信内分享引导 ---------- */
+.share-guide-scrim {
+  position: fixed;
+  inset: 0;
+  z-index: 1400;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: calc(16px + var(--safe-top)) 16px calc(16px + var(--safe-bottom));
+  background: rgba(8, 13, 17, 0.62);
+  backdrop-filter: blur(2px);
+  animation: tp-fade-in 160ms var(--ease, ease);
+}
+.share-guide-arrow {
+  position: absolute;
+  top: calc(8px + var(--safe-top));
+  right: 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+}
+.share-guide-arrow .sg-line {
+  width: 66px;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.65);
+  transform: rotate(-38deg) translateX(10px);
+  transform-origin: right center;
+  border-radius: 2px;
+}
+.share-guide-arrow .sg-dot {
+  margin-right: -2px;
+  padding: 2px 8px;
+  border: 1.5px solid rgba(255, 255, 255, 0.8);
+  border-radius: 999px;
+  font-size: 14px;
+  line-height: 1;
+  letter-spacing: 0;
+}
+.share-guide-card {
+  width: min(480px, 100%);
+  margin: 0 auto;
+  background: var(--bg);
+  color: var(--text);
+  border-radius: var(--r-lg);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-lg);
+  padding: 18px;
+  animation: tp-sheet-up 220ms var(--ease, ease);
+}
+.sg-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: var(--fs-16);
+  font-weight: 700;
+}
+.sg-title .od-icon {
+  --od-icon-size: 18px;
+  color: var(--primary);
+}
+.sg-body {
+  margin: 8px 0 12px;
+  font-size: var(--fs-13);
+  color: var(--text-muted);
+  line-height: 1.65;
+}
+.sg-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 8px 8px 12px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  border-radius: var(--r-sm);
+  font-size: var(--fs-12);
+  color: var(--text-muted);
+}
+.sg-link > span {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+.sg-note {
+  font-size: var(--fs-12);
+  color: var(--danger, #b42318);
+  background: var(--surface);
+  border: 1px dashed var(--border-strong);
+  border-radius: var(--r-sm);
+  padding: 10px 12px;
+}
+.sg-trip {
+  margin-top: 10px;
+  font-size: var(--fs-12);
+  color: var(--text-faint);
+}
+.sg-close {
+  width: 100%;
+  margin-top: 14px;
+}
+@keyframes tp-fade-in {
+  from { opacity: 0; }
+}
+@keyframes tp-sheet-up {
+  from { transform: translateY(18px); opacity: 0.4; }
+}
+
+/* ---------- 长图预览（移动端导出降级） ---------- */
+.export-preview-scrim {
+  position: fixed;
+  inset: 0;
+  z-index: 1500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: calc(12px + var(--safe-top)) 12px calc(12px + var(--safe-bottom));
+  background: rgba(8, 13, 17, 0.78);
+  backdrop-filter: blur(3px);
+  animation: tp-fade-in 150ms var(--ease, ease);
+}
+.export-preview {
+  display: flex;
+  flex-direction: column;
+  width: min(480px, 100%);
+  max-height: 92dvh;
+  background: var(--bg);
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+.ep-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 10px 12px 10px 16px;
+  border-bottom: 1px solid var(--border);
+  flex: none;
+}
+.ep-head strong {
+  font-size: var(--fs-14);
+}
+.ep-body {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow: auto;
+  padding: 10px;
+  background: var(--surface-2);
+  -webkit-overflow-scrolling: touch;
+}
+.ep-body img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--r-sm);
+  background: var(--bg);
+}
+.ep-tip {
+  flex: none;
+  padding: 10px 14px calc(10px + var(--safe-bottom));
+  font-size: var(--fs-12);
+  color: var(--text-muted);
+  text-align: center;
+  border-top: 1px solid var(--border);
+}
+
+/* ---------- 平台微调 ---------- */
+.platform-app body,
+.platform-app #root {
+  overscroll-behavior: none;
+}
+.platform-weapp .topbar {
+  /* web-view 已在微信导航栏之下，不需要再让状态栏高度 */
+  padding-top: var(--safe-top);
+}
+.platform-weapp .mobile-menu {
+  top: calc(var(--topbar-h) + var(--safe-top) + 6px);
+}
+.platform-preview {
+  /* 预览页本身不做任何外壳变化 */
+}
+
+/* 微信 / App 里隐藏“在浏览器打开”类无关入口（由组件控制，这里兜底） */
+@media (display-mode: standalone) {
+  .topbar {
+    height: calc(var(--topbar-h) + var(--safe-top));
+  }
+}
