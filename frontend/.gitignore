@@ -1,0 +1,11 @@
+node_modules/
+dist/
+.vite/
+tsconfig.tsbuildinfo
+*.local
+
+# 禁止提交 env / markdown
+.env
+.env.*
+*.env
+*.md

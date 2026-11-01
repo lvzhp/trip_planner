@@ -1,0 +1,23 @@
+<view class="tp-page">
+  <view class="tp-card">
+    <view class="tp-brand">
+      <view class="tp-logo">⌁</view>
+      <text>Trace Planner</text>
+    </view>
+    <view class="tp-h1">{{title}}</view>
+    <view class="tp-sub">分享这份只读行程：朋友打开后可以看到地图、每日安排与地点详情，不会看到你的编辑入口。</view>
+
+    <view class="tp-note" wx:if="{{!tripId}}">
+      没有拿到行程信息。请先回到 H5 行程页，再点「分享行程」。
+    </view>
+
+    <view class="tp-actions" wx:if="{{tripId}}">
+      <button class="tp-btn tp-btn-primary" open-type="share">分享给微信好友</button>
+      <button class="tp-btn" bindtap="copyLink">复制网页只读链接</button>
+    </view>
+    <view class="tp-actions">
+      <button class="tp-btn tp-btn-ghost" bindtap="close">返回行程</button>
+    </view>
+  </view>
+  <view class="tp-footer">也可以点右上角「···」直接转发</view>
+</view>

@@ -1,0 +1,31 @@
+<web-view
+  wx:if="{{src && !error}}"
+  src="{{src}}"
+  bindload="onLoadWeb"
+  binderror="onWebError"
+  bindmessage="onMessage"
+></web-view>
+
+<view wx:else class="tp-page">
+  <view class="tp-card">
+    <view class="tp-brand">
+      <view class="tp-logo">⌁</view>
+      <text>Trace Planner</text>
+    </view>
+    <view class="tp-h1">页面没能打开</view>
+    <view class="tp-sub">{{errorMessage || '还没有配置 H5 地址。'}}</view>
+
+    <view class="tp-note">
+      本地联调请把 config.js 的 h5Base 改成电脑局域网地址（如
+      http://192.168.x.x:5180），并在开发者工具「详情 → 本地设置」勾选
+      「不校验合法域名」。
+      正式环境必须是 HTTPS，并在小程序后台配置业务域名。
+    </view>
+
+    <view class="tp-actions">
+      <button class="tp-btn tp-btn-primary" bindtap="onRetry">重新加载</button>
+      <button class="tp-btn" bindtap="onCopyUrl">复制 H5 地址</button>
+    </view>
+  </view>
+  <view class="tp-footer">{{h5Base}}</view>
+</view>

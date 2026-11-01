@@ -1,0 +1,2595 @@
+{
+  "trip": {
+    "trip_id": "xj-2026-wuyi",
+    "title": "新疆环线 · 五一自驾",
+    "version": 7,
+    "constraints": {
+      "origin": "上海",
+      "date_range": {
+        "start": "2026-05-01",
+        "end": "2026-05-08",
+        "note": "只有 5.1–5.8 有假，不能再延"
+      },
+      "travelers": 2,
+      "budget": {
+        "total": 25000.0,
+        "level": "mid",
+        "per_person_est": 10730.0
+      },
+      "transport_mode": "self_drive",
+      "vehicle": {
+        "pickup": {
+          "poi": "乌鲁木齐地窝堡机场 · 神州租车"
+        },
+        "dropoff": {
+          "poi": "伊宁机场店（异地还车）"
+        },
+        "rental_channel": {
+          "name": "神州租车 App",
+          "type": "app",
+          "detail": "神州租车 App",
+          "note": null
+        },
+        "permits": [
+          {
+            "name": "边境管理区通行证",
+            "where_to_apply": "布尔津县政务服务中心 / 「新疆边防」公众号",
+            "lead_time_days": 0,
+            "applies_to": [
+              "喀纳斯 · 禾木（白哈巴需查验）"
+            ],
+            "source_ref": null
+          }
+        ]
+      },
+      "pace": "relaxed",
+      "diet": [
+        "不吃内脏",
+        "喜欢牛羊肉"
+      ],
+      "must_go": [
+        {
+          "name": "喀纳斯湖",
+          "amap_poi_id": "B0FFH3V5Q2",
+          "lng": null,
+          "lat": null,
+          "city": null,
+          "source_ref": null,
+          "season_closure": null
+        },
+        {
+          "name": "赛里木湖",
+          "amap_poi_id": "B03E700I9K",
+          "lng": null,
+          "lat": null,
+          "city": null,
+          "source_ref": null,
+          "season_closure": null
+        },
+        {
+          "name": "独库公路",
+          "amap_poi_id": "B0FFHKQ31X",
+          "lng": null,
+          "lat": null,
+          "city": null,
+          "source_ref": null,
+          "season_closure": {
+            "open_from": "06-01",
+            "open_to": "10-15",
+            "note": "往年 6 月上旬解除交通管制（2026 年通车时间以官方公告为准）",
+            "source_ref": "web:seed:duku"
+          }
+        }
+      ],
+      "must_avoid": [
+        {
+          "name": "购物团点位",
+          "amap_poi_id": null,
+          "lng": null,
+          "lat": null,
+          "city": null,
+          "source_ref": null,
+          "season_closure": null
+        }
+      ],
+      "assumptions": [
+        "按 2 人 / 中等预算估算，可修改",
+        "机票按经济舱全价预估，五一时段实际可能上浮 15–20%",
+        "喀纳斯、禾木住宿按景区内木屋标间估算",
+        "独库公路按往年 6 月上旬开放预估 —— 五一期间大概率封路"
+      ]
+    },
+    "days": [
+      {
+        "day_index": 1,
+        "date": "2026-05-01",
+        "theme": "上海 → 乌鲁木齐 · 落地适应",
+        "rhythm": {
+          "wake": "05:30:00",
+          "sleep": "23:30:00"
+        },
+        "stops": [
+          {
+            "stop_id": "d1s1",
+            "seq": 1,
+            "poi": {
+              "name": "乌鲁木齐 · 新疆国际大巴扎",
+              "amap_poi_id": "B0FFG1K9A0",
+              "lng": 87.6165,
+              "lat": 43.7915,
+              "city": "乌鲁木齐市",
+              "address": "天山区解放南路8号",
+              "source_ref": "poi:seed:d1s1"
+            },
+            "activities": [
+              {
+                "activity_id": "d1s1a1",
+                "seq": 1,
+                "type": "long_transit",
+                "title": "上海虹桥 ✈ 乌鲁木齐地窝堡",
+                "time_window": {
+                  "start": "08:00:00",
+                  "end": "13:20:00"
+                },
+                "note": "飞行约 5 小时 20 分，与内地有约 2 小时实际时差（作息整体后移）",
+                "tips": [
+                  "选左侧靠窗可看天山雪峰",
+                  "落地后手表/作息按新疆时间调整"
+                ],
+                "transit_from_prev": null,
+                "transit_detail": {
+                  "mode": "flight",
+                  "flight_no": "CA1234",
+                  "airline": "国航",
+                  "airport_from": "上海虹桥 T2",
+                  "airport_to": "乌鲁木齐地窝堡 T3",
+                  "dep_time": "08:00:00",
+                  "arr_time": "13:20:00",
+                  "source_ref": "route:seed:d1s1"
+                },
+                "food_detail": null,
+                "ticket": {
+                  "kind": "transport",
+                  "price_range": [
+                    1280.0,
+                    1580.0
+                  ],
+                  "currency": "CNY",
+                  "lead_time_days": 11,
+                  "real_name_required": true,
+                  "channels": [
+                    {
+                      "name": "航司官方 App",
+                      "type": "app",
+                      "detail": "国航 App · 值机选座",
+                      "note": "改签最方便"
+                    },
+                    {
+                      "name": "携程旅行",
+                      "type": "ota",
+                      "detail": "机票 · 上海→乌鲁木齐",
+                      "note": null
+                    },
+                    {
+                      "name": "飞猪",
+                      "type": "ota",
+                      "detail": "机票频道",
+                      "note": null
+                    }
+                  ],
+                  "recommended_purchase": {
+                    "target_date": "2026-05-01",
+                    "session": "早班 08:00",
+                    "lead_time_days": 11,
+                    "note": "五一首日票紧，建议 4月20日 前锁定"
+                  },
+                  "note": "含 20kg 托运",
+                  "source_ref": "web:seed:d1s1a1"
+                },
+                "source_refs": [
+                  "poi:seed:d1s1"
+                ]
+              },
+              {
+                "activity_id": "d1s1a2",
+                "seq": 2,
+                "type": "visit",
+                "title": "新疆国际大巴扎 · 步行街与观光塔",
+                "time_window": {
+                  "start": "16:00:00",
+                  "end": "19:00:00"
+                },
+                "note": "落地取车后轻松逛，适应时差不安排强度",
+                "tips": [
+                  "观光塔门票另购，时间紧可不登塔",
+                  "步行街晚上有民族歌舞表演（免费）"
+                ],
+                "transit_from_prev": {
+                  "mode": "drive",
+                  "minutes": 35,
+                  "distance_km": 21.0,
+                  "source_ref": "route:seed:d1s1a2"
+                },
+                "transit_detail": null,
+                "food_detail": null,
+                "ticket": {
+                  "kind": "none",
+                  "price_range": [
+                    0.0,
+                    0.0
+                  ],
+                  "currency": "CNY",
+                  "lead_time_days": 0,
+                  "real_name_required": false,
+                  "channels": [],
+                  "recommended_purchase": null,
+                  "note": "街区免费开放",
+                  "source_ref": "web:seed:d1s1a2"
+                },
+                "source_refs": [
+                  "poi:seed:d1s1"
+                ]
+              },
+              {
+                "activity_id": "d1s1a3",
+                "seq": 3,
+                "type": "meal",
+                "title": "晚餐 · 自行安排",
+                "time_window": {
+                  "start": "19:30:00",
+                  "end": "21:00:00"
+                },
+                "note": "",
+                "tips": [],
+                "transit_from_prev": {
+                  "mode": "walk",
+                  "minutes": 8,
+                  "distance_km": 0.6,
+                  "source_ref": "route:seed:d1s1a3"
+                },
+                "transit_detail": null,
+                "food_detail": {
+                  "shop_name": "海尔巴格餐厅（大巴扎店）",
+                  "dishes": [
+                    "手抓肉",
+                    "椒麻鸡",
+                    "格瓦斯"
+                  ],
+                  "per_person_price": 85.0,
+                  "poi": null,
+                  "source_ref": null
+                },
+                "ticket": null,
+                "source_refs": [
+                  "poi:seed:d1s1"
+                ]
+              },
+              {
+                "activity_id": "d1s1a4",
+                "seq": 4,
+                "type": "stay",
+                "title": "住宿 · 乌鲁木齐天山大厦",
+                "time_window": {
+                  "start": "21:30:00",
+                  "end": "23:30:00"
+                },
+                "note": "四钻 · 距明日出城高速口 10 分钟",
+                "tips": [
+                  "含双早，明早可打包路上吃"
+                ],
+                "transit_from_prev": {
+                  "mode": "drive",
+                  "minutes": 12,
+                  "distance_km": 5.0,
+                  "source_ref": "route:seed:d1s1a4"
+                },
+                "transit_detail": null,
+                "food_detail": null,
+                "ticket": {
+                  "kind": "hotel",
+                  "price_range": [
+                    480.0,
+                    560.0
+                  ],
+                  "currency": "CNY",
+                  "lead_time_days": 9,
+                  "real_name_required": true,
+                  "channels": [
+                    {
+                      "name": "携程酒店",
+                      "type": "ota",
+                      "detail": "搜「乌鲁木齐天山大厦」",
+                      "note": null
+                    },
+                    {
+                      "name": "美团",
+                      "type": "ota",
+                      "detail": "酒店频道",
+                      "note": "偶尔有立减券"
+                    }
+                  ],
+                  "recommended_purchase": {
+                    "target_date": "2026-05-01",
+                    "session": "5月1日 1晚",
+                    "lead_time_days": 9,
+                    "note": "五一房价上浮快，4月22日 前订可锁价"
+                  },
+                  "note": "免费停车",
+                  "source_ref": "web:seed:d1s1a4"
+                },
+                "source_refs": [
+                  "poi:seed:d1s1"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "day_index": 2,
+        "date": "2026-05-02",
+        "theme": "准噶尔盆地东缘 → 可可托海",
+        "rhythm": {
+          "wake": "08:00:00",
+          "sleep": "23:30:00"
+        },
+        "stops": [
+          {
+            "stop_id": "d2s1",
+            "seq": 1,
+            "poi": {
+              "name": "可可托海景区 · 额尔齐斯大峡谷",
+              "amap_poi_id": "B0FFHR22K1",
+              "lng": 89.7204,
+              "lat": 47.1912,
+              "city": "阿勒泰地区富蕴县",
+              "address": "可可托海镇",
+              "source_ref": "poi:seed:d2s1"
+            },
+            "activities": [
+              {
+                "activity_id": "d2s1a1",
+                "seq": 1,
+                "type": "long_transit",
+                "title": "乌鲁木齐 → 富蕴 · 自驾转场",
+                "time_window": {
+                  "start": "09:00:00",
+                  "end": "15:00:00"
+                },
+                "note": "G216 穿越准噶尔盆地东缘，服务区少，出发前加满油",
+                "tips": [
+                  "恰库尔图服务区是中途唯一可靠补给点"
+                ],
+                "transit_from_prev": null,
+                "transit_detail": {
+                  "mode": "self_drive",
+                  "distance_km": 486.0,
+                  "drive_minutes": 360,
+                  "waypoints_poi": [
+                    {
+                      "name": "五彩湾服务区",
+                      "amap_poi_id": null,
+                      "lng": null,
+                      "lat": null,
+                      "city": null,
+                      "source_ref": null,
+                      "season_closure": null
+                    },
+                    {
+                      "name": "恰库尔图镇",
+                      "amap_poi_id": null,
+                      "lng": null,
+                      "lat": null,
+                      "city": null,
+                      "source_ref": null,
+                      "season_closure": null
+                    }
+                  ],
+                  "road_refs": [
+                    "G216",
+                    "S226"
+                  ],
+                  "road_condition": "全程柏油路况良好，富蕴段有区间测速",
+                  "season_closure": null,
+                  "fuel_stops": [
+                    {
+                      "name": "恰库尔图镇中石化",
+                      "amap_poi_id": null,
+                      "lng": null,
+                      "lat": null,
+                      "city": null,
+                      "source_ref": null,
+                      "season_closure": null
+                    }
+                  ],
+                  "parking": "景区游客中心停车场 ¥10/次",
+                  "permit_required": false,
+                  "permit_note": null,
+                  "source_ref": "route:seed:d2s1"
+                },
+                "food_detail": null,
+                "ticket": null,
+                "source_refs": [
+                  "poi:seed:d2s1"
+                ]
+              },
+              {
+                "activity_id": "d2s1a2",
+                "seq": 2,
+                "type": "visit",
+                "title": "额尔齐斯大峡谷 · 神钟山",
+                "time_window": {
+                  "start": "15:40:00",
+                  "end": "19:30:00"
+                },
+                "note": "区间车进沟，沿河徒步至神钟山观景台",
+                "tips": [
+                  "区间车末班 19:00（进沟），务必留足返程时间",
+                  "5月初河谷风大，带冲锋衣"
+                ],
+                "transit_from_prev": {
+                  "mode": "drive",
+                  "minutes": 40,
+                  "distance_km": 52.0,
+                  "source_ref": "route:seed:d2s1a2"
+                },
+                "transit_detail": null,
+                "food_detail": null,
+                "ticket": {
+                  "kind": "attraction",
+                  "price_range": [
+                    150.0,
+                    190.0
+                  ],
+                  "currency": "CNY",
+                  "lead_time_days": 4,
+                  "real_name_required": true,
+                  "channels": [
+                    {
+                      "name": "微信公众号「可可托海旅游」",
+                      "type": "wechat_mp",
+                      "detail": "可可托海旅游",
+                      "note": "官方直营，可退改"
+                    },
+                    {
+                      "name": "微信小程序「智游可可托海」",
+                      "type": "mini_program",
+                      "detail": "智游可可托海",
+                      "note": null
+                    },
+                    {
+                      "name": "携程",
+                      "type": "ota",
+                      "detail": "门票 · 可可托海",
+                      "note": null
+                    }
+                  ],
+                  "recommended_purchase": {
+                    "target_date": "2026-05-02",
+                    "session": "5月2日 下午场",
+                    "lead_time_days": 4,
+                    "note": "含门票+区间车，4月28日 前下单"
+                  },
+                  "note": "门票 ¥90 + 区间车 ¥60",
+                  "source_ref": "web:seed:d2s1a2"
+                },
+                "source_refs": [
+                  "poi:seed:d2s1"
+                ]
+              },
+              {
+                "activity_id": "d2s1a3",
+                "seq": 3,
+                "type": "stay",
+                "title": "住宿 · 可可托海镇宝石宾馆",
+                "time_window": {
+                  "start": "21:00:00",
+                  "end": "23:30:00"
+                },
+                "note": "镇上条件最好的选择，有地暖",
+                "tips": [
+                  "镇上餐厅 22:00 后陆续打烊，晚餐建议在景区门口解决"
+                ],
+                "transit_from_prev": {
+                  "mode": "drive",
+                  "minutes": 15,
+                  "distance_km": 9.0,
+                  "source_ref": "route:seed:d2s1a3"
+                },
+                "transit_detail": null,
+                "food_detail": null,
+                "ticket": {
+                  "kind": "hotel",
+                  "price_range": [
+                    320.0,
+                    400.0
+                  ],
+                  "currency": "CNY",
+                  "lead_time_days": 6,
+                  "real_name_required": true,
+                  "channels": [
+                    {
+                      "name": "美团",
+                      "type": "ota",
+                      "detail": "搜「可可托海宝石宾馆」",
+                      "note": null
+                    },
+                    {
+                      "name": "电话直订",
+                      "type": "onsite",
+                      "detail": "0906-878****",
+                      "note": "可谈含早"
+                    }
+                  ],
+                  "recommended_purchase": {
+                    "target_date": "2026-05-02",
+                    "session": "5月2日 1晚",
+                    "lead_time_days": 6,
+                    "note": "镇上房源少，4月26日 前预订"
+                  },
+                  "note": "",
+                  "source_ref": "web:seed:d2s1a3"
+                },
+                "source_refs": [
+                  "poi:seed:d2s1"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "day_index": 3,
+        "date": "2026-05-03",
+        "theme": "喀纳斯 → 禾木",
+        "rhythm": {
+          "wake": "09:00:00",
+          "sleep": "23:30:00"
+        },
+        "stops": [
+          {
+            "stop_id": "d3s1",
+            "seq": 1,
+            "poi": {
+              "name": "阿勒泰市 · 克兰河午餐补给",
+              "amap_poi_id": "B0FFHM01P7",
+              "lng": 88.1396,
+              "lat": 47.8452,
+              "city": "阿勒泰市",
+              "address": "克兰河沿线",
+              "source_ref": "poi:seed:d3s1"
+            },
+            "activities": [
+              {
+                "activity_id": "d3s1a1",
+                "seq": 1,
+                "type": "long_transit",
+                "title": "可可托海 → 阿勒泰 · 自驾转场",
+                "time_window": {
+                  "start": "09:30:00",
+                  "end": "12:00:00"
+                },
+                "note": "",
+                "tips": [],
+                "transit_from_prev": null,
+                "transit_detail": {
+                  "mode": "self_drive",
+                  "distance_km": 196.0,
+                  "drive_minutes": 150,
+                  "waypoints_poi": [
+                    {
+                      "name": "北屯市",
+                      "amap_poi_id": null,
+                      "lng": null,
+                      "lat": null,
+                      "city": null,
+                      "source_ref": null,
+                      "season_closure": null
+                    }
+                  ],
+                  "road_refs": [
+                    "G216",
+                    "S319"
+                  ],
+                  "road_condition": "路况良好",
+                  "season_closure": null,
+                  "fuel_stops": [
+                    {
+                      "name": "北屯中石油",
+                      "amap_poi_id": null,
+                      "lng": null,
+                      "lat": null,
+                      "city": null,
+                      "source_ref": null,
+                      "season_closure": null
+                    }
+                  ],
+                  "parking": "路边免费",
+                  "permit_required": false,
+                  "permit_note": null,
+                  "source_ref": "route:seed:d3s1"
+                },
+                "food_detail": null,
+                "ticket": null,
+                "source_refs": [
+                  "poi:seed:d3s1"
+                ]
+              },
+              {
+                "activity_id": "d3s1a2",
+                "seq": 2,
+                "type": "meal",
+                "title": "午餐 · 自行安排",
+                "time_window": {
+                  "start": "12:00:00",
+                  "end": "13:00:00"
+                },
+                "note": "",
+                "tips": [],
+                "transit_from_prev": {
+                  "mode": "drive",
+                  "minutes": 5,
+                  "distance_km": 2.0,
+                  "source_ref": "route:seed:d3s1a2"
+                },
+                "transit_detail": null,
+                "food_detail": {
+                  "shop_name": "额河烤鱼店（克兰河路店）",
+                  "dishes": [
+                    "烤狗鱼",
+                    "包尔萨克",
+                    "奶茶"
+                  ],
+                  "per_person_price": 70.0,
+                  "poi": null,
+                  "source_ref": null
+                },
+                "ticket": null,
+                "source_refs": [
+                  "poi:seed:d3s1"
+                ]
+              },
+              {
+                "activity_id": "d3s1a3",
+                "seq": 3,
+                "type": "visit",
+                "title": "加油 + 边防证核验点确认",
+                "time_window": {
+                  "start": "13:00:00",
+                  "end": "13:30:00"
+                },
+                "note": "进布尔津前加满油；白哈巴方向查验边境通行证",
+                "tips": [
+                  "布尔津起全程山区，油量保持半箱以上"
+                ],
+                "transit_from_prev": {
+                  "mode": "drive",
+                  "minutes": 8,
+                  "distance_km": 4.0,
+                  "source_ref": "route:seed:d3s1a3"
+                },
+                "transit_detail": null,
+                "food_detail": null,
+                "ticket": {
+                  "kind": "none",
+                  "price_range": [
+                    0.0,
+                    0.0
+                  ],
+                  "currency": "CNY",
+                  "lead_time_days": 0,
+                  "real_name_required": false,
+                  "channels": [],
+                  "recommended_purchase": null,
+                  "note": "",
+                  "source_ref": "web:seed:d3s1a3"
+                },
+                "source_refs": [
+                  "poi:seed:d3s1"
+                ]
+              }
+            ]
+          },
+          {
+            "stop_id": "d3s2",
+            "seq": 2,
+            "poi": {
+              "name": "布尔津 · 五彩滩",
+              "amap_poi_id": "B0FFHN55T2",
+              "lng": 86.8744,
+              "lat": 47.8045,
+              "city": "阿勒泰地区布尔津县",
+              "address": "县城北侧额尔齐斯河北岸",
+              "source_ref": "poi:seed:d3s2"
+            },
+            "activities": [
+              {
+                "activity_id": "d3s2a1",
+                "seq": 1,
+                "type": "visit",
+                "title": "五彩滩 · 雅丹地貌观景",
+                "time_window": {
+                  "start": "15:30:00",
+                  "end": "16:40:00"
+                },
+                "note": "顺路短停 1 小时，主观景台看额河北岸雅丹",
+                "tips": [
+                  "日落场最美但会与禾木行程冲突，此程放弃"
+                ],
+                "transit_from_prev": {
+                  "mode": "drive",
+                  "minutes": 145,
+                  "distance_km": 148.0,
+                  "source_ref": "route:seed:d3s2a1"
+                },
+                "transit_detail": null,
+                "food_detail": null,
+                "ticket": {
+                  "kind": "attraction",
+                  "price_range": [
+                    50.0,
+                    50.0
+                  ],
+                  "currency": "CNY",
+                  "lead_time_days": 1,
+                  "real_name_required": false,
+                  "channels": [
+                    {
+                      "name": "美团",
+                      "type": "ota",
+                      "detail": "门票 · 五彩滩",
+                      "note": null
+                    },
+                    {
+                      "name": "现场购票",
+                      "type": "onsite",
+                      "detail": "景区售票处",
+                      "note": "旺季排队 20 分钟"
+                    }
+                  ],
+                  "recommended_purchase": null,
+                  "note": "",
+                  "source_ref": "web:seed:d3s2a1"
+                },
+                "source_refs": [
+                  "poi:seed:d3s2"
+                ]
+              }
+            ]
+          },
+          {
+            "stop_id": "d3s3",
+            "seq": 3,
+            "poi": {
+              "name": "喀纳斯湖 · 三湾徒步",
+              "amap_poi_id": "B0FFH3V5Q2",
+              "lng": 87.0206,
+              "lat": 48.7231,
+              "city": "阿勒泰地区布尔津县",
+              "address": "喀纳斯景区（贾登峪门票站进）",
+              "source_ref": "poi:seed:d3s3"
+            },
+            "activities": [
+              {
+                "activity_id": "d3s3a1",
+                "seq": 1,
+                "type": "visit",
+                "title": "三湾徒步 · 神仙湾–月亮湾–卧龙湾",
+                "time_window": {
+                  "start": "17:30:00",
+                  "end": "19:30:00"
+                },
+                "note": "区间车至神仙湾下，沿栈道徒步约 5km 依次看三湾",
+                "tips": [
+                  "区间车末班 19:00（换乘中心方向），徒步需控制节奏",
+                  "5月初栈道部分残雪，防滑鞋"
+                ],
+                "transit_from_prev": {
+                  "mode": "drive",
+                  "minutes": 95,
+                  "distance_km": 86.0,
+                  "source_ref": "route:seed:d3s3a1"
+                },
+                "transit_detail": null,
+                "food_detail": null,
+                "ticket": {
+                  "kind": "attraction",
+                  "price_range": [
+                    230.0,
+                    280.0
+                  ],
+                  "currency": "CNY",
+                  "lead_time_days": 3,
+                  "real_name_required": true,
+                  "channels": [
+                    {
+                      "name": "微信公众号「喀纳斯景区」",
+                      "type": "wechat_mp",
+                      "detail": "喀纳斯景区",
+                      "note": "官方首选，实名预约"
+                    },
+                    {
+                      "name": "微信小程序「喀纳斯智慧旅游」",
+                      "type": "mini_program",
+                      "detail": "喀纳斯智慧旅游",
+                      "note": null
+                    },
+                    {
+                      "name": "美团 / 携程",
+                      "type": "ota",
+                      "detail": "门票 · 喀纳斯",
+                      "note": null
+                    }
+                  ],
+                  "recommended_purchase": {
+                    "target_date": "2026-05-03",
+                    "session": "5月3日 上午场",
+                    "lead_time_days": 3,
+                    "note": "最迟 4月30日 下单；门票+区间车一票制"
+                  },
+                  "note": "门票 ¥160 + 区间车 ¥70–120",
+                  "source_ref": "web:seed:d3s3a1"
+                },
+                "source_refs": [
+                  "poi:seed:d3s3"
+                ]
+              }
+            ]
+          },
+          {
+            "stop_id": "d3s4",
+            "seq": 4,
+            "poi": {
+              "name": "禾木村 · 日落观景",
+              "amap_poi_id": "B0FFHP88W3",
+              "lng": 87.4167,
+              "lat": 48.8306,
+              "city": "阿勒泰地区布尔津县",
+              "address": "禾木哈纳斯民族乡",
+              "source_ref": "poi:seed:d3s4"
+            },
+            "activities": [
+              {
+                "activity_id": "d3s4a1",
+                "seq": 1,
+                "type": "visit",
+                "title": "禾木日落 · 哈登观景台",
+                "time_window": {
+                  "start": "19:00:00",
+                  "end": "21:30:00"
+                },
+                "note": "日落约 21:20（新疆时间），观景台俯瞰全村炊烟",
+                "tips": [
+                  "观景台徒步上山约 20 分钟，也可骑马 ¥50",
+                  "日落后骤冷，抓绒+外套"
+                ],
+                "transit_from_prev": {
+                  "mode": "drive",
+                  "minutes": 70,
+                  "distance_km": 62.0,
+                  "source_ref": "route:seed:d3s4a1"
+                },
+                "transit_detail": null,
+                "food_detail": null,
+                "ticket": {
+                  "kind": "attraction",
+                  "price_range": [
+                    102.0,
+                    102.0
+                  ],
+                  "currency": "CNY",
+                  "lead_time_days": 3,
+                  "real_name_required": true,
+                  "channels": [
+                    {
+                      "name": "微信公众号「喀纳斯景区」",
+                      "type": "wechat_mp",
+                      "detail": "喀纳斯景区",
+                      "note": "禾木门票同公众号购买"
+                    },
+                    {
+                      "name": "微信小程序「喀纳斯智慧旅游」",
+                      "type": "mini_program",
+                      "detail": "喀纳斯智慧旅游",
+                      "note": null
+                    }
+                  ],
+                  "recommended_purchase": {
+                    "target_date": "2026-05-03",
+                    "session": "与喀纳斯联票",
+                    "lead_time_days": 3,
+                    "note": "禾木门票 ¥50 + 区间车 ¥52"
+                  },
+                  "note": "",
+                  "source_ref": "web:seed:d3s4a1"
+                },
+                "source_refs": [
+                  "poi:seed:d3s4"
+                ]
+              },
+              {
+                "activity_id": "d3s4a2",
+                "seq": 2,
+                "type": "stay",
+                "title": "住宿 · 禾木山庄（景区内木屋）",
+                "time_window": {
+                  "start": "22:00:00",
+                  "end": "23:30:00"
+                },
+                "note": "景区内住宿贵但省去二次进沟",
+                "tips": [
+                  "木屋隔音一般，备耳塞",
+                  "明早看晨雾步行 10 分钟到禾木桥"
+                ],
+                "transit_from_prev": {
+                  "mode": "walk",
+                  "minutes": 10,
+                  "distance_km": 0.8,
+                  "source_ref": "route:seed:d3s4a2"
+                },
+                "transit_detail": null,
+                "food_detail": null,
+                "ticket": {
+                  "kind": "hotel",
+                  "price_range": [
+                    680.0,
+                    880.0
+                  ],
+                  "currency": "CNY",
+                  "lead_time_days": 7,
+                  "real_name_required": true,
+                  "channels": [
+                    {
+                      "name": "微信公众号「喀纳斯景区」",
+                      "type": "wechat_mp",
+                      "detail": "喀纳斯景区 · 住宿预订",
+                      "note": "景区直营"
+                    },
+                    {
+                      "name": "携程",
+                      "type": "ota",
+                      "detail": "搜「禾木山庄」",
+                      "note": null
+                    }
+                  ],
+                  "recommended_purchase": {
+                    "target_date": "2026-05-03",
+                    "session": "5月3日 1晚",
+                    "lead_time_days": 7,
+                    "note": "五一禾木住宿最紧张，4月26日 前必订"
+                  },
+                  "note": "",
+                  "source_ref": "web:seed:d3s4a2"
+                },
+                "source_refs": [
+                  "poi:seed:d3s4"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "day_index": 4,
+        "date": "2026-05-04",
+        "theme": "禾木晨雾 → 乌尔禾魔鬼城",
+        "rhythm": {
+          "wake": "07:00:00",
+          "sleep": "23:30:00"
+        },
+        "stops": [
+          {
+            "stop_id": "d4s1",
+            "seq": 1,
+            "poi": {
+              "name": "禾木河谷 · 晨雾观景",
+              "amap_poi_id": "B0FFHP88W4",
+              "lng": 87.4231,
+              "lat": 48.8352,
+              "city": "阿勒泰地区布尔津县",
+              "address": "禾木桥–美丽峰方向",
+              "source_ref": "poi:seed:d4s1"
+            },
+            "activities": [
+              {
+                "activity_id": "d4s1a1",
+                "seq": 1,
+                "type": "visit",
+                "title": "禾木晨雾 · 禾木桥日出",
+                "time_window": {
+                  "start": "07:30:00",
+                  "end": "09:30:00"
+                },
+                "note": "清晨河谷炊烟与晨雾，5月日出约 07:10",
+                "tips": [
+                  "最佳机位在禾木桥东侧河岸",
+                  "零下气温，手套帽子"
+                ],
+                "transit_from_prev": {
+                  "mode": "walk",
+                  "minutes": 10,
+                  "distance_km": 0.8,
+                  "source_ref": "route:seed:d4s1a1"
+                },
+                "transit_detail": null,
+                "food_detail": null,
+                "ticket": {
+                  "kind": "none",
+                  "price_range": [
+                    0.0,
+                    0.0
+                  ],
+                  "currency": "CNY",
+                  "lead_time_days": 0,
+                  "real_name_required": false,
+                  "channels": [],
+                  "recommended_purchase": null,
+                  "note": "含在昨日禾木门票内",
+                  "source_ref": "web:seed:d4s1a1"
+                },
+                "source_refs": [
+                  "poi:seed:d4s1"
+                ]
+              }
+            ]
+          },
+          {
+            "stop_id": "d4s2",
+            "seq": 2,
+            "poi": {
+              "name": "乌尔禾世界魔鬼城",
+              "amap_poi_id": "B0FFHJ61D8",
+              "lng": 85.6872,
+              "lat": 46.0984,
+              "city": "克拉玛依市乌尔禾区",
+              "address": "G217 与 S201 交叉口东北",
+              "source_ref": "poi:seed:d4s2"
+            },
+            "activities": [
+              {
+                "activity_id": "d4s2a1",
+                "seq": 1,
+                "type": "long_transit",
+                "title": "禾木 → 乌尔禾 · 自驾转场",
+                "time_window": {
+                  "start": "10:00:00",
+                  "end": "15:30:00"
+                },
+                "note": "出山路窄，布尔津午餐后上高速",
+                "tips": [],
+                "transit_from_prev": {
+                  "mode": "drive",
+                  "minutes": 45,
+                  "distance_km": 52.0,
+                  "source_ref": "route:seed:d4s2a1"
+                },
+                "transit_detail": {
+                  "mode": "self_drive",
+                  "distance_km": 430.0,
+                  "drive_minutes": 330,
+                  "waypoints_poi": [
+                    {
+                      "name": "布尔津县",
+                      "amap_poi_id": null,
+                      "lng": null,
+                      "lat": null,
+                      "city": null,
+                      "source_ref": null,
+                      "season_closure": null
+                    },
+                    {
+                      "name": "和布克赛尔",
+                      "amap_poi_id": null,
+                      "lng": null,
+                      "lat": null,
+                      "city": null,
+                      "source_ref": null,
+                      "season_closure": null
+                    }
+                  ],
+                  "road_refs": [
+                    "S232",
+                    "G3014"
+                  ],
+                  "road_condition": "高速为主，戈壁段注意横风",
+                  "season_closure": null,
+                  "fuel_stops": [
+                    {
+                      "name": "布尔津中石化",
+                      "amap_poi_id": null,
+                      "lng": null,
+                      "lat": null,
+                      "city": null,
+                      "source_ref": null,
+                      "season_closure": null
+                    },
+                    {
+                      "name": "乌尔禾服务区",
+                      "amap_poi_id": null,
+                      "lng": null,
+                      "lat": null,
+                      "city": null,
+                      "source_ref": null,
+                      "season_closure": null
+                    }
+                  ],
+                  "parking": "景区停车场免费",
+                  "permit_required": false,
+                  "permit_note": null,
+                  "source_ref": "route:seed:d4s2"
+                },
+                "food_detail": null,
+                "ticket": null,
+                "source_refs": [
+                  "poi:seed:d4s2"
+                ]
+              },
+              {
+                "activity_id": "d4s2a2",
+                "seq": 2,
+                "type": "visit",
+                "title": "魔鬼城 · 观光小火车雅丹环线",
+                "time_window": {
+                  "start": "16:00:00",
+                  "end": "19:00:00"
+                },
+                "note": "日落前光线最佳，风蚀城堡群",
+                "tips": [
+                  "戈壁大风，帽子墨镜收好",
+                  "小火车末班 19:30"
+                ],
+                "transit_from_prev": {
+                  "mode": "walk",
+                  "minutes": 3,
+                  "distance_km": 0.2,
+                  "source_ref": "route:seed:d4s2a2"
+                },
+                "transit_detail": null,
+                "food_detail": null,
+                "ticket": {
+                  "kind": "attraction",
+                  "price_range": [
+                    68.0,
+                    98.0
+                  ],
+                  "currency": "CNY",
+                  "lead_time_days": 1,
+                  "real_name_required": false,
+                  "channels": [
+                    {
+                      "name": "微信公众号「克拉玛依文旅」",
+                      "type": "wechat_mp",
+                      "detail": "克拉玛依文旅",
+                      "note": null
+                    },
+                    {
+                      "name": "携程",
+                      "type": "ota",
+                      "detail": "门票 · 魔鬼城",
+                      "note": null
+                    }
+                  ],
+                  "recommended_purchase": null,
+                  "note": "含区间小火车",
+                  "source_ref": "web:seed:d4s2a2"
+                },
+                "source_refs": [
+                  "poi:seed:d4s2"
+                ]
+              }
+            ]
+          },
+          {
+            "stop_id": "d4s3",
+            "seq": 3,
+            "poi": {
+              "name": "奎屯市 · 住宿补给",
+              "amap_poi_id": "B0FFHK30C9",
+              "lng": 84.9017,
+              "lat": 44.4252,
+              "city": "伊犁州奎屯市",
+              "address": "乌鲁木齐西路",
+              "source_ref": "poi:seed:d4s3"
+            },
+            "activities": [
+              {
+                "activity_id": "d4s3a1",
+                "seq": 1,
+                "type": "stay",
+                "title": "住宿 · 奎屯锦江都城",
+                "time_window": {
+                  "start": "21:30:00",
+                  "end": "23:30:00"
+                },
+                "note": "中转补给点，明早直奔赛里木湖",
+                "tips": [
+                  "加满油再休息，明早行程 2.5h"
+                ],
+                "transit_from_prev": {
+                  "mode": "drive",
+                  "minutes": 150,
+                  "distance_km": 235.0,
+                  "source_ref": "route:seed:d4s3a1"
+                },
+                "transit_detail": null,
+                "food_detail": null,
+                "ticket": {
+                  "kind": "hotel",
+                  "price_range": [
+                    300.0,
+                    380.0
+                  ],
+                  "currency": "CNY",
+                  "lead_time_days": 4,
+                  "real_name_required": true,
+                  "channels": [
+                    {
+                      "name": "携程",
+                      "type": "ota",
+                      "detail": "搜「奎屯锦江都城」",
+                      "note": null
+                    }
+                  ],
+                  "recommended_purchase": null,
+                  "note": "",
+                  "source_ref": "web:seed:d4s3a1"
+                },
+                "source_refs": [
+                  "poi:seed:d4s3"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "day_index": 5,
+        "date": "2026-05-05",
+        "theme": "赛里木湖环湖一整天",
+        "rhythm": {
+          "wake": "08:00:00",
+          "sleep": "23:00:00"
+        },
+        "stops": [
+          {
+            "stop_id": "d5s1",
+            "seq": 1,
+            "poi": {
+              "name": "赛里木湖 · 环湖自驾",
+              "amap_poi_id": "B03E700I9K",
+              "lng": 81.1671,
+              "lat": 44.6083,
+              "city": "博尔塔拉州博乐市",
+              "address": "G30 连霍高速赛里木湖出口",
+              "source_ref": "poi:seed:d5s1"
+            },
+            "activities": [
+              {
+                "activity_id": "d5s1a1",
+                "seq": 1,
+                "type": "visit",
+                "title": "环湖自驾 · 顺时针全环 90km",
+                "time_window": {
+                  "start": "09:00:00",
+                  "end": "13:00:00"
+                },
+                "note": "点将台–天鹅广场–西海草原依次停靠；v7 已把环湖调整到上午（光线顺、人少）",
+                "tips": [
+                  "5月初湖面可能仍有残冰「蓝冰」，留意安全提示",
+                  "环湖限速 40–60，全程 2.5h 纯驾车"
+                ],
+                "transit_from_prev": {
+                  "mode": "drive",
+                  "minutes": 150,
+                  "distance_km": 246.0,
+                  "source_ref": "route:seed:d5s1a1"
+                },
+                "transit_detail": null,
+                "food_detail": null,
+                "ticket": {
+                  "kind": "attraction",
+                  "price_range": [
+                    140.0,
+                    145.0
+                  ],
+                  "currency": "CNY",
+                  "lead_time_days": 2,
+                  "real_name_required": true,
+                  "channels": [
+                    {
+                      "name": "微信公众号「赛里木湖旅游」",
+                      "type": "wechat_mp",
+                      "detail": "赛里木湖旅游",
+                      "note": "官方购票+区间车"
+                    },
+                    {
+                      "name": "携程",
+                      "type": "ota",
+                      "detail": "门票 · 赛里木湖",
+                      "note": null
+                    }
+                  ],
+                  "recommended_purchase": {
+                    "target_date": "2026-05-05",
+                    "session": "5月5日 上午场",
+                    "lead_time_days": 2,
+                    "note": "自驾环湖需另付车辆进入费"
+                  },
+                  "note": "门票 ¥70 + 环湖自驾费 ¥70–75/车",
+                  "source_ref": "web:seed:d5s1a1"
+                },
+                "source_refs": [
+                  "poi:seed:d5s1"
+                ]
+              },
+              {
+                "activity_id": "d5s1a2",
+                "seq": 2,
+                "type": "free",
+                "title": "湖畔自由活动",
+                "time_window": {
+                  "start": "14:00:00",
+                  "end": "18:00:00"
+                },
+                "note": "西海草原发呆 / 补拍照片，节奏自己定",
+                "tips": [],
+                "transit_from_prev": null,
+                "transit_detail": null,
+                "food_detail": null,
+                "ticket": {
+                  "kind": "none",
+                  "price_range": [
+                    0.0,
+                    0.0
+                  ],
+                  "currency": "CNY",
+                  "lead_time_days": 0,
+                  "real_name_required": false,
+                  "channels": [],
+                  "recommended_purchase": null,
+                  "note": "",
+                  "source_ref": "web:seed:d5s1a2"
+                },
+                "source_refs": [
+                  "poi:seed:d5s1"
+                ]
+              },
+              {
+                "activity_id": "d5s1a3",
+                "seq": 3,
+                "type": "stay",
+                "title": "住宿 · 赛里木湖景区毡房营地（升级版）",
+                "time_window": {
+                  "start": "20:00:00",
+                  "end": "23:00:00"
+                },
+                "note": "湖景星空毡房，公共卫浴升级版；怕冷可退到博乐市区酒店",
+                "tips": [
+                  "夜间湖边 0°C 左右，睡袋内胆自备更卫生",
+                  "看星空远离停车场灯光"
+                ],
+                "transit_from_prev": {
+                  "mode": "drive",
+                  "minutes": 10,
+                  "distance_km": 6.0,
+                  "source_ref": "route:seed:d5s1a3"
+                },
+                "transit_detail": null,
+                "food_detail": null,
+                "ticket": {
+                  "kind": "hotel",
+                  "price_range": [
+                    560.0,
+                    760.0
+                  ],
+                  "currency": "CNY",
+                  "lead_time_days": 5,
+                  "real_name_required": true,
+                  "channels": [
+                    {
+                      "name": "微信公众号「赛里木湖旅游」",
+                      "type": "wechat_mp",
+                      "detail": "赛里木湖旅游 · 营地预订",
+                      "note": null
+                    },
+                    {
+                      "name": "美团",
+                      "type": "ota",
+                      "detail": "搜「赛里木湖毡房」",
+                      "note": null
+                    }
+                  ],
+                  "recommended_purchase": {
+                    "target_date": "2026-05-05",
+                    "session": "5月5日 1晚",
+                    "lead_time_days": 5,
+                    "note": "4月30日 前预订，五一湖景房极紧张"
+                  },
+                  "note": "",
+                  "source_ref": "web:seed:d5s1a3"
+                },
+                "source_refs": [
+                  "poi:seed:d5s1"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "day_index": 6,
+        "date": "2026-05-06",
+        "theme": "果子沟大桥 → 伊宁老城",
+        "rhythm": {
+          "wake": "07:30:00",
+          "sleep": "23:00:00"
+        },
+        "stops": [
+          {
+            "stop_id": "d6s1",
+            "seq": 1,
+            "poi": {
+              "name": "伊宁 · 喀赞其民俗旅游区",
+              "amap_poi_id": "B0FFHQ21M4",
+              "lng": 81.3297,
+              "lat": 43.9128,
+              "city": "伊犁州伊宁市",
+              "address": "喀赞其街道",
+              "source_ref": "poi:seed:d6s1"
+            },
+            "activities": [
+              {
+                "activity_id": "d6s1a1",
+                "seq": 1,
+                "type": "long_transit",
+                "title": "赛里木湖 → 伊宁 · 果子沟大桥",
+                "time_window": {
+                  "start": "09:00:00",
+                  "end": "11:30:00"
+                },
+                "note": "G30 经果子沟大桥下山，桥面禁止停车，观景台在服务区",
+                "tips": [
+                  "果子沟服务区可回望大桥全景",
+                  "下坡长，注意刹车温度"
+                ],
+                "transit_from_prev": null,
+                "transit_detail": {
+                  "mode": "self_drive",
+                  "distance_km": 130.0,
+                  "drive_minutes": 120,
+                  "waypoints_poi": [
+                    {
+                      "name": "果子沟大桥",
+                      "amap_poi_id": null,
+                      "lng": null,
+                      "lat": null,
+                      "city": null,
+                      "source_ref": null,
+                      "season_closure": null
+                    },
+                    {
+                      "name": "果子沟服务区",
+                      "amap_poi_id": null,
+                      "lng": null,
+                      "lat": null,
+                      "city": null,
+                      "source_ref": null,
+                      "season_closure": null
+                    }
+                  ],
+                  "road_refs": [
+                    "G30"
+                  ],
+                  "road_condition": "山区高速，隧道多",
+                  "season_closure": null,
+                  "fuel_stops": [],
+                  "parking": "喀赞其周边收费停车场",
+                  "permit_required": false,
+                  "permit_note": null,
+                  "source_ref": "route:seed:d6s1"
+                },
+                "food_detail": null,
+                "ticket": null,
+                "source_refs": [
+                  "poi:seed:d6s1"
+                ]
+              },
+              {
+                "activity_id": "d6s1a2",
+                "seq": 2,
+                "type": "visit",
+                "title": "喀赞其 · 蓝色老城马车巡游",
+                "time_window": {
+                  "start": "14:00:00",
+                  "end": "17:30:00"
+                },
+                "note": "哈迪克马车穿巷，蓝色民居与手工艺小院",
+                "tips": [
+                  "马车线路约 1h，剩下时间步行逛",
+                  "家访需另付 ¥30–50"
+                ],
+                "transit_from_prev": {
+                  "mode": "drive",
+                  "minutes": 20,
+                  "distance_km": 8.0,
+                  "source_ref": "route:seed:d6s1a2"
+                },
+                "transit_detail": null,
+                "food_detail": null,
+                "ticket": {
+                  "kind": "attraction",
+                  "price_range": [
+                    50.0,
+                    100.0
+                  ],
+                  "currency": "CNY",
+                  "lead_time_days": 0,
+                  "real_name_required": false,
+                  "channels": [
+                    {
+                      "name": "现场购票",
+                      "type": "onsite",
+                      "detail": "喀赞其游客中心",
+                      "note": "马车+讲解套票"
+                    },
+                    {
+                      "name": "美团",
+                      "type": "ota",
+                      "detail": "门票 · 喀赞其",
+                      "note": null
+                    }
+                  ],
+                  "recommended_purchase": null,
+                  "note": "",
+                  "source_ref": "web:seed:d6s1a2"
+                },
+                "source_refs": [
+                  "poi:seed:d6s1"
+                ]
+              }
+            ]
+          },
+          {
+            "stop_id": "d6s2",
+            "seq": 2,
+            "poi": {
+              "name": "伊宁 · 六星街",
+              "amap_poi_id": "B0FFHQ21M5",
+              "lng": 81.3177,
+              "lat": 43.9211,
+              "city": "伊犁州伊宁市",
+              "address": "六星街景区",
+              "source_ref": "poi:seed:d6s2"
+            },
+            "activities": [
+              {
+                "activity_id": "d6s2a1",
+                "seq": 1,
+                "type": "meal",
+                "title": "晚餐 · 自行安排",
+                "time_window": {
+                  "start": "19:00:00",
+                  "end": "21:00:00"
+                },
+                "note": "",
+                "tips": [
+                  "手风琴博物馆就在街口，饭后顺看"
+                ],
+                "transit_from_prev": {
+                  "mode": "drive",
+                  "minutes": 10,
+                  "distance_km": 3.0,
+                  "source_ref": "route:seed:d6s2a1"
+                },
+                "transit_detail": null,
+                "food_detail": {
+                  "shop_name": "亚历山大庭院餐厅",
+                  "dishes": [
+                    "罐罐牛肉",
+                    "奶疙瘩",
+                    "卡瓦斯"
+                  ],
+                  "per_person_price": 95.0,
+                  "poi": null,
+                  "source_ref": null
+                },
+                "ticket": null,
+                "source_refs": [
+                  "poi:seed:d6s2"
+                ]
+              },
+              {
+                "activity_id": "d6s2a2",
+                "seq": 2,
+                "type": "stay",
+                "title": "住宿 · 伊宁天缘国际酒店",
+                "time_window": {
+                  "start": "21:30:00",
+                  "end": "23:00:00"
+                },
+                "note": "市中心四钻，明早出发去特克斯方便",
+                "tips": [],
+                "transit_from_prev": {
+                  "mode": "walk",
+                  "minutes": 12,
+                  "distance_km": 1.0,
+                  "source_ref": "route:seed:d6s2a2"
+                },
+                "transit_detail": null,
+                "food_detail": null,
+                "ticket": {
+                  "kind": "hotel",
+                  "price_range": [
+                    420.0,
+                    500.0
+                  ],
+                  "currency": "CNY",
+                  "lead_time_days": 3,
+                  "real_name_required": true,
+                  "channels": [
+                    {
+                      "name": "携程",
+                      "type": "ota",
+                      "detail": "搜「伊宁天缘国际」",
+                      "note": null
+                    }
+                  ],
+                  "recommended_purchase": null,
+                  "note": "",
+                  "source_ref": "web:seed:d6s2a2"
+                },
+                "source_refs": [
+                  "poi:seed:d6s2"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "day_index": 7,
+        "date": "2026-05-07",
+        "theme": "特克斯八卦城 → 琼库什台",
+        "rhythm": {
+          "wake": "08:30:00",
+          "sleep": "23:00:00"
+        },
+        "stops": [
+          {
+            "stop_id": "d7s1",
+            "seq": 1,
+            "poi": {
+              "name": "特克斯八卦城 · 离街",
+              "amap_poi_id": "B0FFHR90K6",
+              "lng": 81.8399,
+              "lat": 43.2148,
+              "city": "伊犁州特克斯县",
+              "address": "八卦城中心",
+              "source_ref": "poi:seed:d7s1"
+            },
+            "activities": [
+              {
+                "activity_id": "d7s1a1",
+                "seq": 1,
+                "type": "visit",
+                "title": "八卦城观光塔 + 离街漫步",
+                "time_window": {
+                  "start": "11:00:00",
+                  "end": "13:00:00"
+                },
+                "note": "全球唯一保存完整的八卦布局城市",
+                "tips": [
+                  "观光塔顶看八卦全景，¥30"
+                ],
+                "transit_from_prev": {
+                  "mode": "drive",
+                  "minutes": 130,
+                  "distance_km": 118.0,
+                  "source_ref": "route:seed:d7s1a1"
+                },
+                "transit_detail": null,
+                "food_detail": null,
+                "ticket": {
+                  "kind": "attraction",
+                  "price_range": [
+                    0.0,
+                    30.0
+                  ],
+                  "currency": "CNY",
+                  "lead_time_days": 0,
+                  "real_name_required": false,
+                  "channels": [
+                    {
+                      "name": "现场购票",
+                      "type": "onsite",
+                      "detail": "观光塔售票处",
+                      "note": null
+                    }
+                  ],
+                  "recommended_purchase": null,
+                  "note": "街区免费",
+                  "source_ref": "web:seed:d7s1a1"
+                },
+                "source_refs": [
+                  "poi:seed:d7s1"
+                ]
+              }
+            ]
+          },
+          {
+            "stop_id": "d7s2",
+            "seq": 2,
+            "poi": {
+              "name": "琼库什台村",
+              "amap_poi_id": "B0FFHR90K7",
+              "lng": 82.0986,
+              "lat": 43.0503,
+              "city": "伊犁州特克斯县",
+              "address": "喀拉达拉镇琼库什台村",
+              "source_ref": "poi:seed:d7s2"
+            },
+            "activities": [
+              {
+                "activity_id": "d7s2a1",
+                "seq": 1,
+                "type": "visit",
+                "title": "琼库什台 · 乌孙古道入口河谷",
+                "time_window": {
+                  "start": "14:30:00",
+                  "end": "18:30:00"
+                },
+                "note": "原木哈萨克村落 + 河谷草甸短徒步（4km 往返）",
+                "tips": [
+                  "进村最后 20km 砂石路，轿车慢行可过",
+                  "无信号，提前离线地图"
+                ],
+                "transit_from_prev": {
+                  "mode": "drive",
+                  "minutes": 90,
+                  "distance_km": 62.0,
+                  "source_ref": "route:seed:d7s2a1"
+                },
+                "transit_detail": null,
+                "food_detail": null,
+                "ticket": {
+                  "kind": "none",
+                  "price_range": [
+                    30.0,
+                    30.0
+                  ],
+                  "currency": "CNY",
+                  "lead_time_days": 0,
+                  "real_name_required": false,
+                  "channels": [
+                    {
+                      "name": "现场购票",
+                      "type": "onsite",
+                      "detail": "村口生态费 ¥30/人",
+                      "note": null
+                    }
+                  ],
+                  "recommended_purchase": null,
+                  "note": "",
+                  "source_ref": "web:seed:d7s2a1"
+                },
+                "source_refs": [
+                  "poi:seed:d7s2"
+                ]
+              },
+              {
+                "activity_id": "d7s2a2",
+                "seq": 2,
+                "type": "stay",
+                "title": "住宿 · 特克斯君邦酒店",
+                "time_window": {
+                  "start": "21:00:00",
+                  "end": "23:00:00"
+                },
+                "note": "返回县城住宿（琼库什台无标准住宿）",
+                "tips": [
+                  "明早还车前加满油，机场店验车"
+                ],
+                "transit_from_prev": {
+                  "mode": "drive",
+                  "minutes": 90,
+                  "distance_km": 62.0,
+                  "source_ref": "route:seed:d7s2a2"
+                },
+                "transit_detail": null,
+                "food_detail": null,
+                "ticket": {
+                  "kind": "hotel",
+                  "price_range": [
+                    340.0,
+                    420.0
+                  ],
+                  "currency": "CNY",
+                  "lead_time_days": 2,
+                  "real_name_required": true,
+                  "channels": [
+                    {
+                      "name": "携程",
+                      "type": "ota",
+                      "detail": "搜「特克斯君邦」",
+                      "note": null
+                    }
+                  ],
+                  "recommended_purchase": null,
+                  "note": "",
+                  "source_ref": "web:seed:d7s2a2"
+                },
+                "source_refs": [
+                  "poi:seed:d7s2"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "day_index": 8,
+        "date": "2026-05-08",
+        "theme": "伊宁 ✈ 乌鲁木齐 ✈ 上海",
+        "rhythm": {
+          "wake": "07:00:00",
+          "sleep": "23:30:00"
+        },
+        "stops": [
+          {
+            "stop_id": "d8s1",
+            "seq": 1,
+            "poi": {
+              "name": "伊宁机场 · 还车登机",
+              "amap_poi_id": "B0FFHS01Z2",
+              "lng": 81.3303,
+              "lat": 43.9551,
+              "city": "伊犁州伊宁市",
+              "address": "伊宁机场",
+              "source_ref": "poi:seed:d8s1"
+            },
+            "activities": [
+              {
+                "activity_id": "d8s1a1",
+                "seq": 1,
+                "type": "long_transit",
+                "title": "特克斯 → 伊宁机场 · 还车",
+                "time_window": {
+                  "start": "08:00:00",
+                  "end": "10:30:00"
+                },
+                "note": "机场店还车，验车约 30 分钟",
+                "tips": [
+                  "加满油还车（机场口加油站）",
+                  "异地还车费 ¥600 已计入预算"
+                ],
+                "transit_from_prev": null,
+                "transit_detail": {
+                  "mode": "self_drive",
+                  "distance_km": 150.0,
+                  "drive_minutes": 130,
+                  "waypoints_poi": [],
+                  "road_refs": [
+                    "G577"
+                  ],
+                  "road_condition": "路况良好",
+                  "season_closure": null,
+                  "fuel_stops": [
+                    {
+                      "name": "伊宁机场加油站",
+                      "amap_poi_id": null,
+                      "lng": null,
+                      "lat": null,
+                      "city": null,
+                      "source_ref": null,
+                      "season_closure": null
+                    }
+                  ],
+                  "parking": "还车即停",
+                  "permit_required": false,
+                  "permit_note": null,
+                  "source_ref": "route:seed:d8s1"
+                },
+                "food_detail": null,
+                "ticket": null,
+                "source_refs": [
+                  "poi:seed:d8s1"
+                ]
+              },
+              {
+                "activity_id": "d8s1a2",
+                "seq": 2,
+                "type": "long_transit",
+                "title": "伊宁 ✈ 乌鲁木齐",
+                "time_window": {
+                  "start": "12:40:00",
+                  "end": "14:00:00"
+                },
+                "note": "",
+                "tips": [
+                  "预留 2h 中转时间衔接下一班"
+                ],
+                "transit_from_prev": {
+                  "mode": "walk",
+                  "minutes": 10,
+                  "distance_km": 0.5,
+                  "source_ref": "route:seed:d8s1a2"
+                },
+                "transit_detail": {
+                  "mode": "flight",
+                  "flight_no": "GS7542",
+                  "airline": "天津航空",
+                  "airport_from": "伊宁机场",
+                  "airport_to": "乌鲁木齐地窝堡 T2",
+                  "dep_time": "12:40:00",
+                  "arr_time": "14:00:00",
+                  "source_ref": "route:seed:d8s1"
+                },
+                "food_detail": null,
+                "ticket": {
+                  "kind": "transport",
+                  "price_range": [
+                    420.0,
+                    560.0
+                  ],
+                  "currency": "CNY",
+                  "lead_time_days": 10,
+                  "real_name_required": true,
+                  "channels": [
+                    {
+                      "name": "航司官方 App",
+                      "type": "app",
+                      "detail": "天津航空 App",
+                      "note": null
+                    },
+                    {
+                      "name": "携程",
+                      "type": "ota",
+                      "detail": "机票 · 伊宁→乌鲁木齐",
+                      "note": null
+                    }
+                  ],
+                  "recommended_purchase": {
+                    "target_date": "2026-05-08",
+                    "session": "午班 12:40",
+                    "lead_time_days": 10,
+                    "note": "4月28日 前购买"
+                  },
+                  "note": "",
+                  "source_ref": "web:seed:d8s1a2"
+                },
+                "source_refs": [
+                  "poi:seed:d8s1"
+                ]
+              },
+              {
+                "activity_id": "d8s1a3",
+                "seq": 3,
+                "type": "long_transit",
+                "title": "乌鲁木齐 ✈ 上海虹桥",
+                "time_window": {
+                  "start": "16:10:00",
+                  "end": "21:20:00"
+                },
+                "note": "",
+                "tips": [
+                  "落地虹桥已 21:20，回家预留 1h"
+                ],
+                "transit_from_prev": null,
+                "transit_detail": {
+                  "mode": "flight",
+                  "flight_no": "CZ6989",
+                  "airline": "南航",
+                  "airport_from": "乌鲁木齐地窝堡 T2",
+                  "airport_to": "上海虹桥 T2",
+                  "dep_time": "16:10:00",
+                  "arr_time": "21:20:00",
+                  "source_ref": "route:seed:d8s1"
+                },
+                "food_detail": null,
+                "ticket": {
+                  "kind": "transport",
+                  "price_range": [
+                    1150.0,
+                    1450.0
+                  ],
+                  "currency": "CNY",
+                  "lead_time_days": 11,
+                  "real_name_required": true,
+                  "channels": [
+                    {
+                      "name": "航司官方 App",
+                      "type": "app",
+                      "detail": "南航 App",
+                      "note": null
+                    },
+                    {
+                      "name": "携程",
+                      "type": "ota",
+                      "detail": "机票 · 乌鲁木齐→上海",
+                      "note": null
+                    }
+                  ],
+                  "recommended_purchase": {
+                    "target_date": "2026-05-08",
+                    "session": "下午班 16:10",
+                    "lead_time_days": 11,
+                    "note": "五一返程票最紧张，4月20日 前必须出票"
+                  },
+                  "note": "",
+                  "source_ref": "web:seed:d8s1a3"
+                },
+                "source_refs": [
+                  "poi:seed:d8s1"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "revision_log": [
+      {
+        "version": 1,
+        "turn_seq": null,
+        "summary": "生成初版骨架：北疆大环线 8 天，含喀纳斯与赛里木湖",
+        "user_request": "马上五一了，我想去新疆旅游，给个推荐路线",
+        "op_count": 34,
+        "changed_stop_ids": [
+          "*"
+        ],
+        "changed_activity_ids": [],
+        "created_at": "04-24 20:03"
+      },
+      {
+        "version": 2,
+        "turn_seq": null,
+        "summary": "按 8天7晚 · 上海往返 · 自驾重排全程，锁定日期 5.1–5.8",
+        "user_request": "（回答澄清问题：8天 / 上海出发 / 自驾）",
+        "op_count": 22,
+        "changed_stop_ids": [
+          "*"
+        ],
+        "changed_activity_ids": [],
+        "created_at": "04-24 20:11"
+      },
+      {
+        "version": 3,
+        "turn_seq": null,
+        "summary": "喀纳斯升为过夜点，新增禾木住宿；D1/D3 加入手抓肉餐厅",
+        "user_request": "喀纳斯和赛里木湖必须去，想吃手抓肉",
+        "op_count": 9,
+        "changed_stop_ids": [
+          "d3s3",
+          "d3s4",
+          "d1s1"
+        ],
+        "changed_activity_ids": [],
+        "created_at": "04-24 21:40"
+      },
+      {
+        "version": 4,
+        "turn_seq": null,
+        "summary": "pace 调整为 relaxed，删减 2 个次级景点，每日预留自由时间",
+        "user_request": "排得太满了，松弛一点",
+        "op_count": 12,
+        "changed_stop_ids": [
+          "d2s1",
+          "d5s1",
+          "d6s2"
+        ],
+        "changed_activity_ids": [],
+        "created_at": "04-25 09:12"
+      },
+      {
+        "version": 5,
+        "turn_seq": null,
+        "summary": "D7 重排为独库北段穿越（伊宁→那拉提→独山子）",
+        "user_request": "把独库公路也加上",
+        "op_count": 15,
+        "changed_stop_ids": [
+          "d7s1",
+          "d7s2"
+        ],
+        "changed_activity_ids": [],
+        "created_at": "04-25 15:47"
+      },
+      {
+        "version": 6,
+        "turn_seq": null,
+        "summary": "D7 改排特克斯八卦城+琼库什台；保留「独库公路」冲突待用户决策",
+        "user_request": "（校验器自动触发：独库公路 5 月初未开放）",
+        "op_count": 8,
+        "changed_stop_ids": [
+          "d7s1",
+          "d7s2"
+        ],
+        "changed_activity_ids": [],
+        "created_at": "04-25 15:49"
+      },
+      {
+        "version": 7,
+        "turn_seq": null,
+        "summary": "D5 环湖 14:00→09:00，下午改为自由活动，住宿不变",
+        "user_request": "赛里木湖那天想早点环湖，下午留着发呆",
+        "op_count": 4,
+        "changed_stop_ids": [
+          "d5s1"
+        ],
+        "changed_activity_ids": [],
+        "created_at": "04-26 21:14"
+      }
+    ],
+    "created_at": "2026-04-24T20:03:00+08:00",
+    "updated_at": "2026-04-26T21:14:00+08:00"
+  },
+  "events": [
+    {
+      "seq": 1,
+      "type": "message",
+      "payload": {
+        "role": "user",
+        "text": "马上五一了，我想去新疆旅游，给个推荐路线",
+        "at": "04-24 20:03"
+      },
+      "trip_id": "xj-2026-wuyi",
+      "turn_id": "seed-turn-1",
+      "created_at": "2026-04-24T20:03:00+08:00"
+    },
+    {
+      "seq": 2,
+      "type": "ask_user",
+      "payload": {
+        "ask_id": "ask_trip_basics",
+        "intro": "为了排出合适的路线，需要确认几件事",
+        "questions": [
+          {
+            "question": "这趟大概几天？",
+            "multi": false,
+            "options": [
+              {
+                "id": "d4",
+                "label": "4 天"
+              },
+              {
+                "id": "d6",
+                "label": "6 天"
+              },
+              {
+                "id": "d8",
+                "label": "8 天"
+              }
+            ],
+            "note_hint": null
+          },
+          {
+            "question": "从哪个城市出发？",
+            "multi": false,
+            "options": [
+              {
+                "id": "sh",
+                "label": "上海"
+              },
+              {
+                "id": "bj",
+                "label": "北京"
+              },
+              {
+                "id": "other",
+                "label": "其他"
+              }
+            ],
+            "note_hint": null
+          },
+          {
+            "question": "当地交通方式？",
+            "multi": false,
+            "options": [
+              {
+                "id": "drive",
+                "label": "自驾"
+              },
+              {
+                "id": "flight",
+                "label": "飞机+包车"
+              },
+              {
+                "id": "train",
+                "label": "火车"
+              }
+            ],
+            "note_hint": null
+          }
+        ],
+        "allow_note": true,
+        "allow_skip": true,
+        "at": "04-24 20:04"
+      },
+      "trip_id": "xj-2026-wuyi",
+      "turn_id": "seed-turn-1",
+      "created_at": "2026-04-24T20:04:00+08:00"
+    },
+    {
+      "seq": 3,
+      "type": "message",
+      "payload": {
+        "role": "user",
+        "text": "（回答澄清问题：8天 / 上海出发 / 自驾）",
+        "hidden": true,
+        "answer_to": "ask_trip_basics",
+        "answers": [
+          {
+            "question_index": 0,
+            "option_ids": [
+              "d8"
+            ],
+            "note": "只有 5.1–5.4 有假 → 已确认为 5.1–5.8 拼假"
+          },
+          {
+            "question_index": 1,
+            "option_ids": [
+              "sh"
+            ],
+            "note": ""
+          },
+          {
+            "question_index": 2,
+            "option_ids": [
+              "drive"
+            ],
+            "note": "想走独库公路"
+          }
+        ],
+        "at": "04-24 20:05"
+      },
+      "trip_id": "xj-2026-wuyi",
+      "turn_id": "seed-turn-1",
+      "created_at": "2026-04-24T20:05:00+08:00"
+    },
+    {
+      "seq": 4,
+      "type": "tool_call",
+      "payload": {
+        "call_id": "seed1-call1",
+        "tool": "search_poi",
+        "args": {
+          "keyword": "北疆 五一 自驾 环线",
+          "city": "乌鲁木齐"
+        },
+        "summary": "搜索「北疆 五一 自驾 环线」",
+        "verbose": "搜索「北疆 五一 自驾 环线」"
+      },
+      "trip_id": "xj-2026-wuyi",
+      "turn_id": "seed-turn-1",
+      "created_at": "2026-04-24T20:06:00+08:00"
+    },
+    {
+      "seq": 5,
+      "type": "tool_result",
+      "payload": {
+        "call_id": "seed1-call1",
+        "tool": "search_poi",
+        "ok": true,
+        "summary": "12 条结果 · 已提取 4 条成熟路线",
+        "data": {
+          "query": "北疆 五一 自驾 环线",
+          "results": 12,
+          "top": [
+            "乌市-可可托海-喀纳斯-赛湖-伊宁 8日",
+            "阿勒泰深度 6日",
+            "伊犁花海 7日（5月中旬后）"
+          ]
+        },
+        "duration_ms": 400
+      },
+      "trip_id": "xj-2026-wuyi",
+      "turn_id": "seed-turn-1",
+      "created_at": "2026-04-24T20:06:01+08:00"
+    },
+    {
+      "seq": 6,
+      "type": "tool_call",
+      "payload": {
+        "call_id": "seed1-call2",
+        "tool": "plan_route",
+        "args": {
+          "from": "乌鲁木齐",
+          "to": "可可托海",
+          "mode": "drive"
+        },
+        "summary": "路径规划 · 乌鲁木齐→可可托海",
+        "verbose": "路径规划 · 乌鲁木齐→可可托海"
+      },
+      "trip_id": "xj-2026-wuyi",
+      "turn_id": "seed-turn-1",
+      "created_at": "2026-04-24T20:06:01+08:00"
+    },
+    {
+      "seq": 7,
+      "type": "tool_result",
+      "payload": {
+        "call_id": "seed1-call2",
+        "tool": "plan_route",
+        "ok": true,
+        "summary": "486 公里 / 约 6 小时（G216）",
+        "data": {
+          "from": "乌鲁木齐",
+          "to": "可可托海",
+          "distanceKm": 486,
+          "minutes": 360,
+          "roadRefs": [
+            "G216",
+            "S226"
+          ]
+        },
+        "duration_ms": 520
+      },
+      "trip_id": "xj-2026-wuyi",
+      "turn_id": "seed-turn-1",
+      "created_at": "2026-04-24T20:06:02+08:00"
+    },
+    {
+      "seq": 8,
+      "type": "tool_call",
+      "payload": {
+        "call_id": "seed1-call3",
+        "tool": "get_weather",
+        "args": {
+          "city": "阿勒泰",
+          "date": "2026-05-01"
+        },
+        "summary": "查询天气 · 阿勒泰 5/1–5/8",
+        "verbose": "查询天气 · 阿勒泰 5/1–5/8"
+      },
+      "trip_id": "xj-2026-wuyi",
+      "turn_id": "seed-turn-1",
+      "created_at": "2026-04-24T20:06:02+08:00"
+    },
+    {
+      "seq": 9,
+      "type": "tool_result",
+      "payload": {
+        "call_id": "seed1-call3",
+        "tool": "get_weather",
+        "ok": true,
+        "summary": "晴为主，夜间 -2°C～4°C，山区有残雪",
+        "data": {
+          "region": "阿勒泰",
+          "range": "2026-05-01/2026-05-08",
+          "summary": "晴为主，昼夜温差 15°C+",
+          "risk": "山区垭口残雪"
+        },
+        "duration_ms": 640
+      },
+      "trip_id": "xj-2026-wuyi",
+      "turn_id": "seed-turn-1",
+      "created_at": "2026-04-24T20:06:03+08:00"
+    },
+    {
+      "seq": 10,
+      "type": "tool_call",
+      "payload": {
+        "call_id": "seed1-call4",
+        "tool": "web_search",
+        "args": {
+          "query": "独库公路 开放时间 2026"
+        },
+        "summary": "搜索「独库公路 开放时间 2026」",
+        "verbose": "搜索「独库公路 开放时间 2026」"
+      },
+      "trip_id": "xj-2026-wuyi",
+      "turn_id": "seed-turn-1",
+      "created_at": "2026-04-24T20:06:03+08:00"
+    },
+    {
+      "seq": 11,
+      "type": "tool_result",
+      "payload": {
+        "call_id": "seed1-call4",
+        "tool": "web_search",
+        "ok": true,
+        "summary": "8 条结果 · 往年 6 月上旬通车",
+        "data": {
+          "query": "独库公路 开放时间",
+          "results": 8,
+          "conclusion": "G217 独山子-库车段往年 6/1-6/10 解除交通管制"
+        },
+        "duration_ms": 760
+      },
+      "trip_id": "xj-2026-wuyi",
+      "turn_id": "seed-turn-1",
+      "created_at": "2026-04-24T20:06:04+08:00"
+    },
+    {
+      "seq": 12,
+      "type": "tool_call",
+      "payload": {
+        "call_id": "seed1-call5",
+        "tool": "search_poi",
+        "args": {
+          "keyword": "喀纳斯 / 禾木 / 赛里木湖",
+          "city": "阿勒泰"
+        },
+        "summary": "POI 检索 · 喀纳斯 / 禾木 / 赛里木湖",
+        "verbose": "POI 检索 · 喀纳斯 / 禾木 / 赛里木湖"
+      },
+      "trip_id": "xj-2026-wuyi",
+      "turn_id": "seed-turn-1",
+      "created_at": "2026-04-24T20:06:04+08:00"
+    },
+    {
+      "seq": 13,
+      "type": "tool_result",
+      "payload": {
+        "call_id": "seed1-call5",
+        "tool": "search_poi",
+        "ok": true,
+        "summary": "3 个必去点定位完成（高德 POI）",
+        "data": {
+          "pois": [
+            {
+              "name": "喀纳斯湖",
+              "id": "B0FFH3V5Q2"
+            },
+            {
+              "name": "禾木村",
+              "id": "B0FFHP88W3"
+            },
+            {
+              "name": "赛里木湖",
+              "id": "B03E700I9K"
+            }
+          ]
+        },
+        "duration_ms": 880
+      },
+      "trip_id": "xj-2026-wuyi",
+      "turn_id": "seed-turn-1",
+      "created_at": "2026-04-24T20:06:05+08:00"
+    },
+    {
+      "seq": 14,
+      "type": "tool_call",
+      "payload": {
+        "call_id": "seed1-call6",
+        "tool": "search_poi",
+        "args": {
+          "keyword": "禾木 住宿 5月3日",
+          "city": "布尔津",
+          "category": "酒店"
+        },
+        "summary": "搜索住宿 · 禾木 5/3 晚",
+        "verbose": "搜索住宿 · 禾木 5/3 晚"
+      },
+      "trip_id": "xj-2026-wuyi",
+      "turn_id": "seed-turn-1",
+      "created_at": "2026-04-24T20:06:05+08:00"
+    },
+    {
+      "seq": 15,
+      "type": "tool_result",
+      "payload": {
+        "call_id": "seed1-call6",
+        "tool": "search_poi",
+        "ok": true,
+        "summary": "9 家 · 景区内木屋 ¥680 起，余量少",
+        "data": {
+          "query": "禾木 住宿 5月3日",
+          "results": 9,
+          "note": "五一余量紧张"
+        },
+        "duration_ms": 1000
+      },
+      "trip_id": "xj-2026-wuyi",
+      "turn_id": "seed-turn-1",
+      "created_at": "2026-04-24T20:06:06+08:00"
+    },
+    {
+      "seq": 16,
+      "type": "message",
+      "payload": {
+        "role": "assistant",
+        "text": "已经排好初版 **8 天北疆环线**：\n\n#### 整体思路\n- **顺时针大环线**：[[poi:d1s1]] → [[route:d1s1:d2s1:drive]] [[poi:d2s1]] → [[poi:d3s3]]/[[poi:d3s4]] → [[poi:d4s2]] → [[poi:d5s1]] → [[poi:d6s1]] → [[poi:d7s2]]，不走回头路\n- 上海往返飞机，**乌鲁木齐取车、伊宁还车**（异地还车费约 ¥600）\n- 按 relaxed 节奏，每天驾驶尽量控制在 5 小时内\n\n有一个问题需要你知道：**独库公路 5 月初大概率还没开放**（往年 6 月上旬通车）。我先按「特克斯+琼库什台」排了 D7 替代（[[poi:d7s2]]），你可以随时让我改。",
+        "at": "04-24 20:09",
+        "kind": "ready"
+      },
+      "trip_id": "xj-2026-wuyi",
+      "turn_id": "seed-turn-1",
+      "created_at": "2026-04-24T20:09:00+08:00"
+    },
+    {
+      "seq": 17,
+      "type": "message",
+      "payload": {
+        "role": "user",
+        "text": "赛里木湖那天想早点环湖，下午留着发呆",
+        "at": "04-26 21:08"
+      },
+      "trip_id": "xj-2026-wuyi",
+      "turn_id": "seed-turn-2",
+      "created_at": "2026-04-26T21:08:00+08:00"
+    },
+    {
+      "seq": 18,
+      "type": "tool_call",
+      "payload": {
+        "call_id": "seed2-call1",
+        "tool": "plan_route",
+        "args": {
+          "from": "奎屯",
+          "to": "赛里木湖",
+          "mode": "drive"
+        },
+        "summary": "路径规划 · 奎屯→赛里木湖（到达时间重算）"
+      },
+      "trip_id": "xj-2026-wuyi",
+      "turn_id": "seed-turn-2",
+      "created_at": "2026-04-26T21:10:00+08:00"
+    },
+    {
+      "seq": 19,
+      "type": "tool_result",
+      "payload": {
+        "call_id": "seed2-call1",
+        "tool": "plan_route",
+        "ok": true,
+        "summary": "246 公里 / 2.5 小时 · 09:00 前可到",
+        "data": {
+          "from": "奎屯",
+          "to": "赛里木湖",
+          "distanceKm": 246,
+          "minutes": 150
+        },
+        "duration_ms": 380
+      },
+      "trip_id": "xj-2026-wuyi",
+      "turn_id": "seed-turn-2",
+      "created_at": "2026-04-26T21:10:01+08:00"
+    },
+    {
+      "seq": 20,
+      "type": "tool_call",
+      "payload": {
+        "call_id": "seed2-call2",
+        "tool": "web_search",
+        "args": {
+          "query": "赛里木湖 上午 光线 环湖"
+        },
+        "summary": "搜索「赛里木湖 上午 光线 环湖」"
+      },
+      "trip_id": "xj-2026-wuyi",
+      "turn_id": "seed-turn-2",
+      "created_at": "2026-04-26T21:10:01+08:00"
+    },
+    {
+      "seq": 21,
+      "type": "tool_result",
+      "payload": {
+        "call_id": "seed2-call2",
+        "tool": "web_search",
+        "ok": true,
+        "summary": "5 条结果 · 上午顺光更适合拍照",
+        "data": {
+          "conclusion": "环湖东岸上午顺光"
+        },
+        "duration_ms": 380
+      },
+      "trip_id": "xj-2026-wuyi",
+      "turn_id": "seed-turn-2",
+      "created_at": "2026-04-26T21:10:02+08:00"
+    },
+    {
+      "seq": 22,
+      "type": "message",
+      "payload": {
+        "role": "assistant",
+        "text": "已调整 **Day 5**（v7）：\n- 环湖自驾 `14:00–18:00` → `09:00–13:00`\n- 下午改为 **湖畔自由活动**（free），西海草原发呆\n- 毡房营地住宿不变\n\n地图上高亮的就是这次改动的部分。",
+        "at": "04-26 21:14"
+      },
+      "trip_id": "xj-2026-wuyi",
+      "turn_id": "seed-turn-2",
+      "created_at": "2026-04-26T21:14:00+08:00"
+    }
+  ],
+  "today": "2026-04-26",
+  "last_seq": 22
+}

@@ -1,0 +1,162 @@
+/* ============================================================
+   Trace Planner · Design Tokens
+   明暗双主题 + 按天色相 + 交通线色 + 间距/圆角/阴影阶梯
+   ============================================================ */
+
+:root {
+  /* ---- 品牌 ---- */
+  --primary: #1D6F5C;
+  --primary-600: #155346;
+  --primary-100: #E4F0ED;
+  --accent: #E8833A;
+  --accent-100: #FBEBDD;
+
+  /* ---- 语义 ---- */
+  --error: #DC2626;
+  --error-100: #FBE7E7;
+  --warning: #F59E0B;
+  --warning-100: #FDF1DC;
+  --success: #16A34A;
+  --info: #2563EB;
+
+  /* ---- 中性（亮色默认） ---- */
+  --bg: #FFFFFF;
+  --surface: #F8FAFB;
+  --surface-2: #F1F5F7;
+  --border: #E3E8EB;
+  --border-strong: #CBD5DC;
+  --text: #0F1720;
+  --text-muted: #5A6B78;
+  --text-faint: #8D9BA6;
+
+  /* ---- 地图交通线（与语义色区分） ---- */
+  --line-city: #64748B;      /* 市内短驳 · 实线 */
+  --line-flight: #6366F1;    /* 航班 · 虚线弧 */
+  --line-train: #C2410C;     /* 火车 · 虚线 */
+  --line-drive: #1D6F5C;     /* 自驾 · 点划线 */
+
+  /* ---- 按天色相（12 色等距，Day 1–N 循环） ---- */
+  --day-1: hsl(152, 55%, 33%);
+  --day-2: hsl(200, 62%, 42%);
+  --day-3: hsl(262, 52%, 50%);
+  --day-4: hsl(326, 55%, 46%);
+  --day-5: hsl(14, 68%, 48%);
+  --day-6: hsl(40, 78%, 42%);
+  --day-7: hsl(76, 52%, 36%);
+  --day-8: hsl(110, 45%, 36%);
+  --day-9: hsl(172, 52%, 34%);
+  --day-10: hsl(216, 58%, 46%);
+  --day-11: hsl(284, 46%, 48%);
+  --day-12: hsl(344, 58%, 46%);
+
+  /* ---- 字号阶梯 ---- */
+  --fs-11: 11px;
+  --fs-12: 12px;
+  --fs-13: 13px;
+  --fs-14: 14px;
+  --fs-16: 16px;
+  --fs-20: 20px;
+  --fs-24: 24px;
+
+  /* ---- 行高 ---- */
+  --lh-body: 1.6;
+  --lh-tight: 1.4;
+
+  /* ---- 间距（8px 网格；紧凑档密度） ---- */
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-5: 20px;
+  --sp-6: 24px;
+  --sp-8: 32px;
+  --sp-10: 40px;
+  --density-card-pad: 12px 14px;   /* 密度切换：紧凑 */
+  --density-card-gap: 8px;
+
+  /* ---- 圆角 ---- */
+  --r-sm: 6px;    /* chip / 小按钮 */
+  --r-md: 10px;   /* 卡片 */
+  --r-lg: 14px;   /* 浮层 / 抽屉 */
+
+  /* ---- 阴影三档 ---- */
+  --shadow-sm: 0 1px 2px rgba(15, 23, 32, .06), 0 1px 3px rgba(15, 23, 32, .05);
+  --shadow-md: 0 4px 12px rgba(15, 23, 32, .10), 0 2px 4px rgba(15, 23, 32, .06);
+  --shadow-lg: 0 16px 40px rgba(15, 23, 32, .18), 0 6px 16px rgba(15, 23, 32, .10);
+
+  /* ---- 动效 ---- */
+  --dur-fast: 150ms;
+  --dur-base: 200ms;
+  --dur-slow: 250ms;
+  --ease: cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* ---- 字体 ---- */
+  --font-sans: Inter, "PingFang SC", "HarmonyOS Sans SC", "Microsoft YaHei", system-ui, -apple-system, sans-serif;
+  --font-num: Inter, "SF Pro Text", system-ui, sans-serif;
+
+  /* ---- 布局尺寸 ---- */
+  --topbar-h: 52px;
+  --split-min: 320px;
+  --panel-w: 384px;
+}
+
+/* ============ 深色主题（独立配色，非简单反色） ============ */
+[data-theme="dark"] {
+  --primary: #3D9B84;
+  --primary-600: #57B39B;
+  --primary-100: #123028;
+  --accent: #EE9A57;
+  --accent-100: #3A2413;
+
+  --error: #F16A6A;
+  --error-100: #3A1C1C;
+  --warning: #F5B445;
+  --warning-100: #3A2C10;
+  --success: #4CC38A;
+  --info: #6FA1F5;
+
+  --bg: #0E1418;
+  --surface: #151D22;
+  --surface-2: #1B252C;
+  --border: #243038;
+  --border-strong: #3A4A55;
+  --text: #E6EDF2;
+  --text-muted: #9BAAB6;
+  --text-faint: #6B7B87;
+
+  --line-city: #8CA0B3;
+  --line-flight: #8B8EF8;
+  --line-train: #E07742;
+  --line-drive: #3D9B84;
+
+  --day-1: hsl(152, 45%, 48%);
+  --day-2: hsl(200, 55%, 58%);
+  --day-3: hsl(262, 50%, 66%);
+  --day-4: hsl(326, 50%, 62%);
+  --day-5: hsl(14, 62%, 62%);
+  --day-6: hsl(40, 70%, 58%);
+  --day-7: hsl(76, 42%, 52%);
+  --day-8: hsl(110, 38%, 52%);
+  --day-9: hsl(172, 45%, 48%);
+  --day-10: hsl(216, 52%, 62%);
+  --day-11: hsl(284, 42%, 64%);
+  --day-12: hsl(344, 52%, 62%);
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, .4);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, .45), 0 2px 4px rgba(0, 0, 0, .3);
+  --shadow-lg: 0 16px 40px rgba(0, 0, 0, .55), 0 6px 16px rgba(0, 0, 0, .35);
+}
+
+/* ============ 密度切换（舒适档） ============ */
+[data-density="cozy"] {
+  --density-card-pad: 16px 18px;
+  --density-card-gap: 12px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

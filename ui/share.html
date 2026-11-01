@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>新疆环线 · 五一自驾 · 只读分享 · Trace Planner</title>
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/components.css">
+</head>
+<body data-app="workbench" data-readonly="true" data-route="share">
+<div class="workbench">
+
+  <!-- §3.11 只读横幅 -->
+  <div class="share-banner" id="share-banner">
+    <span id="banner-icon"></span>
+    <span>由 <strong>林小满</strong> 分享 · 只读视图 — 地图可缩放浏览，无编辑入口</span>
+  </div>
+
+  <header class="topbar" id="topbar">
+    <div id="topbar-main" class="od-row" style="flex:1;min-width:0;gap:var(--sp-3)"><!-- JS 渲染 --></div>
+  </header>
+
+  <main class="wb-body">
+    <div id="desktop-chat-slot" style="display:flex;flex:0 0 34%;min-width:0">
+      <section class="chat-pane" id="chat-pane" aria-label="规划过程（只读）">
+        <div class="chat-scroll" id="chat-scroll"></div>
+      </section>
+    </div>
+
+    <div class="splitter" id="splitter" role="separator" aria-orientation="vertical" tabindex="0"><span class="grip"></span></div>
+
+    <section class="map-pane" aria-label="行程地图">
+      <div id="map-canvas"></div>
+      <div class="map-overlay map-controls-tr" id="map-controls"></div>
+      <div class="map-overlay map-legend" id="map-legend"></div>
+      <div class="map-overlay map-daycard" id="map-daycard"></div>
+
+      <aside class="trip-panel" id="trip-panel" aria-label="行程卡片面板">
+        <div class="sheet-handle" id="sheet-handle">
+          <span class="handle-bar"></span>
+          <span class="handle-summary" id="sheet-summary"></span>
+        </div>
+        <div class="day-tabs" id="day-tabs" role="tablist"></div>
+        <div class="mobile-chat-slot" id="mobile-chat-slot"></div>
+        <div class="panel-scroll" id="panel-scroll"></div>
+      </aside>
+    </section>
+
+    <button class="panel-toggle" id="panel-toggle" aria-label="折叠/展开行程卡片面板"></button>
+  </main>
+</div>
+
+<script src="assets/js/ui.js"></script>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/map-canvas.js"></script>
+<script src="assets/js/workbench.js"></script>
+<script>document.getElementById('banner-icon').innerHTML = window.TP_UI.icon('lock');</script>
+</body>
+</html>
