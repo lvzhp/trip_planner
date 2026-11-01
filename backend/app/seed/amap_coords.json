@@ -1,0 +1,233 @@
+{
+  "xj-2026-wuyi": {
+    "d1s1": {
+      "amap_name": "新疆国际大巴扎",
+      "amap_poi_id": "B03DF05V5I",
+      "lng": 87.617977,
+      "lat": 43.780006,
+      "address": "解放南路518号",
+      "city": "乌鲁木齐市",
+      "query": "新疆国际大巴扎"
+    },
+    "d2s1": {
+      "amap_name": "额尔齐斯大峡谷",
+      "amap_poi_id": "B0LBC5DEAK",
+      "lng": 89.979515,
+      "lat": 47.270505,
+      "address": "可可托海镇可可托海景区",
+      "city": "阿勒泰地区",
+      "query": "额尔齐斯大峡谷"
+    },
+    "d3s1": {
+      "amap_name": "克兰河",
+      "amap_poi_id": "B038A0LUS2",
+      "lng": 88.131747,
+      "lat": 47.850655,
+      "address": "阿勒泰市",
+      "city": "阿勒泰地区",
+      "query": "克兰河"
+    },
+    "d3s2": {
+      "amap_name": "阿勒泰地区布尔津五彩滩",
+      "amap_poi_id": "B038A007HY",
+      "lng": 86.680702,
+      "lat": 47.837537,
+      "address": "227省道西北方",
+      "city": "阿勒泰地区",
+      "query": "阿勒泰地区布尔津五彩滩"
+    },
+    "d3s3": {
+      "amap_name": "喀纳斯湖",
+      "amap_poi_id": "B0FFFQ6VG0",
+      "lng": 87.055797,
+      "lat": 48.82663,
+      "address": "布尔津县",
+      "city": "阿勒泰地区",
+      "query": "喀纳斯湖"
+    },
+    "d3s4": {
+      "amap_name": "禾木观景台",
+      "amap_poi_id": "B0FFH6KSDA",
+      "lng": 87.428572,
+      "lat": 48.577354,
+      "address": "禾木乡禾木村",
+      "city": "阿勒泰地区",
+      "query": "禾木观景台"
+    },
+    "d4s1": {
+      "amap_name": "禾木桥",
+      "amap_poi_id": "B0FFGP9617",
+      "lng": 87.430677,
+      "lat": 48.571972,
+      "address": "禾木喀纳斯蒙古族乡禾木乡禾木村内",
+      "city": "阿勒泰地区",
+      "query": "禾木桥"
+    },
+    "d4s2": {
+      "amap_name": "世界魔鬼城",
+      "amap_poi_id": "B03DE0004L",
+      "lng": 85.733205,
+      "lat": 46.135149,
+      "address": "龙脊路200号",
+      "city": "克拉玛依市",
+      "query": "世界魔鬼城"
+    },
+    "d5s1": {
+      "amap_name": "赛里木湖",
+      "amap_poi_id": "B0FFFQ6VG6",
+      "lng": 81.172193,
+      "lat": 44.604112,
+      "address": "博乐市",
+      "city": "博尔塔拉蒙古自治州",
+      "query": "赛里木湖"
+    },
+    "d6s1": {
+      "amap_name": "伊犁老城文化旅游区",
+      "amap_poi_id": "B03E70M9TY",
+      "lng": 81.332486,
+      "lat": 43.901992,
+      "address": "胜利南路2号",
+      "city": "伊犁哈萨克自治州",
+      "query": "伊犁老城文化旅游区"
+    },
+    "d6s2": {
+      "amap_name": "六星街景区",
+      "amap_poi_id": "B0KDYAY50F",
+      "lng": 81.30846,
+      "lat": 43.932766,
+      "address": "工人街十巷与黎光街交叉口西北方向50米",
+      "city": "伊犁哈萨克自治州",
+      "query": "六星街景区"
+    },
+    "d7s1": {
+      "amap_name": "特克斯八卦城",
+      "amap_poi_id": "B03E700ARS",
+      "lng": 81.839833,
+      "lat": 43.214965,
+      "address": "古勒巴格街",
+      "city": "伊犁哈萨克自治州",
+      "query": "特克斯八卦城"
+    },
+    "d7s2": {
+      "amap_name": "琼库什台村落",
+      "amap_poi_id": "B0FFGZLJ7R",
+      "lng": 82.200075,
+      "lat": 42.916463,
+      "address": "琼库什台村核心区",
+      "city": "伊犁哈萨克自治州",
+      "query": "琼库什台村落"
+    },
+    "d8s1": {
+      "amap_name": "伊犁伊宁国际机场",
+      "amap_poi_id": "B03E7002XR",
+      "lng": 81.333342,
+      "lat": 43.957238,
+      "address": "飞机场路273号",
+      "city": "伊犁哈萨克自治州",
+      "query": "伊犁伊宁国际机场"
+    }
+  },
+  "yn-2025-autumn": {
+    "yn1s1": {
+      "amap_name": "昆明老街",
+      "amap_poi_id": "B0MUYLS70F",
+      "lng": 102.709725,
+      "lat": 25.040725,
+      "address": "正义路100号正义坊购物中心北馆",
+      "city": "昆明市",
+      "query": "昆明老街"
+    },
+    "yn1s2": {
+      "amap_name": "建水古城",
+      "amap_poi_id": "B0FFGG3R3X",
+      "lng": 102.825002,
+      "lat": 23.613899,
+      "address": null,
+      "city": "红河哈尼族彝族自治州",
+      "query": "建水古城"
+    },
+    "yn2s1": {
+      "amap_name": "朱家花园",
+      "amap_poi_id": "B0369009RF",
+      "lng": 102.826959,
+      "lat": 23.615863,
+      "address": "翰林街16号(近书院街)",
+      "city": "红河哈尼族彝族自治州",
+      "query": "朱家花园"
+    },
+    "yn2s2": {
+      "amap_name": "双龙桥",
+      "amap_poi_id": "B0369006QQ",
+      "lng": 102.794276,
+      "lat": 23.605719,
+      "address": "白家营村",
+      "city": "红河哈尼族彝族自治州",
+      "query": "双龙桥"
+    },
+    "yn3s1": {
+      "amap_name": "多依树梯田-观景台",
+      "amap_poi_id": "B0FFLQ418O",
+      "lng": 102.796236,
+      "lat": 23.089693,
+      "address": "沩山风景名胜区龙泉村",
+      "city": "红河哈尼族彝族自治州",
+      "query": "多依树梯田-观景台"
+    },
+    "yn3s2": {
+      "amap_name": "坝达梯田景区一观景台",
+      "amap_poi_id": "B0FFKISBFH",
+      "lng": 102.768614,
+      "lat": 23.112249,
+      "address": "大胜段附近(坝达景区内)",
+      "city": "红河哈尼族彝族自治州",
+      "query": "坝达梯田景区一观景台"
+    },
+    "yn4s1": {
+      "amap_name": "青龙山",
+      "amap_poi_id": "B0FFHUEAKD",
+      "lng": 104.112649,
+      "lat": 24.137714,
+      "address": "丘北县",
+      "city": "文山壮族苗族自治州",
+      "query": "青龙山"
+    },
+    "yn5s1": {
+      "amap_name": "东风韵",
+      "amap_poi_id": "B0MBHGHCQD",
+      "lng": 103.381512,
+      "lat": 24.312546,
+      "address": "明三段035乡",
+      "city": "红河哈尼族彝族自治州",
+      "query": "东风韵"
+    },
+    "yn6s1": {
+      "amap_name": "昆明长水国际机场",
+      "amap_poi_id": "B03670W002",
+      "lng": 102.935835,
+      "lat": 25.099565,
+      "address": "大板桥街道长水社区",
+      "city": "昆明市",
+      "query": "昆明长水国际机场"
+    }
+  },
+  "zj-anji-weekend": {
+    "aj1s1": {
+      "amap_name": "安吉江南天池景区",
+      "amap_poi_id": "BY0001PHGD",
+      "lng": 119.60156,
+      "lat": 30.467174,
+      "address": "天荒坪镇上水库",
+      "city": "湖州市",
+      "query": "安吉江南天池景区"
+    },
+    "aj2s1": {
+      "amap_name": "安吉深溪峡谷漂流(暂停开放)",
+      "amap_poi_id": "B023C0PFO2",
+      "lng": 119.468313,
+      "lat": 30.496707,
+      "address": "报福镇深溪洪家村口",
+      "city": "湖州市",
+      "query": "安吉深溪峡谷漂流"
+    }
+  }
+}
