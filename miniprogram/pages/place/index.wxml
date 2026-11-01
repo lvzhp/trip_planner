@@ -1,0 +1,23 @@
+<view class="tp-page">
+  <view class="tp-card">
+    <view class="tp-brand">
+      <view class="tp-logo">⌖</view>
+      <text>地点导航</text>
+    </view>
+    <view class="tp-h1">{{name}}</view>
+    <view class="tp-sub" wx:if="{{lng != null && lat != null}}">
+      坐标 {{lng}}, {{lat}} · 使用腾讯地图打开
+    </view>
+    <view class="tp-note" wx:if="{{failed}}">{{errorMessage}}</view>
+
+    <view class="tp-actions">
+      <button class="tp-btn tp-btn-primary" bindtap="openLocation" wx:if="{{lng != null && lat != null}}">
+        打开腾讯地图导航
+      </button>
+      <button class="tp-btn" bindtap="copyName">复制地点名称</button>
+      <button class="tp-btn" bindtap="copyCoords" wx:if="{{lng != null && lat != null}}">复制坐标</button>
+      <button class="tp-btn tp-btn-ghost" bindtap="goBack">返回行程</button>
+    </view>
+  </view>
+  <view class="tp-footer">坐标来自行程数据（GCJ-02，与腾讯地图一致）</view>
+</view>
