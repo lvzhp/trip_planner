@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>设计规范 · Trace Planner</title>
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/components.css">
+</head>
+<body class="spec-page">
+
+  <header class="topbar" style="position:sticky;top:0;z-index:60">
+    <a class="topbar-brand" href="index.html"><span class="logo" id="brand-logo"></span>Trace Planner</a>
+    <div class="trip-title-block">
+      <span class="trip-title"><span class="trip-title-text">设计规范</span></span>
+      <span class="trip-subtitle">Design Spec · 颜色 / 字体 / 间距 / 圆角 / 阴影 / 动效 / 组件状态</span>
+    </div>
+    <div class="topbar-actions">
+      <span class="chip chip-primary" id="density-label">密度：紧凑</span>
+      <button class="btn btn-sm" id="btn-density">切换密度</button>
+      <button class="icon-btn" id="btn-theme" aria-label="切换深色模式"></button>
+      <a class="btn btn-sm btn-primary" href="workbench.html">返回工作台</a>
+    </div>
+  </header>
+
+  <main class="spec-main">
+
+    <!-- ============ 颜色 ============ -->
+    <section class="spec-section" id="colors">
+      <h2>颜色 <span class="en">Color Tokens</span></h2>
+      <p class="spec-sub">品牌 / 语义 / 中性</p>
+      <div class="swatch-grid" id="sw-core"></div>
+      <p class="spec-sub">交通线色（与语义色严格区分）</p>
+      <div class="swatch-grid" id="sw-transit"></div>
+      <p class="spec-sub">Day 1–8 色环（marker / tab / 卡片按天着色）</p>
+      <div class="swatch-grid" id="sw-days"></div>
+    </section>
+
+    <!-- ============ 字体 ============ -->
+    <section class="spec-section" id="type">
+      <h2>字体与字号 <span class="en">Typography</span></h2>
+      <p class="spec-sub">正文 14px；字重只用 3 档：400 常规 / 600 半粗 / 700 粗体</p>
+      <div id="type-rows"></div>
+      <p class="spec-sub">数字一律 tabular-nums（时间 / 价格 / 距离）</p>
+      <div class="spec-card">
+        <div class="component-row">
+          <div class="component-cell"><span class="c-label">时间窗</span><span class="num" style="font-size:var(--fs-14);font-weight:700">09:00 – 13:00</span></div>
+          <div class="component-cell"><span class="c-label">价格区间</span><span class="num" style="font-size:var(--fs-14)">¥150–190</span></div>
+          <div class="component-cell"><span class="c-label">距离/时长</span><span class="num" style="font-size:var(--fs-13)">486 km · 6小时0分</span></div>
+          <div class="component-cell"><span class="c-label">航班</span><span class="num" style="font-size:var(--fs-12)">✈ CA1234 · 5h20m</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 间距 / 圆角 / 阴影 ============ -->
+    <section class="spec-section" id="space">
+      <h2>间距 · 圆角 · 阴影 <span class="en">Spacing / Radius / Elevation</span></h2>
+      <p class="spec-sub">8px 网格</p>
+      <div id="spacing-rows"></div>
+      <p class="spec-sub">圆角 6 / 10 / 14</p>
+      <div class="component-row">
+        <div class="component-cell"><span style="width:72px;height:48px;background:var(--primary-100);border:1.5px solid var(--primary);border-radius:var(--r-sm)"></span><span class="c-label">--r-sm 6 · 按钮/输入</span></div>
+        <div class="component-cell"><span style="width:72px;height:48px;background:var(--primary-100);border:1.5px solid var(--primary);border-radius:var(--r-md)"></span><span class="c-label">--r-md 10 · 卡片</span></div>
+        <div class="component-cell"><span style="width:72px;height:48px;background:var(--primary-100);border:1.5px solid var(--primary);border-radius:var(--r-lg)"></span><span class="c-label">--r-lg 14 · 浮层/抽屉</span></div>
+      </div>
+      <p class="spec-sub">阴影三档（地图浮层 ≥ md）</p>
+      <div class="component-row">
+        <div class="component-cell"><span style="width:96px;height:56px;background:var(--bg);border-radius:var(--r-md);box-shadow:var(--shadow-sm)"></span><span class="c-label">sm · 卡片</span></div>
+        <div class="component-cell"><span style="width:96px;height:56px;background:var(--bg);border-radius:var(--r-md);box-shadow:var(--shadow-md)"></span><span class="c-label">md · 地图浮层/菜单</span></div>
+        <div class="component-cell"><span style="width:96px;height:56px;background:var(--bg);border-radius:var(--r-md);box-shadow:var(--shadow-lg)"></span><span class="c-label">lg · 面板/抽屉</span></div>
+      </div>
+    </section>
+
+    <!-- ============ 动效 ============ -->
+    <section class="spec-section" id="motion">
+      <h2>动效 <span class="en">Motion</span></h2>
+      <p class="spec-sub">150–250ms · cubic-bezier(0.4, 0, 0.2, 1) · 尊重 prefers-reduced-motion；diff 脉冲 600ms × 2 次后停止</p>
+      <div class="spec-card component-row">
+        <div class="component-cell"><button class="btn" id="demo-pulse">重放 diff 脉冲</button><span class="c-label">marker 脉冲 / 卡片角标</span></div>
+        <div class="component-cell">
+          <div class="act-card" style="width:220px;position:relative" id="demo-card">
+            <span class="diff-corner" id="demo-corner">09:00 → 13:00</span>
+            <div class="act-card-top"><span class="act-time">09:00 – 13:00</span></div>
+            <div class="act-title">环湖自驾 · 顺时针全环</div>
+          </div>
+          <span class="c-label">卡片 diff 角标（accent）</span>
+        </div>
+        <div class="component-cell"><span class="spinner"></span><span class="c-label">工具调用 running</span></div>
+        <div class="component-cell"><div class="typing-indicator"><span></span><span></span><span></span></div><span class="c-label">AI 输入中</span></div>
+      </div>
+    </section>
+
+    <!-- ============ 按钮 / chip / badge ============ -->
+    <section class="spec-section" id="controls">
+      <h2>控件 <span class="en">Buttons / Chips / Badges</span></h2>
+      <div class="spec-card component-row">
+        <div class="component-cell"><button class="btn btn-primary">主要操作</button><span class="c-label">btn-primary</span></div>
+        <div class="component-cell"><button class="btn">次要操作</button><span class="c-label">btn</span></div>
+        <div class="component-cell"><button class="btn btn-ghost">幽灵</button><span class="c-label">btn-ghost</span></div>
+        <div class="component-cell"><button class="btn btn-danger">危险</button><span class="c-label">btn-danger</span></div>
+        <div class="component-cell"><button class="btn btn-sm">小号</button><span class="c-label">btn-sm</span></div>
+        <div class="component-cell"><button class="icon-btn" id="demo-icon-btn"></button><span class="c-label">icon-btn</span></div>
+      </div>
+      <div class="spec-card component-row" style="margin-top:12px">
+        <div class="component-cell"><span class="chip">@阿勒泰 · Day 3</span><span class="c-label">上下文 chip</span></div>
+        <div class="component-cell"><span class="chip chip-primary">主要</span></div>
+        <div class="component-cell"><span class="chip chip-accent">强调</span></div>
+        <div class="component-cell"><span class="chip chip-error">错误</span></div>
+        <div class="component-cell"><span class="chip chip-warning">警告</span></div>
+        <div class="component-cell"><span class="badge badge-error" id="demo-badge-e"></span><span class="c-label">冲突徽章 error</span></div>
+        <div class="component-cell"><span class="badge badge-warning" id="demo-badge-w"></span><span class="c-label">冲突徽章 warning</span></div>
+      </div>
+    </section>
+
+    <!-- ============ 交通线型 ============ -->
+    <section class="spec-section" id="lines">
+      <h2>地图线型 <span class="en">Transit Lines</span></h2>
+      <div class="spec-card" id="line-demo"></div>
+    </section>
+
+    <!-- ============ 卡片形态 ============ -->
+    <section class="spec-section" id="cards">
+      <h2>行程卡片形态 <span class="en">Card Anatomy</span></h2>
+      <p class="spec-sub">普通 / 住宿（分隔线+视觉差异）/ 长途（整行高权重）/ 自由（虚线轻样式）/ 冲突（可展开建议修法）/ pending（待更新）</p>
+      <div class="component-row" id="card-demo"></div>
+    </section>
+
+    <!-- ============ ask_user / 工具时间线 ============ -->
+    <section class="spec-section" id="chatforms">
+      <h2>对话消息形态 <span class="en">Chat Message Forms</span></h2>
+      <p class="spec-sub">五种形态：用户气泡（带 chip）/ AI Markdown / 工具时间线 / ask_user 提问卡 / 行程就绪卡（就绪卡见工作台流程 A）</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:14px" id="chat-demo"></div>
+    </section>
+
+    <footer style="font-size:var(--fs-11);color:var(--text-faint);border-top:1px solid var(--border);padding-top:16px">
+      Trace Planner 原型 · 静态演示数据 · 无真实预订/支付入口 · 数字均 tabular-nums · 地图为模拟高德风格 SVG 渲染（接口按 adapter 组织，可替换真实 AMap JS API）
+    </footer>
+  </main>
+
+<script src="assets/js/ui.js"></script>
+<script src="assets/js/data.js"></script>
+<script>
+(function () {
+  'use strict';
+  const { icon, initTheme, toggleTheme, toggleDensity, store, toast } = window.TP_UI;
+  initTheme();
+
+  document.getElementById('brand-logo').innerHTML = icon('logo');
+  document.getElementById('demo-icon-btn').innerHTML = icon('edit');
+  document.getElementById('demo-badge-e').innerHTML = icon('warn') + ' 1';
+  document.getElementById('demo-badge-w').innerHTML = icon('warn') + ' 3';
+
+  const btnTheme = document.getElementById('btn-theme');
+  const paint = () => { btnTheme.innerHTML = document.documentElement.dataset.theme === 'dark' ? icon('sun') : icon('moon'); };
+  paint();
+  btnTheme.addEventListener('click', () => { toggleTheme(); paint(); });
+  const dLabel = document.getElementById('density-label');
+  const paintD = () => { dLabel.textContent = '密度：' + (document.documentElement.dataset.density === 'cozy' ? '宽松' : '紧凑'); };
+  paintD();
+  document.getElementById('btn-density').addEventListener('click', () => { toggleDensity(); paintD(); toast('已切换卡片密度'); });
+
+  /* ---------- 色板 ---------- */
+  function swatches(hostId, list) {
+    document.getElementById(hostId).innerHTML = list.map(s => `
+      <div class="swatch">
+        <div class="sw-color" style="background:${s.css}"></div>
+        <div class="sw-info"><div class="sw-name">${s.name}</div><div class="sw-hex">${s.hex}</div></div>
+      </div>`).join('');
+  }
+  swatches('sw-core', [
+    { name: 'primary 品牌', hex: '#1D6F5C', css: 'var(--primary)' },
+    { name: 'primary-600', hex: '#185C4C', css: 'var(--primary-600)' },
+    { name: 'primary-100', hex: '#E4F0ED', css: 'var(--primary-100)' },
+    { name: 'accent 强调', hex: '#E8833A', css: 'var(--accent)' },
+    { name: 'accent-100', hex: '#FCEFE3', css: 'var(--accent-100)' },
+    { name: 'error 错误', hex: '#DC2626', css: 'var(--error)' },
+    { name: 'warning 警告', hex: '#F59E0B', css: 'var(--warning)' },
+    { name: 'success 成功', hex: '#16A34A', css: 'var(--success)' },
+    { name: 'info 信息', hex: '#2563EB', css: 'var(--info)' },
+    { name: 'text 正文', hex: '#1F2933', css: 'var(--text)' },
+    { name: 'text-muted', hex: '#5B6B79', css: 'var(--text-muted)' },
+    { name: 'border', hex: '#DCE3E8', css: 'var(--border)' },
+    { name: 'surface', hex: '#F4F6F8', css: 'var(--surface)' },
+    { name: 'bg', hex: '#FFFFFF', css: 'var(--bg)' }
+  ]);
+  swatches('sw-transit', [
+    { name: '市内短驳（实线）', hex: '#64748B', css: 'var(--line-city)' },
+    { name: '航班（虚线弧）', hex: '#6366F1', css: 'var(--line-flight)' },
+    { name: '火车（虚线）', hex: '#C2410C', css: 'var(--line-train)' },
+    { name: '自驾（点划线）', hex: '#1D6F5C', css: 'var(--line-drive)' }
+  ]);
+  swatches('sw-days', [1, 2, 3, 4, 5, 6, 7, 8].map(i => ({ name: `Day ${i}`, hex: `--day-${i}`, css: `var(--day-${i})` })));
+
+  /* ---------- 字号 ---------- */
+  document.getElementById('type-rows').innerHTML = [
+    ['--fs-11 · 11px', '图例 / 元信息 / 辅助标签'],
+    ['--fs-12 · 12px', '次级文字 / chip / 卡片元行'],
+    ['--fs-13 · 13px', '卡片正文 / 工具行'],
+    ['--fs-14 · 14px', '基准正文 / 输入框'],
+    ['--fs-16 · 16px', '卡片标题 / 浮层标题'],
+    ['--fs-20 · 20px', '区块标题'],
+    ['--fs-24 · 24px', '页面标题']
+  ].map(([label, sample], i) => `
+    <div class="type-row">
+      <span class="t-label">${label}</span>
+      <span style="font-size:var(--fs-${label.match(/\d+/)[0]});font-weight:${i >= 5 ? 700 : 400}">${sample}</span>
+    </div>`).join('');
+
+  /* ---------- 间距 ---------- */
+  document.getElementById('spacing-rows').innerHTML = [1, 2, 3, 4, 6, 8, 10].map(n => {
+    const px = n * 4;
+    return `<div class="spacing-row"><span class="s-label">--sp-${n} · ${px}px</span><span class="s-bar" style="width:${px * 3}px"></span></div>`;
+  }).join('');
+
+  /* ---------- 动效 demo ---------- */
+  document.getElementById('demo-pulse').addEventListener('click', () => {
+    const c = document.getElementById('demo-corner');
+    c.classList.remove('pulsing'); void c.offsetWidth; c.classList.add('pulsing');
+    setTimeout(() => c.classList.remove('pulsing'), 1300);
+  });
+
+  /* ---------- 线型 ---------- */
+  document.getElementById('line-demo').innerHTML = `
+    <svg width="100%" height="120" viewBox="0 0 720 120" role="img" aria-label="四种交通线型示意">
+      <line x1="20" y1="20" x2="240" y2="20" stroke="var(--line-city)" stroke-width="2"/>
+      <text x="256" y="24" font-size="12" fill="var(--text-muted)">市内短驳 · 实线 2px 中性灰 🚶/🚗</text>
+      <path d="M20,52 Q130,26 240,52" fill="none" stroke="var(--line-flight)" stroke-width="2.5" stroke-dasharray="6 4"/>
+      <text x="256" y="56" font-size="12" fill="var(--text-muted)">航班 · 虚线弧线 indigo ✈ MU5637 · 2h15m</text>
+      <line x1="20" y1="84" x2="240" y2="84" stroke="var(--line-train)" stroke-width="2.5" stroke-dasharray="4 4"/>
+      <text x="256" y="88" font-size="12" fill="var(--text-muted)">火车 · 虚线 #C2410C</text>
+      <line x1="20" y1="112" x2="240" y2="112" stroke="var(--line-drive)" stroke-width="2.5" stroke-dasharray="8 3 2 3"/>
+      <text x="256" y="116" font-size="12" fill="var(--text-muted)">自驾 · 点划线绿 + 空心途经点 ○</text>
+      <circle cx="150" cy="112" r="5" fill="var(--bg)" stroke="var(--line-drive)" stroke-width="2"/>
+    </svg>`;
+
+  /* ---------- 卡片形态 ---------- */
+  document.getElementById('card-demo').innerHTML = `
+    <div class="act-card" style="width:250px">
+      <div class="act-card-top"><span class="act-time">15:40 – 19:30</span><span class="act-type act-type-visit">${icon('camera')} 游览</span><button class="act-edit-btn">${icon('edit')} 改这里</button></div>
+      <div class="act-title">额尔齐斯大峡谷 · 神钟山</div>
+      <div class="act-transit">${icon('car')} <span>从上一站 驾车 <span class="num">40</span> 分钟 · <span class="num">52</span> km</span></div>
+      <div class="act-meta-row ticket">${icon('ticket')} <span><span class="val">¥150–190</span> · 需提前 4 天 · 实名制<br><span class="channel-hint">首选 微信公众号<span class="wechat-name">「可可托海旅游」</span></span></span></div>
+      <div class="act-meta-row">${icon('info')} <span>区间车末班 19:00（进沟）</span></div>
+    </div>
+    <div style="width:250px">
+      <div class="stay-divider">${icon('moon')} 今晚住宿</div>
+      <div class="act-card stay-card">
+        <div class="act-card-top"><span class="act-time">21:00 – 23:30</span><span class="act-type act-type-stay">${icon('bed')} 住宿</span></div>
+        <div class="act-title">可可托海镇宝石宾馆</div>
+        <div class="act-meta-row ticket">${icon('ticket')} <span><span class="val">¥320–400</span></span></div>
+      </div>
+    </div>
+    <div class="act-card transit-card" style="width:280px">
+      <div class="act-card-top"><span class="act-time">08:00 – 13:20</span><span class="act-type act-type-long_transit">${icon('flight')} 长途 · 航班</span></div>
+      <div class="act-title">上海虹桥 ✈ 乌鲁木齐地窝堡</div>
+      <div class="transit-route">
+        <div class="tr-endpoint"><span class="tr-time">08:00</span><span class="tr-place">上海虹桥 T2</span></div>
+        <div class="tr-mid"><span class="tr-dur">5小时20分</span><span class="tr-line">${icon('flight')}</span><span class="transit-no">CA1234 · 国航</span></div>
+        <div class="tr-endpoint" style="text-align:right"><span class="tr-time">13:20</span><span class="tr-place">地窝堡 T3</span></div>
+      </div>
+    </div>
+    <div class="act-card free-card" style="width:220px">
+      <div class="act-card-top"><span class="act-time">14:00 – 18:00</span><span class="act-type act-type-free">${icon('free')} 自由活动</span></div>
+      <div class="act-title">湖畔自由活动</div>
+      <div class="free-hint">${icon('sparkle')} 这段时间自己安排 —— 也可以让我补排</div>
+    </div>
+    <div class="act-card" style="width:250px">
+      <div class="act-card-top"><span class="act-time">17:30 – 19:30</span><span class="act-type act-type-visit">${icon('camera')} 游览</span></div>
+      <div class="act-title">三湾徒步</div>
+      <div class="act-conflict severity-warning open">${icon('warn')} <span>与禾木日落时间窗重叠（点击查看详情）</span></div>
+      <div class="conflict-detail open">
+        <div class="fix-title">${icon('sparkle')} 建议修法</div>
+        把三湾徒步压缩到 17:00–18:20，或放弃徒步直接进禾木。
+      </div>
+    </div>
+    <div class="act-card pending-update" style="width:220px;position:relative">
+      <div class="act-card-top"><span class="act-time">09:30 – 12:00</span><span class="act-type act-type-long_transit">${icon('car')} 长途 · 自驾</span></div>
+      <div class="act-title">可可托海 → 阿勒泰</div>
+      <div class="pending-veil"><span class="spinner spinner-sm"></span> 待更新 · AI 正在重排…</div>
+    </div>`;
+
+  /* ---------- 对话形态 ---------- */
+  document.getElementById('chat-demo').innerHTML = `
+    <div class="spec-card od-stack">
+      <span class="c-label">① 用户气泡 + 上下文 chip</span>
+      <div class="msg-user">
+        <div class="ctx-chips"><span class="ctx-chip">${icon('pin')} @阿勒泰 · Day 3</span></div>
+        <div class="bubble">我起晚了，想下午再出发，重规划一下</div>
+        <span class="msg-time">21:40</span>
+      </div>
+    </div>
+    <div class="spec-card od-stack">
+      <span class="c-label">② AI Markdown 文本</span>
+      <div class="msg-ai">
+        <span class="avatar">${icon('sparkle')}</span>
+        <div><div class="md-body"><h4>Day 3 已重排完成（v8）</h4><ul><li>作息 <code>09:00</code> → <code>13:00</code></li><li><strong>禾木日落完整保留</strong></li></ul></div><div class="msg-time">Trace · 21:42</div></div>
+      </div>
+    </div>
+    <div class="spec-card od-stack">
+      <span class="c-label">③ 工具时间线（running / done / failed / 聚合）</span>
+      <div class="tool-group open">
+        <button class="tool-group-head"><span class="spinner spinner-sm"></span><span>正在调用工具…</span><span class="tg-count">3 项</span></button>
+        <div class="tool-group-body">
+          <div class="tool-item running"><span class="ti-icon"><span class="spinner spinner-sm"></span></span><div class="ti-main"><div class="ti-title">正在重算驾车路程…</div></div></div>
+          <div class="tool-item"><span class="ti-icon">${icon('sun')}</span><div class="ti-main"><div class="ti-title">查询禾木日落时间</div><div class="ti-result">日落 21:23</div></div></div>
+          <div class="tool-item failed"><span class="ti-icon">${icon('xCircle')}</span><div class="ti-main"><div class="ti-title">搜索「独库公路 开放时间」</div><div class="ti-result">网络超时 · 将自动重试</div></div></div>
+        </div>
+      </div>
+    </div>
+    <div class="spec-card od-stack">
+      <span class="c-label">④ ask_user 提问卡（未答态节选）</span>
+      <div class="ask-card">
+        <div class="ask-card-head">${icon('chat')}<span class="ask-head-title">需要确认几件事</span><span class="chip chip-primary ask-badge">3 个问题</span></div>
+        <div class="ask-question">
+          <div class="ask-q-label">这趟大概几天？ <span class="q-hint">单选</span></div>
+          <div class="ask-options"><button class="ask-opt">4 天</button><button class="ask-opt selected">${icon('check')} 8 天</button></div>
+          <button class="ask-skip">${icon('chat')} 不选，直接和 AI 沟通</button>
+          <div class="ask-note visible"><label>备注（可选）</label><textarea rows="1" placeholder="例如：只有 5.1–5.4 有假"></textarea></div>
+        </div>
+      </div>
+      <div class="ask-card answered">
+        <div class="ask-card-head">${icon('checkCircle')}<span class="ask-head-title">已回答</span><span class="chip ask-badge">${icon('lock')} 只读</span></div>
+        <div class="ask-answered-row"><span class="aq">这趟大概几天？</span><span class="av">8 天</span><span class="an">备注：5.1–5.8 拼假</span></div>
+      </div>
+    </div>`;
+})();
+</script>
+</body>
+</html>

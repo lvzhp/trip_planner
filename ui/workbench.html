@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Trace Planner · 工作台 · 新疆环线 · 五一自驾</title>
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/components.css">
+</head>
+<body data-app="workbench">
+<div class="workbench">
+
+  <!-- ============ 顶栏 ============ -->
+  <header class="topbar" id="topbar">
+    <div id="topbar-main" class="od-row" style="flex:1;min-width:0;gap:var(--sp-3)"><!-- JS 渲染 --></div>
+    <div class="state-switcher desktop-only" id="state-switcher" title="原型演示：三种工作台状态">
+      <button data-state="complete">完整态</button>
+      <button data-state="planning">首次规划中</button>
+      <button data-state="replan">节点重规划中</button>
+    </div>
+  </header>
+
+  <!-- ============ 主体：对话 | 分割条 | 地图 + 浮动面板 ============ -->
+  <main class="wb-body">
+
+    <!-- 左：对话区（五种消息形态由 JS 渲染） -->
+    <div id="desktop-chat-slot" style="display:flex;flex:0 0 40%;min-width:0">
+      <section class="chat-pane" id="chat-pane" aria-label="对话区">
+        <div class="chat-scroll" id="chat-scroll"></div>
+        <div class="composer-wrap" id="composer-wrap">
+          <div class="ctx-chips-bar" id="ctx-chips-bar" aria-label="上下文标签"></div>
+          <div class="composer" id="composer">
+            <textarea id="composer-input" rows="1" placeholder="对整个行程说话，或用「改这里」定位到某个节点…"></textarea>
+            <button class="send-btn" id="btn-send" aria-label="发送"></button>
+          </div>
+          <div class="composer-hint">
+            <span><kbd>Enter</kbd> 发送 · <kbd>Shift+Enter</kbd> 换行</span>
+            <span class="slash-cmd" data-cmd="/replan">/replan</span>
+            <span class="slash-cmd" data-cmd="/booking">/booking</span>
+            <span class="slash-cmd" data-cmd="/conflicts">/conflicts</span>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- 分割条 + 三预设 -->
+    <div class="splitter" id="splitter" role="separator" aria-orientation="vertical" aria-label="调整对话与地图比例" tabindex="0"><span class="grip"></span></div>
+    <div class="split-presets" aria-label="布局预设">
+      <button data-preset="chat">对话优先</button>
+      <button data-preset="balanced">均衡</button>
+      <button data-preset="map">地图优先</button>
+    </div>
+
+    <!-- 右：地图区（浮层 + 卡片面板悬浮其上） -->
+    <section class="map-pane" aria-label="行程地图">
+      <div id="map-canvas"></div>
+      <div class="map-overlay map-controls-tr" id="map-controls"></div>
+      <div class="map-overlay map-legend" id="map-legend"></div>
+      <div class="map-overlay map-daycard" id="map-daycard"></div>
+
+      <!-- 行程卡片面板（浮在地图右侧，可折叠） -->
+      <aside class="trip-panel" id="trip-panel" aria-label="行程卡片面板">
+        <div class="sheet-handle" id="sheet-handle">
+          <span class="handle-bar"></span>
+          <span class="handle-summary" id="sheet-summary"></span>
+        </div>
+        <div class="mobile-tabs" id="mobile-tabs">
+          <button data-tab="cards" class="active">行程</button>
+          <button data-tab="chat">对话</button>
+        </div>
+        <div class="day-tabs" id="day-tabs" role="tablist" aria-label="按天切换"></div>
+        <div class="mobile-chat-slot" id="mobile-chat-slot"></div>
+        <div class="panel-scroll" id="panel-scroll"></div>
+      </aside>
+    </section>
+
+    <button class="panel-toggle" id="panel-toggle" aria-label="折叠/展开行程卡片面板"></button>
+  </main>
+</div>
+
+<script src="assets/js/ui.js"></script>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/map-canvas.js"></script>
+<script src="assets/js/workbench.js"></script>
+</body>
+</html>

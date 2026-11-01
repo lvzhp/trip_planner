@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>移动端工作台 · 半屏 sheet 关键态 · Trace Planner</title>
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/components.css">
+<style>
+  body { background: var(--surface); min-height: 100dvh; display: flex; flex-direction: column; align-items: center; padding: 28px 16px 48px; gap: 16px; }
+  .mob-head { max-width: 420px; text-align: center; display: flex; flex-direction: column; gap: 6px; }
+  .mob-head h1 { font-size: var(--fs-16); font-weight: 700; }
+  .mob-head p { font-size: var(--fs-12); color: var(--text-muted); line-height: 1.6; }
+  .mob-head a { color: var(--primary); font-weight: 600; }
+  .mob-stage { width: 390px; height: 844px; max-height: calc(100dvh - 160px); border: 1px solid var(--border); border-radius: var(--r-lg); overflow: hidden; background: var(--bg); box-shadow: var(--shadow-lg); }
+  .mob-stage iframe { width: 390px; height: 100%; border: 0; display: block; }
+  @media (max-width: 430px) { body { padding: 0; } .mob-head { display: none; } .mob-stage { width: 100vw; height: 100dvh; max-height: none; border: 0; border-radius: 0; box-shadow: none; } }
+</style>
+</head>
+<body>
+  <div class="mob-head">
+    <h1>移动端工作台 · 关键态：半屏 sheet + 地图</h1>
+    <p>Capacitor 壳内即整页 Web 应用。底部 sheet 三档吸附：<strong>64px 把手 / 50% / 85%</strong>，行程卡片与对话在 sheet 内切 tab。<br>
+    真实手机访问 <a href="workbench.html">workbench.html</a> 会自动进入该形态；下面以 390×844 视口内嵌演示。</p>
+  </div>
+  <div class="mob-stage">
+    <iframe src="workbench.html?mobile=1&sheet=half" title="移动端工作台演示" loading="lazy"></iframe>
+  </div>
+</body>
+</html>
