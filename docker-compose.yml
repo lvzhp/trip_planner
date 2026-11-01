@@ -1,0 +1,64 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: trace-planner-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: trace
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-trace}
+      POSTGRES_DB: trace_planner
+    ports:
+      - "5432:5432"
+    volumes:
+      - trace_pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U trace -d trace_planner"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: trace-planner-app
+    restart: unless-stopped
+    ports:
+      - "8010:8010"
+    environment:
+      DATABASE_URL: postgresql://trace:${POSTGRES_PASSWORD:-trace}@postgres:5432/trace_planner
+      DEMO_MODE: ${DEMO_MODE:-false}
+      SEED_DEMO: ${SEED_DEMO:-false}
+      DEMO_TODAY: ${DEMO_TODAY:-2026-04-26}
+      DEFAULT_PROVIDER: ${DEFAULT_PROVIDER:-deepseek}
+      DEFAULT_MODEL: ${DEFAULT_MODEL:-deepseek-flash}
+      DEEPSEEK_API_KEY: ${DEEPSEEK_API_KEY:-}
+      DEEPSEEK_BASE_URL: ${DEEPSEEK_BASE_URL:-https://api.deepseek.com}
+      QWEN_API_KEY: ${QWEN_API_KEY:-}
+      OPENAI_API_KEY: ${OPENAI_API_KEY:-}
+      ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY:-}
+      CUSTOM_API_KEY: ${CUSTOM_API_KEY:-}
+      CUSTOM_BASE_URL: ${CUSTOM_BASE_URL:-}
+      CUSTOM_MODEL: ${CUSTOM_MODEL:-}
+      AMAP_WEB_KEY: ${AMAP_WEB_KEY:-}
+      AMAP_JS_KEY: ${AMAP_JS_KEY:-}
+      AMAP_JS_SECURITY_CODE: ${AMAP_JS_SECURITY_CODE:-}
+      TAVILY_API_KEY: ${TAVILY_API_KEY:-}
+      MAP_PROVIDER: ${MAP_PROVIDER:-auto}
+      HTTP_TRUST_ENV: ${HTTP_TRUST_ENV:-false}
+      ALLOW_ORIGIN: ${ALLOW_ORIGIN:-http://127.0.0.1:8010,http://localhost:8010,capacitor://localhost,https://localhost}
+    volumes:
+      - trace_data:/workspace/backend/data
+    depends_on:
+      postgres:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8010/api/health', timeout=3)"]
+      interval: 20s
+      timeout: 5s
+      retries: 5
+      start_period: 20s
+
+volumes:
+  trace_pgdata:
+  trace_data:

@@ -1,0 +1,32 @@
+# Build context must never contain env or markdown files.
+.git
+.githooks
+.idea
+.DS_Store
+
+# --- env files -------------------------------------------------------------
+.env
+.env.*
+*.env
+**/.env
+**/.env.*
+
+# --- markdown files --------------------------------------------------------
+*.md
+**/*.md
+
+# --- 本地资料/工具产物，不进镜像 ------------------------------------------
+docs
+ui
+agent_talk_docs
+**/node_modules
+**/dist
+**/tsconfig.tsbuildinfo
+**/.vite
+backend/.venv
+backend/data
+backend/.pytest_cache
+backend/__pycache__
+backend/app/**/__pycache__
+backend/tests
+*.py[cod]

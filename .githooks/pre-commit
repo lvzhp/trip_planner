@@ -1,0 +1,16 @@
+#!/bin/sh
+# 仓库铁律：任何 .env / *.md 文件都不允许进入 Git。
+# 启用方式：git config core.hooksPath .githooks   （或 make hooks）
+banned='(^|/)\.env($|\.)|\.env$|\.md$'
+
+paths=$( { git diff --cached --name-only --diff-filter=ACMR; git ls-files; } | sort -u )
+violations=$(printf '%s\n' "$paths" | grep -Ei "$banned" || true)
+
+if [ -n "$violations" ]; then
+  echo "✖ 提交被拒绝：以下 env / markdown 文件禁止入库 →" >&2
+  printf '%s\n' "$violations" | sed 's/^/    - /' >&2
+  echo "  处理：git rm --cached <file>，并确认 .gitignore 已覆盖。" >&2
+  exit 1
+fi
+
+exit 0

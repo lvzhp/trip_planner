@@ -1,0 +1,34 @@
+Trace Planner — Git 工作流约定
+================================================================
+
+一、分支（进展以 branch 体现）
+  main             发布主干。只接受来自 develop 的合并，合并即打 tag。
+  develop          集成分支。所有 feature 在此汇合。
+  feature/<name>   单项进展。从 develop 切出，完成后以 --no-ff 合回 develop。
+  hotfix/<name>    紧急修复。从 main 切出，修完同时合回 main 与 develop。
+
+  常用：
+    git switch develop && git pull
+    git switch -c feature/xxx
+    git switch develop && git merge --no-ff feature/xxx
+
+二、发布（以 tag 为主）
+  vMAJOR.MINOR.PATCH，annotated tag，只打在 main 上。
+    git switch main && git merge --no-ff develop
+    git tag -a v0.1.0 -m "release: ..."
+    git push origin main --tags
+
+三、铁律：任何 env / markdown 文件不得进入仓库、不得进入部署
+  - env: .env  .env.*  *.env   （含各层目录下的同名文件）
+  - md : *.md  README.md  docs/
+  - 已写入 .gitignore 与 .dockerignore
+  - 由 .githooks/pre-commit 与 .githooks/pre-push 拦截，违规提交/推送直接失败
+  - 新克隆仓库后执行：make hooks && make verify-clean
+
+四、常用命令
+  make hooks         启用仓库 hook
+  make verify-clean  全量扫描历史，确认无 env / markdown
+  make backend       启动后端 (uvicorn :8010)
+  make frontend      启动前端 (vite)
+  make test          后端测试
+  make docker        容器化启动

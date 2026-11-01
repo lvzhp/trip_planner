@@ -1,0 +1,50 @@
+# ==========================================================================
+# Repository rule: NEVER commit .env* or *.md files.
+#   - 任何 env 文件（含 .env / .env.* / *.env / 各层目录）
+#   - 任何 markdown 文件（含 README.md / docs 笔记）
+# Enforced by .githooks/pre-commit and .githooks/pre-push.
+# ==========================================================================
+
+# --- env files: never published -------------------------------------------
+.env
+.env.*
+*.env
+**/.env
+**/.env.*
+**/*.env
+
+# --- markdown: never published --------------------------------------------
+*.md
+**/*.md
+
+# --- markdown 配套的调研素材（截图/CSV/脚本），与 md 一同留在本地 ----------
+docs/
+
+# --- OS / editor -----------------------------------------------------------
+.DS_Store
+.idea/
+.vscode/
+*.iml
+
+# --- python ----------------------------------------------------------------
+__pycache__/
+*.py[cod]
+.venv/
+**/.pytest_cache/
+backend/data/
+backend/:memory:
+
+# --- node / frontend build -------------------------------------------------
+node_modules/
+**/node_modules/
+dist/
+**/dist/
+.vite/
+**/.vite/
+*.tsbuildinfo
+
+# --- UI 原型工具产物 -------------------------------------------------------
+ui/.file-versions/
+ui/.od-frames/
+ui/.od-skills/
+*.artifact.json
