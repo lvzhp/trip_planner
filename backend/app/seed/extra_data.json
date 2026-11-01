@@ -1,0 +1,2883 @@
+[
+  {
+    "trip_id": "yn-2025-autumn",
+    "title": "滇东南 · 秋色环线",
+    "version": 12,
+    "constraints": {
+      "origin": "上海",
+      "date_range": {
+        "start": "2025-10-02",
+        "end": "2025-10-07",
+        "note": null
+      },
+      "travelers": 2,
+      "budget": {
+        "total": 12000.0,
+        "level": "mid",
+        "per_person_est": 6000.0
+      },
+      "transport_mode": "self_drive",
+      "vehicle": null,
+      "pace": "normal",
+      "diet": [],
+      "must_go": [],
+      "must_avoid": [],
+      "assumptions": [
+        "按 2 人 / 中等预算估算",
+        "机票按经济舱全价预估"
+      ]
+    },
+    "days": [
+      {
+        "day_index": 1,
+        "date": "2025-10-02",
+        "theme": "昆明 → 建水 · 滇南秋色",
+        "rhythm": {
+          "wake": "07:30:00",
+          "sleep": "23:00:00"
+        },
+        "stops": [
+          {
+            "stop_id": "yn1s1",
+            "seq": 1,
+            "poi": {
+              "name": "昆明老街 · 南强街",
+              "amap_poi_id": null,
+              "lng": 102.7125,
+              "lat": 25.0406,
+              "city": "昆明市",
+              "address": "五华区南强街",
+              "source_ref": "seed:poi:yn1s1"
+            },
+            "activities": [
+              {
+                "activity_id": "yn1a1",
+                "seq": 1,
+                "type": "visit",
+                "title": "昆明老街 · 早茶与花市",
+                "time_window": {
+                  "start": "08:30:00",
+                  "end": "10:30:00"
+                },
+                "note": null,
+                "tips": [
+                  "篆新农贸市场适合买水果"
+                ],
+                "transit_from_prev": null,
+                "transit_detail": null,
+                "food_detail": null,
+                "ticket": null,
+                "source_refs": [
+                  "seed:extra"
+                ]
+              },
+              {
+                "activity_id": "yn1a2",
+                "seq": 1,
+                "type": "meal",
+                "title": "午餐 · 自行安排",
+                "time_window": {
+                  "start": "11:00:00",
+                  "end": "12:00:00"
+                },
+                "note": null,
+                "tips": [],
+                "transit_from_prev": null,
+                "transit_detail": null,
+                "food_detail": {
+                  "shop_name": "建新园",
+                  "dishes": [
+                    "过桥米线",
+                    "汽锅鸡"
+                  ],
+                  "per_person_price": 60.0,
+                  "poi": null,
+                  "source_ref": null
+                },
+                "ticket": null,
+                "source_refs": [
+                  "seed:extra"
+                ]
+              },
+              {
+                "activity_id": "yn1a3",
+                "seq": 1,
+                "type": "long_transit",
+                "title": "昆明 → 建水 · 自驾",
+                "time_window": {
+                  "start": "12:30:00",
+                  "end": "15:30:00"
+                },
+                "note": null,
+                "tips": [],
+                "transit_from_prev": null,
+                "transit_detail": {
+                  "mode": "self_drive",
+                  "distance_km": 220.0,
+                  "drive_minutes": 180,
+                  "waypoints_poi": [
+                    {
+                      "name": "通海古城",
+                      "amap_poi_id": null,
+                      "lng": null,
+                      "lat": null,
+                      "city": null,
+                      "source_ref": null,
+                      "season_closure": null
+                    }
+                  ],
+                  "road_refs": [
+                    "G8511"
+                  ],
+                  "road_condition": "高速为主",
+                  "season_closure": null,
+                  "fuel_stops": [],
+                  "parking": "古城游客中心",
+                  "permit_required": false,
+                  "permit_note": null,
+                  "source_ref": null
+                },
+                "food_detail": null,
+                "ticket": null,
+                "source_refs": [
+                  "seed:extra"
+                ]
+              }
+            ]
+          },
+          {
+            "stop_id": "yn1s2",
+            "seq": 2,
+            "poi": {
+              "name": "建水古城 · 朝阳楼",
+              "amap_poi_id": null,
+              "lng": 102.8302,
+              "lat": 23.6205,
+              "city": "建水县",
+              "address": "临安镇临安路",
+              "source_ref": "seed:poi:yn1s2"
+            },
+            "activities": [
+              {
+                "activity_id": "yn1a4",
+                "seq": 1,
+                "type": "visit",
+                "title": "建水古城 · 朝阳楼与临安路",
+                "time_window": {
+                  "start": "16:00:00",
+                  "end": "18:30:00"
+                },
+                "note": null,
+                "tips": [],
+                "transit_from_prev": {
+                  "mode": "drive",
+                  "minutes": 10,
+                  "distance_km": 3.0,
+                  "source_ref": null
+                },
+                "transit_detail": null,
+                "food_detail": null,
+                "ticket": null,
+                "source_refs": [
+                  "seed:extra"
+                ]
+              },
+              {
+                "activity_id": "yn1a5",
+                "seq": 1,
+                "type": "meal",
+                "title": "晚餐 · 自行安排",
+                "time_window": {
+                  "start": "19:00:00",
+                  "end": "20:30:00"
+                },
+                "note": null,
+                "tips": [],
+                "transit_from_prev": null,
+                "transit_detail": null,
+                "food_detail": {
+                  "shop_name": "临安饭店",
+                  "dishes": [
+                    "汽锅鸡",
+                    "草芽米线",
+                    "烤豆腐"
+                  ],
+                  "per_person_price": 80.0,
+                  "poi": null,
+                  "source_ref": null
+                },
+                "ticket": null,
+                "source_refs": [
+                  "seed:extra"
+                ]
+              },
+              {
+                "activity_id": "yn1a6",
+                "seq": 1,
+                "type": "stay",
+                "title": "住宿 · 建水临安客栈",
+                "time_window": {
+                  "start": "21:00:00",
+                  "end": "23:00:00"
+                },
+                "note": null,
+                "tips": [],
+                "transit_from_prev": null,
+                "transit_detail": null,
+                "food_detail": null,
+                "ticket": {
+                  "kind": "hotel",
+                  "price_range": [
+                    380.0,
+                    520.0
+                  ],
+                  "currency": "CNY",
+                  "lead_time_days": 7,
+                  "real_name_required": true,
+                  "channels": [
+                    {
+                      "name": "携程",
+                      "type": "ota",
+                      "detail": "建水临安客栈",
+                      "note": null
+                    }
+                  ],
+                  "recommended_purchase": {
+                    "target_date": "2025-10-02",
+                    "session": "10月2日 1晚",
+                    "lead_time_days": 7,
+                    "note": null
+                  },
+                  "note": null,
+                  "source_ref": "seed:ticket"
+                },
+                "source_refs": [
+                  "seed:extra"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "day_index": 2,
+        "date": "2025-10-03",
+        "theme": "建水 · 朱家花园与十七孔桥",
+        "rhythm": {
+          "wake": "08:00:00",
+          "sleep": "23:00:00"
+        },
+        "stops": [
+          {
+            "stop_id": "yn2s1",
+            "seq": 1,
+            "poi": {
+              "name": "朱家花园",
+              "amap_poi_id": null,
+              "lng": 102.8281,
+              "lat": 23.6217,
+              "city": "建水县",
+              "address": "翰林街",
+              "source_ref": "seed:poi:yn2s1"
+            },
+            "activities": [
+              {
+                "activity_id": "yn2a1",
+                "seq": 1,
+                "type": "visit",
+                "title": "朱家花园 · 滇南大观园",
+                "time_window": {
+                  "start": "09:00:00",
+                  "end": "11:30:00"
+                },
+                "note": null,
+                "tips": [],
+                "transit_from_prev": null,
+                "transit_detail": null,
+                "food_detail": null,
+                "ticket": {
+                  "kind": "attraction",
+                  "price_range": [
+                    45.0,
+                    60.0
+                  ],
+                  "currency": "CNY",
+                  "lead_time_days": 3,
+                  "real_name_required": false,
+                  "channels": [
+                    {
+                      "name": "微信公众号「建水古城」",
+                      "type": "wechat_mp",
+                      "detail": "建水古城",
+                      "note": null
+                    },
+                    {
+                      "name": "携程",
+                      "type": "ota",
+                      "detail": null,
+                      "note": null
+                    }
+                  ],
+                  "recommended_purchase": {
+                    "target_date": "2025-10-03",
+                    "session": "上午场",
+                    "lead_time_days": 3,
+                    "note": null
+                  },
+                  "note": null,
+                  "source_ref": "seed:ticket"
+                },
+                "source_refs": [
+                  "seed:extra"
+                ]
+              },
+              {
+                "activity_id": "yn2a2",
+                "seq": 1,
+                "type": "meal",
+                "title": "午餐 · 自行安排",
+                "time_window": {
+                  "start": "12:00:00",
+                  "end": "13:00:00"
+                },
+                "note": null,
+                "tips": [],
+                "transit_from_prev": null,
+                "transit_detail": null,
+                "food_detail": {
+                  "shop_name": "西门豆腐坊",
+                  "dishes": [
+                    "烧豆腐",
+                    "草芽",
+                    "米线"
+                  ],
+                  "per_person_price": 55.0,
+                  "poi": null,
+                  "source_ref": null
+                },
+                "ticket": null,
+                "source_refs": [
+                  "seed:extra"
+                ]
+              }
+            ]
+          },
+          {
+            "stop_id": "yn2s2",
+            "seq": 2,
+            "poi": {
+              "name": "双龙桥 · 十七孔桥",
+              "amap_poi_id": null,
+              "lng": 102.7802,
+              "lat": 23.6011,
+              "city": "建水县",
+              "address": "西庄镇",
+              "source_ref": "seed:poi:yn2s2"
+            },
+            "activities": [
+              {
+                "activity_id": "yn2a3",
+                "seq": 1,
+                "type": "visit",
+                "title": "双龙桥 · 十七孔桥日落",
+                "time_window": {
+                  "start": "16:30:00",
+                  "end": "18:30:00"
+                },
+                "note": null,
+                "tips": [],
+                "transit_from_prev": {
+                  "mode": "drive",
+                  "minutes": 15,
+                  "distance_km": 6.0,
+                  "source_ref": null
+                },
+                "transit_detail": null,
+                "food_detail": null,
+                "ticket": null,
+                "source_refs": [
+                  "seed:extra"
+                ]
+              },
+              {
+                "activity_id": "yn2a4",
+                "seq": 1,
+                "type": "meal",
+                "title": "晚餐 · 自行安排",
+                "time_window": {
+                  "start": "19:00:00",
+                  "end": "20:30:00"
+                },
+                "note": null,
+                "tips": [],
+                "transit_from_prev": null,
+                "transit_detail": null,
+                "food_detail": {
+                  "shop_name": "紫陶街烧烤",
+                  "dishes": [
+                    "烤牛肉",
+                    "烤豆腐"
+                  ],
+                  "per_person_price": 70.0,
+                  "poi": null,
+                  "source_ref": null
+                },
+                "ticket": null,
+                "source_refs": [
+                  "seed:extra"
+                ]
+              },
+              {
+                "activity_id": "yn2a5",
+                "seq": 1,
+                "type": "stay",
+                "title": "住宿 · 建水临安客栈",
+                "time_window": {
+                  "start": "21:00:00",
+                  "end": "23:00:00"
+                },
+                "note": null,
+                "tips": [],
+                "transit_from_prev": null,
+                "transit_detail": null,
+                "food_detail": null,
+                "ticket": {
+                  "kind": "hotel",
+                  "price_range": [
+                    380.0,
+                    520.0
+                  ],
+                  "currency": "CNY",
+                  "lead_time_days": 7,
+                  "real_name_required": true,
+                  "channels": [
+                    {
+                      "name": "携程",
+                      "type": "ota",
+                      "detail": null,
+                      "note": null
+                    }
+                  ],
+                  "recommended_purchase": {
+                    "target_date": "2025-10-03",
+                    "session": "10月3日 1晚",
+                    "lead_time_days": 7,
+                    "note": null
+                  },
+                  "note": null,
+                  "source_ref": "seed:ticket"
+                },
+                "source_refs": [
+                  "seed:extra"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "day_index": 3,
+        "date": "2025-10-04",
+        "theme": "元阳 · 梯田日出与日落",
+        "rhythm": {
+          "wake": "05:00:00",
+          "sleep": "22:30:00"
+        },
+        "stops": [
+          {
+            "stop_id": "yn3s1",
+            "seq": 1,
+            "poi": {
+              "name": "多依树梯田",
+              "amap_poi_id": null,
+              "lng": 102.8186,
+              "lat": 23.1036,
+              "city": "元阳县",
+              "address": "新街镇多依树",
+              "source_ref": "seed:poi:yn3s1"
+            },
+            "activities": [
+              {
+                "activity_id": "yn3a1",
+                "seq": 1,
+                "type": "long_transit",
+                "title": "建水 → 元阳 · 自驾",
+                "time_window": {
+                  "start": "06:00:00",
+                  "end": "09:30:00"
+                },
+                "note": null,
+                "tips": [],
+                "transit_from_prev": null,
+                "transit_detail": {
+                  "mode": "self_drive",
+                  "distance_km": 180.0,
+                  "drive_minutes": 210,
+                  "waypoints_poi": [
+                    {
+                      "name": "个旧",
+                      "amap_poi_id": null,
+                      "lng": null,
+                      "lat": null,
+                      "city": null,
+                      "source_ref": null,
+                      "season_closure": null
+                    }
+                  ],
+                  "road_refs": [
+                    "G8012",
+                    "S214"
+                  ],
+                  "road_condition": "山路弯多",
+                  "season_closure": null,
+                  "fuel_stops": [],
+                  "parking": "多依树停车场",
+                  "permit_required": false,
+                  "permit_note": null,
+                  "source_ref": null
+                },
+                "food_detail": null,
+                "ticket": null,
+                "source_refs": [
+                  "seed:extra"
+                ]
+              },
+              {
+                "activity_id": "yn3a2",
+                "seq": 1,
+                "type": "visit",
+                "title": "多依树梯田 · 晨雾",
+                "time_window": {
+                  "start": "10:00:00",
+                  "end": "12:00:00"
+                },
+                "note": null,
+                "tips": [],
+                "transit_from_prev": null,
+                "transit_detail": null,
+                "food_detail": null,
+                "ticket": {
+                  "kind": "attraction",
+                  "price_range": [
+                    70.0,
+                    70.0
+                  ],
+                  "currency": "CNY",
+                  "lead_time_days": 2,
+                  "real_name_required": false,
+                  "channels": [
+                    {
+                      "name": "微信公众号「元阳哈尼梯田」",
+                      "type": "wechat_mp",
+                      "detail": "元阳哈尼梯田",
+                      "note": null
+                    }
+                  ],
+                  "recommended_purchase": {
+                    "target_date": "2025-10-04",
+                    "session": "全天",
+                    "lead_time_days": 2,
+                    "note": null
+                  },
+                  "note": null,
+                  "source_ref": "seed:ticket"
+                },
+                "source_refs": [
+                  "seed:extra"
+                ]
+              },
+              {
+                "activity_id": "yn3a3",
+                "seq": 1,
+                "type": "meal",
+                "title": "午餐 · 自行安排",
+                "time_window": {
+                  "start": "12:30:00",
+                  "end": "13:30:00"
+                },
+                "note": null,
+                "tips": [],
+                "transit_from_prev": null,
+                "transit_detail": null,
+                "food_detail": {
+                  "shop_name": "梯田人家",
+                  "dishes": [
+                    "蘸水鸡",
+                    "梯田红米"
+                  ],
+                  "per_person_price": 60.0,
+                  "poi": null,
+                  "source_ref": null
+                },
+                "ticket": null,
+                "source_refs": [
+                  "seed:extra"
+                ]
+              }
+            ]
+          },
+          {
+            "stop_id": "yn3s2",
+            "seq": 2,
+            "poi": {
+              "name": "坝达梯田",
+              "amap_poi_id": null,
+              "lng": 102.7592,
+              "lat": 23.1168,
+              "city": "元阳县",
+              "address": "新街镇坝达",
+              "source_ref": "seed:poi:yn3s2"
+            },
+            "activities": [
+              {
+                "activity_id": "yn3a4",
+                "seq": 1,
+                "type": "visit",
+                "title": "坝达梯田 · 日落",
+                "time_window": {
+                  "start": "17:00:00",
+                  "end": "19:00:00"
+                },
+                "note": null,
+                "tips": [],
+                "transit_from_prev": {
+                  "mode": "drive",
+                  "minutes": 20,
+                  "distance_km": 8.0,
+                  "source_ref": null
+                },
+                "transit_detail": null,
+                "food_detail": null,
+                "ticket": null,
+                "source_refs": [
+                  "seed:extra"
+                ]
+              },
+              {
+                "activity_id": "yn3a5",
+                "seq": 1,
+                "type": "stay",
+                "title": "住宿 · 元阳梯田民宿",
+                "time_window": {
+                  "start": "20:00:00",
+                  "end": "22:30:00"
+                },
+                "note": null,
+                "tips": [],
+                "transit_from_prev": null,
+                "transit_detail": null,
+                "food_detail": null,
+                "ticket": {
+                  "kind": "hotel",
+                  "price_range": [
+                    420.0,
+                    680.0
+                  ],
+                  "currency": "CNY",
+                  "lead_time_days": 7,
+                  "real_name_required": true,
+                  "channels": [
+                    {
+                      "name": "携程",
+                      "type": "ota",
+                      "detail": null,
+                      "note": null
+                    }
+                  ],
+                  "recommended_purchase": {
+                    "target_date": "2025-10-04",
+                    "session": "10月4日 1晚",
+                    "lead_time_days": 7,
+                    "note": null
+                  },
+                  "note": null,
+                  "source_ref": "seed:ticket"
+                },
+                "source_refs": [
+                  "seed:extra"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "day_index": 4,
+        "date": "2025-10-05",
+        "theme": "元阳 → 普者黑 · 山水田园",
+        "rhythm": {
+          "wake": "07:00:00",
+          "sleep": "23:00:00"
+        },
+        "stops": [
+          {
+            "stop_id": "yn4s1",
+            "seq": 1,
+            "poi": {
+              "name": "普者黑 · 青龙山",
+              "amap_poi_id": null,
+              "lng": 104.1813,
+              "lat": 24.0981,
+              "city": "丘北县",
+              "address": "普者黑景区",
+              "source_ref": "seed:poi:yn4s1"
+            },
+            "activities": [
+              {
+                "activity_id": "yn4a1",
+                "seq": 1,
+                "type": "long_transit",
+                "title": "元阳 → 普者黑 · 自驾",
+                "time_window": {
+                  "start": "07:30:00",
+                  "end": "13:00:00"
+                },
+                "note": null,
+                "tips": [],
+                "transit_from_prev": null,
+                "transit_detail": {
+                  "mode": "self_drive",
+                  "distance_km": 330.0,
+                  "drive_minutes": 330,
+                  "waypoints_poi": [
+                    {
+                      "name": "蒙自",
+                      "amap_poi_id": null,
+                      "lng": null,
+                      "lat": null,
+                      "city": null,
+                      "source_ref": null,
+                      "season_closure": null
+                    }
+                  ],
+                  "road_refs": [
+                    "G80"
+                  ],
+                  "road_condition": "高速为主",
+                  "season_closure": null,
+                  "fuel_stops": [],
+                  "parking": "景区停车场",
+                  "permit_required": false,
+                  "permit_note": null,
+                  "source_ref": null
+                },
+                "food_detail": null,
+                "ticket": null,
+                "source_refs": [
+                  "seed:extra"
+                ]
+              },
+              {
+                "activity_id": "yn4a2",
+                "seq": 1,
+                "type": "visit",
+                "title": "青龙山 · 普者黑全景",
+                "time_window": {
+                  "start": "14:00:00",
+                  "end": "16:30:00"
+                },
+                "note": null,
+                "tips": [],
+                "transit_from_prev": null,
+                "transit_detail": null,
+                "food_detail": null,
+                "ticket": {
+                  "kind": "attraction",
+                  "price_range": [
+                    60.0,
+                    90.0
+                  ],
+                  "currency": "CNY",
+                  "lead_time_days": 3,
+                  "real_name_required": false,
+                  "channels": [
+                    {
+                      "name": "微信公众号「普者黑景区」",
+                      "type": "wechat_mp",
+                      "detail": "普者黑景区",
+                      "note": null
+                    }
+                  ],
+                  "recommended_purchase": {
+                    "target_date": "2025-10-05",
+                    "session": "下午场",
+                    "lead_time_days": 3,
+                    "note": null
+                  },
+                  "note": null,
+                  "source_ref": "seed:ticket"
+                },
+                "source_refs": [
+                  "seed:extra"
+                ]
+              },
+              {
+                "activity_id": "yn4a3",
+                "seq": 1,
+                "type": "visit",
+                "title": "仙人洞村 · 荷塘日落",
+                "time_window": {
+                  "start": "17:00:00",
+                  "end": "19:00:00"
+                },
+                "note": null,
+                "tips": [],
+                "transit_from_prev": null,
+                "transit_detail": null,
+                "food_detail": null,
+                "ticket": null,
+                "source_refs": [
+                  "seed:extra"
+                ]
+              },
+              {
+                "activity_id": "yn4a4",
+                "seq": 1,
+                "type": "meal",
+                "title": "晚餐 · 自行安排",
+                "time_window": {
+                  "start": "19:30:00",
+                  "end": "21:00:00"
+                },
+                "note": null,
+                "tips": [],
+                "transit_from_prev": null,
+                "transit_detail": null,
+                "food_detail": {
+                  "shop_name": "仙人洞农家",
+                  "dishes": [
+                    "荷叶鸡",
+                    "藕粉"
+                  ],
+                  "per_person_price": 65.0,
+                  "poi": null,
+                  "source_ref": null
+                },
+                "ticket": null,
+                "source_refs": [
+                  "seed:extra"
+                ]
+              },
+              {
+                "activity_id": "yn4a5",
+                "seq": 1,
+                "type": "stay",
+                "title": "住宿 · 普者黑湖景民宿",
+                "time_window": {
+                  "start": "21:30:00",
+                  "end": "23:00:00"
+                },
+                "note": null,
+                "tips": [],
+                "transit_from_prev": null,
+                "transit_detail": null,
+                "food_detail": null,
+                "ticket": {
+                  "kind": "hotel",
+                  "price_range": [
+                    450.0,
+                    680.0
+                  ],
+                  "currency": "CNY",
+                  "lead_time_days": 7,
+                  "real_name_required": true,
+                  "channels": [
+                    {
+                      "name": "携程",
+                      "type": "ota",
+                      "detail": null,
+                      "note": null
+                    }
+                  ],
+                  "recommended_purchase": {
+                    "target_date": "2025-10-05",
+                    "session": "10月5日 1晚",
+                    "lead_time_days": 7,
+                    "note": null
+                  },
+                  "note": null,
+                  "source_ref": "seed:ticket"
+                },
+                "source_refs": [
+                  "seed:extra"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "day_index": 5,
+        "date": "2025-10-06",
+        "theme": "普者黑 → 弥勒 · 东风韵",
+        "rhythm": {
+          "wake": "08:00:00",
+          "sleep": "23:00:00"
+        },
+        "stops": [
+          {
+            "stop_id": "yn5s1",
+            "seq": 1,
+            "poi": {
+              "name": "弥勒东风韵",
+              "amap_poi_id": null,
+              "lng": 103.4368,
+              "lat": 24.4102,
+              "city": "弥勒市",
+              "address": "东风韵艺术小镇",
+              "source_ref": "seed:poi:yn5s1"
+            },
+            "activities": [
+              {
+                "activity_id": "yn5a1",
+                "seq": 1,
+                "type": "long_transit",
+                "title": "普者黑 → 弥勒 · 自驾",
+                "time_window": {
+                  "start": "08:30:00",
+                  "end": "12:00:00"
+                },
+                "note": null,
+                "tips": [],
+                "transit_from_prev": null,
+                "transit_detail": {
+                  "mode": "self_drive",
+                  "distance_km": 210.0,
+                  "drive_minutes": 210,
+                  "waypoints_poi": [],
+                  "road_refs": [
+                    "G80"
+                  ],
+                  "road_condition": "高速为主",
+                  "season_closure": null,
+                  "fuel_stops": [],
+                  "parking": "景区停车场",
+                  "permit_required": false,
+                  "permit_note": null,
+                  "source_ref": null
+                },
+                "food_detail": null,
+                "ticket": null,
+                "source_refs": [
+                  "seed:extra"
+                ]
+              },
+              {
+                "activity_id": "yn5a2",
+                "seq": 1,
+                "type": "visit",
+                "title": "东风韵 · 红砖艺术建筑群",
+                "time_window": {
+                  "start": "12:30:00",
+                  "end": "15:30:00"
+                },
+                "note": null,
+                "tips": [],
+                "transit_from_prev": null,
+                "transit_detail": null,
+                "food_detail": null,
+                "ticket": {
+                  "kind": "attraction",
+                  "price_range": [
+                    60.0,
+                    80.0
+                  ],
+                  "currency": "CNY",
+                  "lead_time_days": 3,
+                  "real_name_required": false,
+                  "channels": [
+                    {
+                      "name": "微信公众号「东风韵」",
+                      "type": "wechat_mp",
+                      "detail": "东风韵",
+                      "note": null
+                    }
+                  ],
+                  "recommended_purchase": {
+                    "target_date": "2025-10-06",
+                    "session": "全天",
+                    "lead_time_days": 3,
+                    "note": null
+                  },
+                  "note": null,
+                  "source_ref": "seed:ticket"
+                },
+                "source_refs": [
+                  "seed:extra"
+                ]
+              },
+              {
+                "activity_id": "yn5a3",
+                "seq": 1,
+                "type": "meal",
+                "title": "晚餐 · 自行安排",
+                "time_window": {
+                  "start": "17:30:00",
+                  "end": "18:30:00"
+                },
+                "note": null,
+                "tips": [],
+                "transit_from_prev": null,
+                "transit_detail": null,
+                "food_detail": {
+                  "shop_name": "弥勒卤鸡店",
+                  "dishes": [
+                    "卤鸡米线"
+                  ],
+                  "per_person_price": 45.0,
+                  "poi": null,
+                  "source_ref": null
+                },
+                "ticket": null,
+                "source_refs": [
+                  "seed:extra"
+                ]
+              },
+              {
+                "activity_id": "yn5a4",
+                "seq": 1,
+                "type": "stay",
+                "title": "住宿 · 弥勒湖泉酒店",
+                "time_window": {
+                  "start": "20:00:00",
+                  "end": "23:00:00"
+                },
+                "note": null,
+                "tips": [],
+                "transit_from_prev": null,
+                "transit_detail": null,
+                "food_detail": null,
+                "ticket": {
+                  "kind": "hotel",
+                  "price_range": [
+                    480.0,
+                    680.0
+                  ],
+                  "currency": "CNY",
+                  "lead_time_days": 7,
+                  "real_name_required": true,
+                  "channels": [
+                    {
+                      "name": "携程",
+                      "type": "ota",
+                      "detail": null,
+                      "note": null
+                    }
+                  ],
+                  "recommended_purchase": {
+                    "target_date": "2025-10-06",
+                    "session": "10月6日 1晚",
+                    "lead_time_days": 7,
+                    "note": null
+                  },
+                  "note": null,
+                  "source_ref": "seed:ticket"
+                },
+                "source_refs": [
+                  "seed:extra"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "day_index": 6,
+        "date": "2025-10-07",
+        "theme": "弥勒 → 昆明 · 返程",
+        "rhythm": {
+          "wake": "08:00:00",
+          "sleep": "22:00:00"
+        },
+        "stops": [
+          {
+            "stop_id": "yn6s1",
+            "seq": 1,
+            "poi": {
+              "name": "昆明长水机场",
+              "amap_poi_id": null,
+              "lng": 102.9292,
+              "lat": 25.1019,
+              "city": "昆明市",
+              "address": "长水国际机场",
+              "source_ref": "seed:poi:yn6s1"
+            },
+            "activities": [
+              {
+                "activity_id": "yn6a1",
+                "seq": 1,
+                "type": "long_transit",
+                "title": "弥勒 → 昆明 · 自驾",
+                "time_window": {
+                  "start": "09:00:00",
+                  "end": "11:00:00"
+                },
+                "note": null,
+                "tips": [],
+                "transit_from_prev": null,
+                "transit_detail": {
+                  "mode": "self_drive",
+                  "distance_km": 130.0,
+                  "drive_minutes": 120,
+                  "waypoints_poi": [],
+                  "road_refs": [
+                    "G80"
+                  ],
+                  "road_condition": "高速为主",
+                  "season_closure": null,
+                  "fuel_stops": [],
+                  "parking": "机场还车点",
+                  "permit_required": false,
+                  "permit_note": null,
+                  "source_ref": null
+                },
+                "food_detail": null,
+                "ticket": null,
+                "source_refs": [
+                  "seed:extra"
+                ]
+              },
+              {
+                "activity_id": "yn6a2",
+                "seq": 1,
+                "type": "long_transit",
+                "title": "昆明 ✈ 上海",
+                "time_window": {
+                  "start": "13:30:00",
+                  "end": "16:30:00"
+                },
+                "note": null,
+                "tips": [],
+                "transit_from_prev": null,
+                "transit_detail": {
+                  "mode": "flight",
+                  "flight_no": "MU5812",
+                  "airline": "东航",
+                  "airport_from": "昆明长水 T1",
+                  "airport_to": "上海虹桥 T2",
+                  "dep_time": "13:30:00",
+                  "arr_time": "16:30:00",
+                  "source_ref": null
+                },
+                "food_detail": null,
+                "ticket": {
+                  "kind": "transport",
+                  "price_range": [
+                    950.0,
+                    1250.0
+                  ],
+                  "currency": "CNY",
+                  "lead_time_days": 14,
+                  "real_name_required": true,
+                  "channels": [
+                    {
+                      "name": "东航 App",
+                      "type": "app",
+                      "detail": "东航 App",
+                      "note": null
+                    }
+                  ],
+                  "recommended_purchase": {
+                    "target_date": "2025-10-07",
+                    "session": "13:30 航班",
+                    "lead_time_days": 14,
+                    "note": null
+                  },
+                  "note": null,
+                  "source_ref": "seed:ticket"
+                },
+                "source_refs": [
+                  "seed:extra"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "revision_log": [
+      {
+        "version": 11,
+        "turn_seq": null,
+        "summary": "建水增加十七孔桥日落",
+        "user_request": "想看桥的日落",
+        "op_count": 2,
+        "changed_stop_ids": [
+          "yn2s2"
+        ],
+        "changed_activity_ids": [
+          "yn2a3"
+        ],
+        "created_at": "2025-09-28T10:02:00+08:00"
+      },
+      {
+        "version": 12,
+        "turn_seq": null,
+        "summary": "普者黑改为湖景民宿",
+        "user_request": "住湖边",
+        "op_count": 1,
+        "changed_stop_ids": [
+          "yn4s1"
+        ],
+        "changed_activity_ids": [
+          "yn4a5"
+        ],
+        "created_at": "2025-09-28T10:02:00+08:00"
+      }
+    ],
+    "created_at": "2025-09-20T10:00:00+08:00",
+    "updated_at": "2025-09-28T10:02:00+08:00"
+  },
+  {
+    "trip_id": "jp-2025-kansai",
+    "title": "关西 · 神社与铁道",
+    "version": 5,
+    "constraints": {
+      "origin": "上海",
+      "date_range": {
+        "start": "2025-04-03",
+        "end": "2025-04-09",
+        "note": null
+      },
+      "travelers": 2,
+      "budget": {
+        "total": 18000.0,
+        "level": "mid",
+        "per_person_est": 9000.0
+      },
+      "transport_mode": "train",
+      "vehicle": null,
+      "pace": "normal",
+      "diet": [],
+      "must_go": [],
+      "must_avoid": [],
+      "assumptions": [
+        "按 2 人 / 中等预算估算",
+        "关西周游券未计入"
+      ]
+    },
+    "days": [
+      {
+        "day_index": 1,
+        "date": "2025-04-03",
+        "theme": "上海 → 大阪 · 道顿堀",
+        "rhythm": {
+          "wake": "08:00:00",
+          "sleep": "23:30:00"
+        },
+        "stops": [
+          {
+            "stop_id": "jp1s1",
+            "seq": 1,
+            "poi": {
+              "name": "大阪 · 道顿堀",
+              "amap_poi_id": null,
+              "lng": 135.5012,
+              "lat": 34.6687,
+              "city": "大阪市",
+              "address": "中央区道顿堀",
+              "source_ref": "seed:poi:jp1s1"
+            },
+            "activities": [
+              {
+                "activity_id": "jp1a1",
+                "seq": 1,
+                "type": "long_transit",
+                "title": "上海浦东 ✈ 大阪关西",
+                "time_window": {
+                  "start": "09:30:00",
+                  "end": "13:00:00"
+                },
+                "note": null,
+                "tips": [],
+                "transit_from_prev": null,
+                "transit_detail": {
+                  "mode": "flight",
+                  "flight_no": "MU515",
+                  "airline": "东航",
+                  "airport_from": "上海浦东 T1",
+                  "airport_to": "大阪关西 T1",
+                  "dep_time": "09:30:00",
+                  "arr_time": "13:00:00",
+                  "source_ref": null
+                },
+                "food_detail": null,
+                "ticket": {
+                  "kind": "transport",
+                  "price_range": [
+                    1800.0,
+                    2400.0
+                  ],
+                  "currency": "CNY",
+                  "lead_time_days": 21,
+                  "real_name_required": true,
+                  "channels": [
+                    {
+                      "name": "东航 App",
+                      "type": "app",
+                      "detail": "东航 App",
+                      "note": null
+                    }
+                  ],
+                  "recommended_purchase": {
+                    "target_date": "2025-04-03",
+                    "session": "09:30 航班",
+                    "lead_time_days": 21,
+                    "note": null
+                  },
+                  "note": null,
+                  "source_ref": "seed:ticket"
+                },
+                "source_refs": [
+                  "seed:extra"
+                ]
+              },
+              {
+                "activity_id": "jp1a2",
+                "seq": 1,
+                "type": "long_transit",
+                "title": "关西机场 → 难波 · 南海电铁",
+                "time_window": {
+                  "start": "14:00:00",
+                  "end": "15:00:00"
+                },
+                "note": null,
+                "tips": [],
+                "transit_from_prev": null,
+                "transit_detail": {
+                  "mode": "train",
+                  "train_no": "南海特急",
+                  "station_from": "关西机场",
+                  "station_to": "难波",
+                  "seat_class": "自由席",
+                  "dep_time": "14:00:00",
+                  "arr_time": "15:00:00",
+                  "source_ref": null
+                },
+                "food_detail": null,
+                "ticket": null,
+                "source_refs": [
+                  "seed:extra"
+                ]
+              },
+              {
+                "activity_id": "jp1a3",
+                "seq": 1,
+                "type": "visit",
+                "title": "道顿堀 · 心斋桥",
+                "time_window": {
+                  "start": "16:00:00",
+                  "end": "18:30:00"
+                },
+                "note": null,
+                "tips": [],
+                "transit_from_prev": null,
+                "transit_detail": null,
+                "food_detail": null,
+                "ticket": null,
+                "source_refs": [
+                  "seed:extra"
+                ]
+              },
+              {
+                "activity_id": "jp1a4",
+                "seq": 1,
+                "type": "meal",
+                "title": "晚餐 · 自行安排",
+                "time_window": {
+                  "start": "19:00:00",
+                  "end": "20:30:00"
+                },
+                "note": null,
+                "tips": [],
+                "transit_from_prev": null,
+                "transit_detail": null,
+                "food_detail": {
+                  "shop_name": "千房",
+                  "dishes": [
+                    "大阪烧",
+                    "炒面"
+                  ],
+                  "per_person_price": 120.0,
+                  "poi": null,
+                  "source_ref": null
+                },
+                "ticket": null,
+                "source_refs": [
+                  "seed:extra"
+                ]
+              },
+              {
+                "activity_id": "jp1a5",
+                "seq": 1,
+                "type": "stay",
+                "title": "住宿 · 难波酒店",
+                "time_window": {
+                  "start": "21:00:00",
+                  "end": "23:30:00"
+                },
+                "note": null,
+                "tips": [],
+                "transit_from_prev": null,
+                "transit_detail": null,
+                "food_detail": null,
+                "ticket": {
+                  "kind": "hotel",
+                  "price_range": [
+                    780.0,
+                    980.0
+                  ],
+                  "currency": "CNY",
+                  "lead_time_days": 14,
+                  "real_name_required": true,
+                  "channels": [
+                    {
+                      "name": "携程",
+                      "type": "ota",
+                      "detail": null,
+                      "note": null
+                    }
+                  ],
+                  "recommended_purchase": {
+                    "target_date": "2025-04-03",
+                    "session": "4月3日 1晚",
+                    "lead_time_days": 14,
+                    "note": null
+                  },
+                  "note": null,
+                  "source_ref": "seed:ticket"
+                },
+                "source_refs": [
+                  "seed:extra"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "day_index": 2,
+        "date": "2025-04-04",
+        "theme": "京都 · 清水寺与祇园",
+        "rhythm": {
+          "wake": "07:00:00",
+          "sleep": "22:30:00"
+        },
+        "stops": [
+          {
+            "stop_id": "jp2s1",
+            "seq": 1,
+            "poi": {
+              "name": "清水寺",
+              "amap_poi_id": null,
+              "lng": 135.785,
+              "lat": 34.9949,
+              "city": "京都市",
+              "address": "东山区清水",
+              "source_ref": "seed:poi:jp2s1"
+            },
+            "activities": [
+              {
+                "activity_id": "jp2a1",
+                "seq": 1,
+                "type": "long_transit",
+                "title": "大阪 → 京都 · JR",
+                "time_window": {
+                  "start": "07:30:00",
+                  "end": "08:10:00"
+                },
+                "note": null,
+                "tips": [],
+                "transit_from_prev": null,
+                "transit_detail": {
+                  "mode": "train",
+                  "train_no": "JR 京都线新快速",
+                  "station_from": "大阪",
+                  "station_to": "京都",
+                  "seat_class": "自由席",
+                  "dep_time": "07:30:00",
+                  "arr_time": "08:10:00",
+                  "source_ref": null
+                },
+                "food_detail": null,
+                "ticket": null,
+                "source_refs": [
+                  "seed:extra"
+                ]
+              },
+              {
+                "activity_id": "jp2a2",
+                "seq": 1,
+                "type": "visit",
+                "title": "清水寺 · 二年坂三年坂",
+                "time_window": {
+                  "start": "09:00:00",
+                  "end": "12:00:00"
+                },
+                "note": null,
+                "tips": [],
+                "transit_from_prev": null,
+                "transit_detail": null,
+                "food_detail": null,
+                "ticket": {
+                  "kind": "attraction",
+                  "price_range": [
+                    25.0,
+                    25.0
+                  ],
+                  "currency": "CNY",
+                  "lead_time_days": 0,
+                  "real_name_required": false,
+                  "channels": [
+                    {
+                      "name": "现场",
+                      "type": "onsite",
+                      "detail": null,
+                      "note": null
+                    }
+                  ],
+                  "recommended_purchase": {
+                    "target_date": "2025-04-04",
+                    "session": "全天",
+                    "lead_time_days": 0,
+                    "note": null
+                  },
+                  "note": null,
+                  "source_ref": "seed:ticket"
+                },
+                "source_refs": [
+                  "seed:extra"
+                ]
+              },
+              {
+                "activity_id": "jp2a3",
+                "seq": 1,
+                "type": "meal",
+                "title": "午餐 · 自行安排",
+                "time_window": {
+                  "start": "12:30:00",
+                  "end": "13:30:00"
+                },
+                "note": null,
+                "tips": [],
+                "transit_from_prev": null,
+                "transit_detail": null,
+                "food_detail": {
+                  "shop_name": "奥丹清水",
+                  "dishes": [
+                    "汤豆腐"
+                  ],
+                  "per_person_price": 180.0,
+                  "poi": null,
+                  "source_ref": null
+                },
+                "ticket": null,
+                "source_refs": [
+                  "seed:extra"
+                ]
+              }
+            ]
+          },
+          {
+            "stop_id": "jp2s2",
+            "seq": 2,
+            "poi": {
+              "name": "伏见稻荷大社",
+              "amap_poi_id": null,
+              "lng": 135.7727,
+              "lat": 34.9671,
+              "city": "京都市",
+              "address": "伏见区深草",
+              "source_ref": "seed:poi:jp2s2"
+            },
+            "activities": [
+              {
+                "activity_id": "jp2a4",
+                "seq": 1,
+                "type": "visit",
+                "title": "伏见稻荷 · 千本鸟居",
+                "time_window": {
+                  "start": "15:00:00",
+                  "end": "17:30:00"
+                },
+                "note": null,
+                "tips": [],
+                "transit_from_prev": {
+                  "mode": "transit",
+                  "minutes": 25,
+                  "distance_km": 8.0,
+                  "source_ref": null
+                },
+                "transit_detail": null,
+                "food_detail": null,
+                "ticket": null,
+                "source_refs": [
+                  "seed:extra"
+                ]
+              },
+              {
+                "activity_id": "jp2a5",
+                "seq": 1,
+                "type": "meal",
+                "title": "晚餐 · 自行安排",
+                "time_window": {
+                  "start": "19:00:00",
+                  "end": "21:00:00"
+                },
+                "note": null,
+                "tips": [],
+                "transit_from_prev": null,
+                "transit_detail": null,
+                "food_detail": {
+                  "shop_name": "祇园小料理",
+                  "dishes": [
+                    "刺身",
+                    "清酒"
+                  ],
+                  "per_person_price": 220.0,
+                  "poi": null,
+                  "source_ref": null
+                },
+                "ticket": null,
+                "source_refs": [
+                  "seed:extra"
+                ]
+              },
+              {
+                "activity_id": "jp2a6",
+                "seq": 1,
+                "type": "stay",
+                "title": "住宿 · 京都四条酒店",
+                "time_window": {
+                  "start": "21:30:00",
+                  "end": "22:30:00"
+                },
+                "note": null,
+                "tips": [],
+                "transit_from_prev": null,
+                "transit_detail": null,
+                "food_detail": null,
+                "ticket": {
+                  "kind": "hotel",
+                  "price_range": [
+                    820.0,
+                    1100.0
+                  ],
+                  "currency": "CNY",
+                  "lead_time_days": 14,
+                  "real_name_required": true,
+                  "channels": [
+                    {
+                      "name": "携程",
+                      "type": "ota",
+                      "detail": null,
+                      "note": null
+                    }
+                  ],
+                  "recommended_purchase": {
+                    "target_date": "2025-04-04",
+                    "session": "4月4日 1晚",
+                    "lead_time_days": 14,
+                    "note": null
+                  },
+                  "note": null,
+                  "source_ref": "seed:ticket"
+                },
+                "source_refs": [
+                  "seed:extra"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "day_index": 3,
+        "date": "2025-04-05",
+        "theme": "奈良 · 东大寺与小鹿",
+        "rhythm": {
+          "wake": "08:00:00",
+          "sleep": "22:30:00"
+        },
+        "stops": [
+          {
+            "stop_id": "jp3s1",
+            "seq": 1,
+            "poi": {
+              "name": "奈良公园 · 东大寺",
+              "amap_poi_id": null,
+              "lng": 135.8398,
+              "lat": 34.689,
+              "city": "奈良市",
+              "address": "杂司町",
+              "source_ref": "seed:poi:jp3s1"
+            },
+            "activities": [
+              {
+                "activity_id": "jp3a1",
+                "seq": 1,
+                "type": "long_transit",
+                "title": "京都 → 奈良 · JR",
+                "time_window": {
+                  "start": "08:30:00",
+                  "end": "09:20:00"
+                },
+                "note": null,
+                "tips": [],
+                "transit_from_prev": null,
+                "transit_detail": {
+                  "mode": "train",
+                  "train_no": "JR 奈良线",
+                  "station_from": "京都",
+                  "station_to": "奈良",
+                  "seat_class": "自由席",
+                  "dep_time": "08:30:00",
+                  "arr_time": "09:20:00",
+                  "source_ref": null
+                },
+                "food_detail": null,
+                "ticket": null,
+                "source_refs": [
+                  "seed:extra"
+                ]
+              },
+              {
+                "activity_id": "jp3a2",
+                "seq": 1,
+                "type": "visit",
+                "title": "东大寺 · 奈良公园",
+                "time_window": {
+                  "start": "09:40:00",
+                  "end": "12:30:00"
+                },
+                "note": null,
+                "tips": [],
+                "transit_from_prev": null,
+                "transit_detail": null,
+                "food_detail": null,
+                "ticket": {
+                  "kind": "attraction",
+                  "price_range": [
+                    35.0,
+                    35.0
+                  ],
+                  "currency": "CNY",
+                  "lead_time_days": 0,
+                  "real_name_required": false,
+                  "channels": [
+                    {
+                      "name": "现场",
+                      "type": "onsite",
+                      "detail": null,
+                      "note": null
+                    }
+                  ],
+                  "recommended_purchase": {
+                    "target_date": "2025-04-05",
+                    "session": "全天",
+                    "lead_time_days": 0,
+                    "note": null
+                  },
+                  "note": null,
+                  "source_ref": "seed:ticket"
+                },
+                "source_refs": [
+                  "seed:extra"
+                ]
+              },
+              {
+                "activity_id": "jp3a3",
+                "seq": 1,
+                "type": "meal",
+                "title": "午餐 · 自行安排",
+                "time_window": {
+                  "start": "13:00:00",
+                  "end": "14:00:00"
+                },
+                "note": null,
+                "tips": [],
+                "transit_from_prev": null,
+                "transit_detail": null,
+                "food_detail": {
+                  "shop_name": "志津香",
+                  "dishes": [
+                    "釜饭"
+                  ],
+                  "per_person_price": 110.0,
+                  "poi": null,
+                  "source_ref": null
+                },
+                "ticket": null,
+                "source_refs": [
+                  "seed:extra"
+                ]
+              },
+              {
+                "activity_id": "jp3a4",
+                "seq": 1,
+                "type": "visit",
+                "title": "春日大社 · 若草山",
+                "time_window": {
+                  "start": "14:30:00",
+                  "end": "17:00:00"
+                },
+                "note": null,
+                "tips": [],
+                "transit_from_prev": null,
+                "transit_detail": null,
+                "food_detail": null,
+                "ticket": null,
+                "source_refs": [
+                  "seed:extra"
+                ]
+              },
+              {
+                "activity_id": "jp3a5",
+                "seq": 1,
+                "type": "stay",
+                "title": "住宿 · 奈良町民宿",
+                "time_window": {
+                  "start": "19:00:00",
+                  "end": "22:30:00"
+                },
+                "note": null,
+                "tips": [],
+                "transit_from_prev": null,
+                "transit_detail": null,
+                "food_detail": null,
+                "ticket": {
+                  "kind": "hotel",
+                  "price_range": [
+                    680.0,
+                    920.0
+                  ],
+                  "currency": "CNY",
+                  "lead_time_days": 14,
+                  "real_name_required": true,
+                  "channels": [
+                    {
+                      "name": "携程",
+                      "type": "ota",
+                      "detail": null,
+                      "note": null
+                    }
+                  ],
+                  "recommended_purchase": {
+                    "target_date": "2025-04-05",
+                    "session": "4月5日 1晚",
+                    "lead_time_days": 14,
+                    "note": null
+                  },
+                  "note": null,
+                  "source_ref": "seed:ticket"
+                },
+                "source_refs": [
+                  "seed:extra"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "day_index": 4,
+        "date": "2025-04-06",
+        "theme": "宇治 · 平等院与抹茶",
+        "rhythm": {
+          "wake": "08:30:00",
+          "sleep": "22:00:00"
+        },
+        "stops": [
+          {
+            "stop_id": "jp4s1",
+            "seq": 1,
+            "poi": {
+              "name": "宇治 · 平等院",
+              "amap_poi_id": null,
+              "lng": 135.8076,
+              "lat": 34.8894,
+              "city": "宇治市",
+              "address": "宇治莲华",
+              "source_ref": "seed:poi:jp4s1"
+            },
+            "activities": [
+              {
+                "activity_id": "jp4a1",
+                "seq": 1,
+                "type": "long_transit",
+                "title": "奈良 → 宇治 · JR",
+                "time_window": {
+                  "start": "09:00:00",
+                  "end": "09:50:00"
+                },
+                "note": null,
+                "tips": [],
+                "transit_from_prev": null,
+                "transit_detail": {
+                  "mode": "train",
+                  "train_no": "JR 奈良线",
+                  "station_from": "奈良",
+                  "station_to": "宇治",
+                  "seat_class": "自由席",
+                  "dep_time": "09:00:00",
+                  "arr_time": "09:50:00",
+                  "source_ref": null
+                },
+                "food_detail": null,
+                "ticket": null,
+                "source_refs": [
+                  "seed:extra"
+                ]
+              },
+              {
+                "activity_id": "jp4a2",
+                "seq": 1,
+                "type": "visit",
+                "title": "平等院凤凰堂",
+                "time_window": {
+                  "start": "10:00:00",
+                  "end": "12:00:00"
+                },
+                "note": null,
+                "tips": [],
+                "transit_from_prev": null,
+                "transit_detail": null,
+                "food_detail": null,
+                "ticket": {
+                  "kind": "attraction",
+                  "price_range": [
+                    40.0,
+                    40.0
+                  ],
+                  "currency": "CNY",
+                  "lead_time_days": 0,
+                  "real_name_required": false,
+                  "channels": [
+                    {
+                      "name": "现场",
+                      "type": "onsite",
+                      "detail": null,
+                      "note": null
+                    }
+                  ],
+                  "recommended_purchase": {
+                    "target_date": "2025-04-06",
+                    "session": "全天",
+                    "lead_time_days": 0,
+                    "note": null
+                  },
+                  "note": null,
+                  "source_ref": "seed:ticket"
+                },
+                "source_refs": [
+                  "seed:extra"
+                ]
+              },
+              {
+                "activity_id": "jp4a3",
+                "seq": 1,
+                "type": "meal",
+                "title": "午餐 · 自行安排",
+                "time_window": {
+                  "start": "12:30:00",
+                  "end": "13:30:00"
+                },
+                "note": null,
+                "tips": [],
+                "transit_from_prev": null,
+                "transit_detail": null,
+                "food_detail": {
+                  "shop_name": "中村藤吉本店",
+                  "dishes": [
+                    "抹茶荞麦面",
+                    "抹茶甜品"
+                  ],
+                  "per_person_price": 130.0,
+                  "poi": null,
+                  "source_ref": null
+                },
+                "ticket": null,
+                "source_refs": [
+                  "seed:extra"
+                ]
+              },
+              {
+                "activity_id": "jp4a4",
+                "seq": 1,
+                "type": "visit",
+                "title": "宇治川 · 源氏物语博物馆",
+                "time_window": {
+                  "start": "14:00:00",
+                  "end": "16:30:00"
+                },
+                "note": null,
+                "tips": [],
+                "transit_from_prev": null,
+                "transit_detail": null,
+                "food_detail": null,
+                "ticket": null,
+                "source_refs": [
+                  "seed:extra"
+                ]
+              },
+              {
+                "activity_id": "jp4a5",
+                "seq": 1,
+                "type": "stay",
+                "title": "住宿 · 大阪梅田酒店",
+                "time_window": {
+                  "start": "19:00:00",
+                  "end": "22:00:00"
+                },
+                "note": null,
+                "tips": [],
+                "transit_from_prev": null,
+                "transit_detail": null,
+                "food_detail": null,
+                "ticket": {
+                  "kind": "hotel",
+                  "price_range": [
+                    760.0,
+                    980.0
+                  ],
+                  "currency": "CNY",
+                  "lead_time_days": 14,
+                  "real_name_required": true,
+                  "channels": [
+                    {
+                      "name": "携程",
+                      "type": "ota",
+                      "detail": null,
+                      "note": null
+                    }
+                  ],
+                  "recommended_purchase": {
+                    "target_date": "2025-04-06",
+                    "session": "4月6日 1晚",
+                    "lead_time_days": 14,
+                    "note": null
+                  },
+                  "note": null,
+                  "source_ref": "seed:ticket"
+                },
+                "source_refs": [
+                  "seed:extra"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "day_index": 5,
+        "date": "2025-04-07",
+        "theme": "大阪 · 大阪城与梅田",
+        "rhythm": {
+          "wake": "08:30:00",
+          "sleep": "22:30:00"
+        },
+        "stops": [
+          {
+            "stop_id": "jp5s1",
+            "seq": 1,
+            "poi": {
+              "name": "大阪城公园",
+              "amap_poi_id": null,
+              "lng": 135.5259,
+              "lat": 34.6873,
+              "city": "大阪市",
+              "address": "中央区大阪城",
+              "source_ref": "seed:poi:jp5s1"
+            },
+            "activities": [
+              {
+                "activity_id": "jp5a1",
+                "seq": 1,
+                "type": "visit",
+                "title": "大阪城天守阁",
+                "time_window": {
+                  "start": "09:30:00",
+                  "end": "12:00:00"
+                },
+                "note": null,
+                "tips": [],
+                "transit_from_prev": null,
+                "transit_detail": null,
+                "food_detail": null,
+                "ticket": {
+                  "kind": "attraction",
+                  "price_range": [
+                    35.0,
+                    35.0
+                  ],
+                  "currency": "CNY",
+                  "lead_time_days": 0,
+                  "real_name_required": false,
+                  "channels": [
+                    {
+                      "name": "现场",
+                      "type": "onsite",
+                      "detail": null,
+                      "note": null
+                    }
+                  ],
+                  "recommended_purchase": {
+                    "target_date": "2025-04-07",
+                    "session": "全天",
+                    "lead_time_days": 0,
+                    "note": null
+                  },
+                  "note": null,
+                  "source_ref": "seed:ticket"
+                },
+                "source_refs": [
+                  "seed:extra"
+                ]
+              },
+              {
+                "activity_id": "jp5a2",
+                "seq": 1,
+                "type": "meal",
+                "title": "午餐 · 自行安排",
+                "time_window": {
+                  "start": "12:30:00",
+                  "end": "13:30:00"
+                },
+                "note": null,
+                "tips": [],
+                "transit_from_prev": null,
+                "transit_detail": null,
+                "food_detail": {
+                  "shop_name": "黑门市场",
+                  "dishes": [
+                    "海鲜丼",
+                    "章鱼烧"
+                  ],
+                  "per_person_price": 150.0,
+                  "poi": null,
+                  "source_ref": null
+                },
+                "ticket": null,
+                "source_refs": [
+                  "seed:extra"
+                ]
+              },
+              {
+                "activity_id": "jp5a3",
+                "seq": 1,
+                "type": "visit",
+                "title": "梅田蓝天大厦 · 空中庭园",
+                "time_window": {
+                  "start": "16:00:00",
+                  "end": "18:30:00"
+                },
+                "note": null,
+                "tips": [],
+                "transit_from_prev": {
+                  "mode": "transit",
+                  "minutes": 20,
+                  "distance_km": 6.0,
+                  "source_ref": null
+                },
+                "transit_detail": null,
+                "food_detail": null,
+                "ticket": null,
+                "source_refs": [
+                  "seed:extra"
+                ]
+              },
+              {
+                "activity_id": "jp5a4",
+                "seq": 1,
+                "type": "stay",
+                "title": "住宿 · 大阪梅田酒店",
+                "time_window": {
+                  "start": "20:00:00",
+                  "end": "22:30:00"
+                },
+                "note": null,
+                "tips": [],
+                "transit_from_prev": null,
+                "transit_detail": null,
+                "food_detail": null,
+                "ticket": {
+                  "kind": "hotel",
+                  "price_range": [
+                    760.0,
+                    980.0
+                  ],
+                  "currency": "CNY",
+                  "lead_time_days": 14,
+                  "real_name_required": true,
+                  "channels": [
+                    {
+                      "name": "携程",
+                      "type": "ota",
+                      "detail": null,
+                      "note": null
+                    }
+                  ],
+                  "recommended_purchase": {
+                    "target_date": "2025-04-07",
+                    "session": "4月7日 1晚",
+                    "lead_time_days": 14,
+                    "note": null
+                  },
+                  "note": null,
+                  "source_ref": "seed:ticket"
+                },
+                "source_refs": [
+                  "seed:extra"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "day_index": 6,
+        "date": "2025-04-08",
+        "theme": "大阪 · 自由购物",
+        "rhythm": {
+          "wake": "09:00:00",
+          "sleep": "22:00:00"
+        },
+        "stops": [
+          {
+            "stop_id": "jp6s1",
+            "seq": 1,
+            "poi": {
+              "name": "心斋桥 · 难波",
+              "amap_poi_id": null,
+              "lng": 135.5012,
+              "lat": 34.6742,
+              "city": "大阪市",
+              "address": "中央区心斋桥",
+              "source_ref": "seed:poi:jp6s1"
+            },
+            "activities": [
+              {
+                "activity_id": "jp6a1",
+                "seq": 1,
+                "type": "visit",
+                "title": "心斋桥 · 药妆与买手店",
+                "time_window": {
+                  "start": "10:00:00",
+                  "end": "13:00:00"
+                },
+                "note": null,
+                "tips": [],
+                "transit_from_prev": null,
+                "transit_detail": null,
+                "food_detail": null,
+                "ticket": null,
+                "source_refs": [
+                  "seed:extra"
+                ]
+              },
+              {
+                "activity_id": "jp6a2",
+                "seq": 1,
+                "type": "meal",
+                "title": "午餐 · 自行安排",
+                "time_window": {
+                  "start": "13:30:00",
+                  "end": "14:30:00"
+                },
+                "note": null,
+                "tips": [],
+                "transit_from_prev": null,
+                "transit_detail": null,
+                "food_detail": {
+                  "shop_name": "大起水产",
+                  "dishes": [
+                    "寿司"
+                  ],
+                  "per_person_price": 120.0,
+                  "poi": null,
+                  "source_ref": null
+                },
+                "ticket": null,
+                "source_refs": [
+                  "seed:extra"
+                ]
+              },
+              {
+                "activity_id": "jp6a3",
+                "seq": 1,
+                "type": "free",
+                "title": "自由活动 · 咖啡馆",
+                "time_window": {
+                  "start": "15:00:00",
+                  "end": "18:00:00"
+                },
+                "note": null,
+                "tips": [],
+                "transit_from_prev": null,
+                "transit_detail": null,
+                "food_detail": null,
+                "ticket": null,
+                "source_refs": [
+                  "seed:extra"
+                ]
+              },
+              {
+                "activity_id": "jp6a4",
+                "seq": 1,
+                "type": "stay",
+                "title": "住宿 · 难波酒店",
+                "time_window": {
+                  "start": "20:00:00",
+                  "end": "22:00:00"
+                },
+                "note": null,
+                "tips": [],
+                "transit_from_prev": null,
+                "transit_detail": null,
+                "food_detail": null,
+                "ticket": {
+                  "kind": "hotel",
+                  "price_range": [
+                    780.0,
+                    980.0
+                  ],
+                  "currency": "CNY",
+                  "lead_time_days": 14,
+                  "real_name_required": true,
+                  "channels": [
+                    {
+                      "name": "携程",
+                      "type": "ota",
+                      "detail": null,
+                      "note": null
+                    }
+                  ],
+                  "recommended_purchase": {
+                    "target_date": "2025-04-08",
+                    "session": "4月8日 1晚",
+                    "lead_time_days": 14,
+                    "note": null
+                  },
+                  "note": null,
+                  "source_ref": "seed:ticket"
+                },
+                "source_refs": [
+                  "seed:extra"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "day_index": 7,
+        "date": "2025-04-09",
+        "theme": "大阪 ✈ 上海 · 返程",
+        "rhythm": {
+          "wake": "07:00:00",
+          "sleep": "22:00:00"
+        },
+        "stops": [
+          {
+            "stop_id": "jp7s1",
+            "seq": 1,
+            "poi": {
+              "name": "关西国际机场",
+              "amap_poi_id": null,
+              "lng": 135.2442,
+              "lat": 34.4347,
+              "city": "泉佐野市",
+              "address": "关西机场",
+              "source_ref": "seed:poi:jp7s1"
+            },
+            "activities": [
+              {
+                "activity_id": "jp7a1",
+                "seq": 1,
+                "type": "long_transit",
+                "title": "难波 → 关西机场 · 南海电铁",
+                "time_window": {
+                  "start": "08:00:00",
+                  "end": "09:00:00"
+                },
+                "note": null,
+                "tips": [],
+                "transit_from_prev": null,
+                "transit_detail": {
+                  "mode": "train",
+                  "train_no": "南海特急",
+                  "station_from": "难波",
+                  "station_to": "关西机场",
+                  "seat_class": "自由席",
+                  "dep_time": "08:00:00",
+                  "arr_time": "09:00:00",
+                  "source_ref": null
+                },
+                "food_detail": null,
+                "ticket": null,
+                "source_refs": [
+                  "seed:extra"
+                ]
+              },
+              {
+                "activity_id": "jp7a2",
+                "seq": 1,
+                "type": "long_transit",
+                "title": "大阪关西 ✈ 上海浦东",
+                "time_window": {
+                  "start": "11:00:00",
+                  "end": "12:45:00"
+                },
+                "note": null,
+                "tips": [],
+                "transit_from_prev": null,
+                "transit_detail": {
+                  "mode": "flight",
+                  "flight_no": "MU516",
+                  "airline": "东航",
+                  "airport_from": "大阪关西 T1",
+                  "airport_to": "上海浦东 T1",
+                  "dep_time": "11:00:00",
+                  "arr_time": "12:45:00",
+                  "source_ref": null
+                },
+                "food_detail": null,
+                "ticket": {
+                  "kind": "transport",
+                  "price_range": [
+                    1800.0,
+                    2400.0
+                  ],
+                  "currency": "CNY",
+                  "lead_time_days": 21,
+                  "real_name_required": true,
+                  "channels": [
+                    {
+                      "name": "东航 App",
+                      "type": "app",
+                      "detail": "东航 App",
+                      "note": null
+                    }
+                  ],
+                  "recommended_purchase": {
+                    "target_date": "2025-04-09",
+                    "session": "11:00 航班",
+                    "lead_time_days": 21,
+                    "note": null
+                  },
+                  "note": null,
+                  "source_ref": "seed:ticket"
+                },
+                "source_refs": [
+                  "seed:extra"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "revision_log": [
+      {
+        "version": 5,
+        "turn_seq": null,
+        "summary": "奈良改为住一晚，减少往返",
+        "user_request": "别每天折返",
+        "op_count": 3,
+        "changed_stop_ids": [
+          "jp3s1"
+        ],
+        "changed_activity_ids": [
+          "jp3a5"
+        ],
+        "created_at": "2025-03-20T22:47:00+08:00"
+      }
+    ],
+    "created_at": "2025-03-12T10:00:00+08:00",
+    "updated_at": "2025-03-20T22:47:00+08:00"
+  },
+  {
+    "trip_id": "zj-anji-weekend",
+    "title": "安吉 · 周末山野",
+    "version": 3,
+    "constraints": {
+      "origin": "上海",
+      "date_range": {
+        "start": "2025-03-14",
+        "end": "2025-03-15",
+        "note": null
+      },
+      "travelers": 2,
+      "budget": {
+        "total": 3000.0,
+        "level": "mid",
+        "per_person_est": 1500.0
+      },
+      "transport_mode": "self_drive",
+      "vehicle": null,
+      "pace": "relaxed",
+      "diet": [],
+      "must_go": [],
+      "must_avoid": [],
+      "assumptions": [
+        "按 2 人 / 中等预算估算",
+        "周末民宿价格已含早"
+      ]
+    },
+    "days": [
+      {
+        "day_index": 1,
+        "date": "2025-03-14",
+        "theme": "上海 → 安吉 · 天荒坪",
+        "rhythm": {
+          "wake": "08:00:00",
+          "sleep": "23:00:00"
+        },
+        "stops": [
+          {
+            "stop_id": "aj1s1",
+            "seq": 1,
+            "poi": {
+              "name": "天荒坪 · 江南天池",
+              "amap_poi_id": null,
+              "lng": 119.5733,
+              "lat": 30.5286,
+              "city": "安吉县",
+              "address": "天荒坪镇",
+              "source_ref": "seed:poi:aj1s1"
+            },
+            "activities": [
+              {
+                "activity_id": "aj1a1",
+                "seq": 1,
+                "type": "long_transit",
+                "title": "上海 → 安吉 · 自驾",
+                "time_window": {
+                  "start": "08:30:00",
+                  "end": "11:30:00"
+                },
+                "note": null,
+                "tips": [],
+                "transit_from_prev": null,
+                "transit_detail": {
+                  "mode": "self_drive",
+                  "distance_km": 220.0,
+                  "drive_minutes": 180,
+                  "waypoints_poi": [
+                    {
+                      "name": "湖州",
+                      "amap_poi_id": null,
+                      "lng": null,
+                      "lat": null,
+                      "city": null,
+                      "source_ref": null,
+                      "season_closure": null
+                    }
+                  ],
+                  "road_refs": [
+                    "G50",
+                    "S205"
+                  ],
+                  "road_condition": "高速 + 山路",
+                  "season_closure": null,
+                  "fuel_stops": [],
+                  "parking": "景区停车场",
+                  "permit_required": false,
+                  "permit_note": null,
+                  "source_ref": null
+                },
+                "food_detail": null,
+                "ticket": null,
+                "source_refs": [
+                  "seed:extra"
+                ]
+              },
+              {
+                "activity_id": "aj1a2",
+                "seq": 1,
+                "type": "visit",
+                "title": "江南天池 · 环湖步道",
+                "time_window": {
+                  "start": "12:30:00",
+                  "end": "15:30:00"
+                },
+                "note": null,
+                "tips": [],
+                "transit_from_prev": null,
+                "transit_detail": null,
+                "food_detail": null,
+                "ticket": {
+                  "kind": "attraction",
+                  "price_range": [
+                    70.0,
+                    90.0
+                  ],
+                  "currency": "CNY",
+                  "lead_time_days": 1,
+                  "real_name_required": false,
+                  "channels": [
+                    {
+                      "name": "微信公众号「安吉旅游」",
+                      "type": "wechat_mp",
+                      "detail": "安吉旅游",
+                      "note": null
+                    }
+                  ],
+                  "recommended_purchase": {
+                    "target_date": "2025-03-14",
+                    "session": "全天",
+                    "lead_time_days": 1,
+                    "note": null
+                  },
+                  "note": null,
+                  "source_ref": "seed:ticket"
+                },
+                "source_refs": [
+                  "seed:extra"
+                ]
+              },
+              {
+                "activity_id": "aj1a3",
+                "seq": 1,
+                "type": "meal",
+                "title": "晚餐 · 自行安排",
+                "time_window": {
+                  "start": "17:30:00",
+                  "end": "19:00:00"
+                },
+                "note": null,
+                "tips": [],
+                "transit_from_prev": null,
+                "transit_detail": null,
+                "food_detail": {
+                  "shop_name": "天荒坪农家",
+                  "dishes": [
+                    "土鸡煲",
+                    "笋干"
+                  ],
+                  "per_person_price": 85.0,
+                  "poi": null,
+                  "source_ref": null
+                },
+                "ticket": null,
+                "source_refs": [
+                  "seed:extra"
+                ]
+              },
+              {
+                "activity_id": "aj1a4",
+                "seq": 1,
+                "type": "stay",
+                "title": "住宿 · 山间民宿",
+                "time_window": {
+                  "start": "20:00:00",
+                  "end": "23:00:00"
+                },
+                "note": null,
+                "tips": [],
+                "transit_from_prev": null,
+                "transit_detail": null,
+                "food_detail": null,
+                "ticket": {
+                  "kind": "hotel",
+                  "price_range": [
+                    520.0,
+                    720.0
+                  ],
+                  "currency": "CNY",
+                  "lead_time_days": 7,
+                  "real_name_required": true,
+                  "channels": [
+                    {
+                      "name": "携程",
+                      "type": "ota",
+                      "detail": null,
+                      "note": null
+                    }
+                  ],
+                  "recommended_purchase": {
+                    "target_date": "2025-03-14",
+                    "session": "3月14日 1晚",
+                    "lead_time_days": 7,
+                    "note": null
+                  },
+                  "note": null,
+                  "source_ref": "seed:ticket"
+                },
+                "source_refs": [
+                  "seed:extra"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "day_index": 2,
+        "date": "2025-03-15",
+        "theme": "深溪峡谷 → 返程",
+        "rhythm": {
+          "wake": "07:30:00",
+          "sleep": "22:00:00"
+        },
+        "stops": [
+          {
+            "stop_id": "aj2s1",
+            "seq": 1,
+            "poi": {
+              "name": "深溪峡谷漂流",
+              "amap_poi_id": null,
+              "lng": 119.6651,
+              "lat": 30.4995,
+              "city": "安吉县",
+              "address": "报福镇深溪",
+              "source_ref": "seed:poi:aj2s1"
+            },
+            "activities": [
+              {
+                "activity_id": "aj2a1",
+                "seq": 1,
+                "type": "visit",
+                "title": "深溪峡谷 · 竹海徒步",
+                "time_window": {
+                  "start": "08:30:00",
+                  "end": "11:30:00"
+                },
+                "note": null,
+                "tips": [],
+                "transit_from_prev": {
+                  "mode": "drive",
+                  "minutes": 25,
+                  "distance_km": 14.0,
+                  "source_ref": null
+                },
+                "transit_detail": null,
+                "food_detail": null,
+                "ticket": {
+                  "kind": "attraction",
+                  "price_range": [
+                    55.0,
+                    75.0
+                  ],
+                  "currency": "CNY",
+                  "lead_time_days": 1,
+                  "real_name_required": false,
+                  "channels": [
+                    {
+                      "name": "现场",
+                      "type": "onsite",
+                      "detail": null,
+                      "note": null
+                    }
+                  ],
+                  "recommended_purchase": {
+                    "target_date": "2025-03-15",
+                    "session": "上午场",
+                    "lead_time_days": 1,
+                    "note": null
+                  },
+                  "note": null,
+                  "source_ref": "seed:ticket"
+                },
+                "source_refs": [
+                  "seed:extra"
+                ]
+              },
+              {
+                "activity_id": "aj2a2",
+                "seq": 1,
+                "type": "meal",
+                "title": "午餐 · 自行安排",
+                "time_window": {
+                  "start": "12:00:00",
+                  "end": "13:00:00"
+                },
+                "note": null,
+                "tips": [],
+                "transit_from_prev": null,
+                "transit_detail": null,
+                "food_detail": {
+                  "shop_name": "深溪农家",
+                  "dishes": [
+                    "腌笃鲜",
+                    "春笋"
+                  ],
+                  "per_person_price": 70.0,
+                  "poi": null,
+                  "source_ref": null
+                },
+                "ticket": null,
+                "source_refs": [
+                  "seed:extra"
+                ]
+              },
+              {
+                "activity_id": "aj2a3",
+                "seq": 1,
+                "type": "long_transit",
+                "title": "安吉 → 上海 · 自驾",
+                "time_window": {
+                  "start": "14:00:00",
+                  "end": "17:00:00"
+                },
+                "note": null,
+                "tips": [],
+                "transit_from_prev": null,
+                "transit_detail": {
+                  "mode": "self_drive",
+                  "distance_km": 220.0,
+                  "drive_minutes": 180,
+                  "waypoints_poi": [
+                    {
+                      "name": "湖州",
+                      "amap_poi_id": null,
+                      "lng": null,
+                      "lat": null,
+                      "city": null,
+                      "source_ref": null,
+                      "season_closure": null
+                    }
+                  ],
+                  "road_refs": [
+                    "S205",
+                    "G50"
+                  ],
+                  "road_condition": "高速为主",
+                  "season_closure": null,
+                  "fuel_stops": [],
+                  "parking": "上海家中",
+                  "permit_required": false,
+                  "permit_note": null,
+                  "source_ref": null
+                },
+                "food_detail": null,
+                "ticket": null,
+                "source_refs": [
+                  "seed:extra"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "revision_log": [
+      {
+        "version": 3,
+        "turn_seq": null,
+        "summary": "第二天改为深溪峡谷，避开人流",
+        "user_request": "想走小众路线",
+        "op_count": 2,
+        "changed_stop_ids": [
+          "aj2s1"
+        ],
+        "changed_activity_ids": [
+          "aj2a1"
+        ],
+        "created_at": "2025-03-12T19:31:00+08:00"
+      }
+    ],
+    "created_at": "2025-03-10T10:00:00+08:00",
+    "updated_at": "2025-03-12T19:31:00+08:00"
+  }
+]

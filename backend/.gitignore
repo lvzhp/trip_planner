@@ -1,0 +1,12 @@
+.venv/
+data/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+:memory:
+
+# 禁止提交 env / markdown
+.env
+.env.*
+*.env
+*.md
