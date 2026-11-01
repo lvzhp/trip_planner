@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Trace Planner · 我的行程</title>
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/components.css">
+</head>
+<body class="list-page">
+
+  <header class="list-topbar">
+    <span class="topbar-brand"><span class="logo" id="brand-logo"></span>Trace Planner</span>
+    <span style="font-size:var(--fs-12);color:var(--text-faint)">行程即文档 · 对话与地图是它的两个视图</span>
+    <span class="spacer"></span>
+    <button class="icon-btn" id="btn-theme" aria-label="切换深色模式"></button>
+    <a class="btn btn-sm" href="spec.html">设计规范</a>
+  </header>
+
+  <main class="list-main">
+    <div class="list-head">
+      <h1>我的行程</h1>
+      <span class="count" id="trip-count"></span>
+    </div>
+    <div class="trip-grid" id="trip-grid"><!-- JS 渲染 --></div>
+  </main>
+
+<script src="assets/js/ui.js"></script>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/map-canvas.js"></script>
+<script>
+(function () {
+  'use strict';
+  const { icon, esc, initTheme, toggleTheme, store, toast } = window.TP_UI;
+  const { renderThumb } = window.TP_Map;
+  const D = window.TP_DATA;
+
+  initTheme();
+  document.getElementById('brand-logo').innerHTML = icon('logo');
+  const btnTheme = document.getElementById('btn-theme');
+  const paintTheme = () => { btnTheme.innerHTML = document.documentElement.dataset.theme === 'dark' ? icon('sun') : icon('moon'); };
+  paintTheme();
+  btnTheme.addEventListener('click', () => { toggleTheme(); paintTheme(); });
+
+  const grid = document.getElementById('trip-grid');
+  document.getElementById('trip-count').textContent = `共 ${D.tripList.length} 个行程`;
+
+  /* 缩略图按天上色（前 8 个 stop 用 --day-N） */
+  const dayColors = [];
+  for (let i = 1; i <= 8; i++) {
+    const probe = document.createElement('span');
+    probe.style.color = `var(--day-${i})`;
+    document.body.appendChild(probe);
+    dayColors.push(getComputedStyle(probe).color);
+    probe.remove();
+  }
+
+  for (const t of D.tripList) {
+    const card = document.createElement('a');
+    card.className = 'trip-card-link';
+    card.href = t.tripId === 'xj-2026-wuyi' ? 'workbench.html' : '#';
+    card.setAttribute('aria-label', `打开行程 ${t.title}`);
+    const conflictHtml = t.conflicts.error
+      ? `<span class="badge badge-error">${icon('warn')} ${t.conflicts.error} 错误${t.conflicts.warning ? ' · ' + t.conflicts.warning + ' 警告' : ''}</span>`
+      : t.conflicts.warning
+        ? `<span class="badge badge-warning">${icon('warn')} ${t.conflicts.warning} 警告</span>`
+        : (t.done ? `<span class="chip" style="color:var(--success)">${icon('checkCircle')} 已完成</span>` : `<span class="chip">${icon('check')} 校验通过</span>`);
+    card.innerHTML = `
+      <div class="trip-thumb">
+        <svg class="thumb" role="img" aria-label="${esc(t.dest)} 路线缩略图"></svg>
+        <span class="tt-version">v${t.version}</span>
+      </div>
+      <div class="trip-card-body">
+        <h3>${esc(t.title)}</h3>
+        <div class="trip-card-meta">
+          <span>${icon('map')} ${esc(t.dest)}</span>
+          <span>${icon('calendar')} ${esc(t.dateRange)} · ${t.days} 天</span>
+          <span>${icon(t.transport === '火车' ? 'train' : 'car')} ${esc(t.transport)}</span>
+        </div>
+        <div class="trip-card-foot">
+          <span class="updated">更新于 ${esc(t.updatedAt)}</span>
+          <span class="conflicts">${conflictHtml}</span>
+        </div>
+      </div>`;
+    if (t.tripId !== 'xj-2026-wuyi') {
+      card.addEventListener('click', e => { e.preventDefault(); toast('原型演示：仅「新疆环线」为完整工作台', 'info'); });
+    }
+    grid.appendChild(card);
+    renderThumb(card.querySelector('.thumb'), t.thumbRoute, dayColors);
+  }
+
+  /* 新建行程入口 */
+  const nc = document.createElement('a');
+  nc.className = 'new-trip-card';
+  nc.href = 'workbench.html#/planning';
+  nc.innerHTML = `<span class="plus-circle">${icon('plus')}</span>新建行程<span style="font-size:var(--fs-12);font-weight:500;color:var(--text-faint)">从一句话开始，AI 帮你排全程</span>`;
+  grid.appendChild(nc);
+})();
+</script>
+</body>
+</html>
