@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover, interactive-widget=resizes-content"
+    />
+    <meta name="theme-color" content="#1D6F5C" />
+    <meta name="description" content="Trace Planner — 用一句话规划旅行，对话、地图与行程卡片三向联动。" />
+    <meta name="format-detection" content="telephone=no, email=no, address=no" />
+    <meta name="color-scheme" content="light dark" />
+
+    <!-- 手机 App / PWA -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="Trace Planner" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/icons/icon-192.png" />
+
+    <title>Trace Planner</title>
+
+    <!--
+      运行时配置：App 包 / 小程序壳 / 私有化部署可在这里覆写，无需重新构建。
+      例：window.__TP_CONFIG__ = { platform: 'app', apiBase: 'https://api.xxx.com/api',
+                                    publicBaseUrl: 'https://trace.xxx.com' }
+      可用字段见 src/platform/runtime.ts。
+    -->
+    <script>
+      window.__TP_CONFIG__ = window.__TP_CONFIG__ || { platform: 'auto' }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <noscript>Trace Planner 需要启用 JavaScript 才能使用。</noscript>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
